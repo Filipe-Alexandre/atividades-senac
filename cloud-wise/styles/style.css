@@ -223,10 +223,15 @@ header h1 {
   position: absolute;
   top: 72%;
   left: 50%;
+  border-radius: 16px;
+  transition: .3s ease;
 }
 
 .rot:hover {
   cursor: default;
+  color: var(--orange-1);
+
+  box-shadow: inset 0px 0px 5px rgba(0, 0, 0, 0.5);
 }
 
 .rot i {
@@ -315,7 +320,7 @@ button:hover {
 }
 
 .sobre__texto button {
-    margin-left: 0px;
+  margin-left: 0px;
 }
 
 /* sobre img */
@@ -361,4 +366,27 @@ button:hover {
   height: 290px;
   margin-top: 10px;
   margin-left: 10px;
+}
+
+/* numeros */
+
+#numeros {
+  max-width: 1200px;
+  margin: 80px auto;
+}
+
+.num__categorias {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+}
+
+.num-cat h2 {
+  font-size: 3em;
+  line-height: 1.5em;
+}
+
+.num-cat p {
+    font-size: 1.5em;
 }
