@@ -1,0 +1,37 @@
+/*  SOBRE  */
+
+#sobre {
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+    height: 600px;
+    max-width: 1200px;
+    margin: auto;
+    margin-top: 50px;
+    transition: ease .5s;
+}
+
+#sobre:hover {
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+.sobre-txt {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 50px;
+
+    background-color: var(--cor-4);
+    border-radius: 8px 0px 0px 8px;
+}
+
+.sobre-img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--cor-1);
+    border-radius: 0px 8px 8px 0px;
+}
+
+.sobre-img img {
+    width: 80%;
+}

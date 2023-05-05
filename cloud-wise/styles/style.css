@@ -1,0 +1,216 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Lilita+One&family=Varela+Round&display=swap');
+
+:root {
+    --orange: #FF8900;
+    --blue-1: #1B50D8;
+    --blue-2: #152039;
+    --black-1: #0D0D0D;
+    --black-2: #171717;
+    --white-1: #FFFFFF;
+    --white-2: #F2F2F2;
+    --shadow: #CC02FF;
+
+    --titulo: 'Lilita One', cursive;
+    --padrao: 'Varela Round', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: linear-gradient(to bottom, var(--blue-2), var(--black-2));
+}
+
+header {
+    margin: 0 auto;
+    max-width: 1200px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/*logo no começo*/
+
+header h1 {
+    font-family: var(--titulo);
+    display: flex;
+    align-items: flex-end;
+}
+
+.cloud {
+    color: var(--white-1);
+    margin: 0 10px;
+}
+
+.wise {
+    color: var(--orange);
+}
+
+.header__h1-logo {
+    height: 82px;
+    margin: 0 10px;
+}
+
+/*lista de categorias*/
+
+#header__categorias ul {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-family: var(--padrao);
+    font-size: 20px;
+}
+
+#header__categorias ul li {
+    list-style: none;
+}
+
+#header__categorias ul li a {
+    color: var(--white-1);
+    text-decoration: none;
+}
+
+/*lista de redes sociais*/
+
+#header__redes ul{
+    display: flex;
+    gap: 10px;
+}
+
+#header__redes ul li {
+    list-style: none;
+}
+
+.fa-instagram, .fa-linkedin, .fa-github{
+    text-align: center;
+    background-color: var(--white-1);
+    color: var(--blue-2);
+    font-size: 36px;
+    border-radius: 50%;
+    width: 45px;
+    height: 45px;
+    padding-top: 5px;
+}
+
+/*efeitos header*/
+
+.header__efeitos {
+    position: absolute;
+}
+
+.header__efeitos img{
+    width: 400px;
+    height: 400px;
+    padding: 30px;
+}
+
+.header__sombra-1 {
+    transform: translate(-100px, 290px);
+}
+
+.header__sombra-2 {
+    transform: translate(500px, 280px);
+}
+
+.header__sombra-3 {
+    transform: translate(-900px, 900px);
+}
+
+.header__sombra-4 {
+    transform: translate(1050px, 450px);
+}
+
+.header__trilha {
+    /* background-color: dodgerblue; */
+    position: absolute;
+    top: 625px;
+    left: 800px;
+    transform: scale(2.2, 2.2)
+}
+
+/*banner*/
+
+#banner {
+    margin: 0 auto;
+    max-width: 1200px;
+}
+.banner__nome {
+    font-family: var(--titulo);
+    font-size: 100px;
+    text-align: center;
+    letter-spacing: 9px;
+}
+.banner__cloud {
+    color: var(--white-1);
+    text-indent: 1em;
+}
+
+.banner__wise {
+    color: var(--orange);
+    text-indent: -1em;
+}
+
+#banner p {
+    color: var(--white-1);
+    font-family: var(--padrao);
+    font-size: 30px;
+    width: 515px;
+    padding: 10px 30px;
+    margin: 10px 200px;
+}
+
+.rot {
+    display: flex;
+    transform: rotate(270deg);
+    font-family: var(--padrao);
+    text-align: center;
+    font-size: 20px;
+    color: var(--blue-1);
+    width: 110px;
+    margin: auto;
+}
+
+.rot i {
+    font-size: 36px;
+}
+
+#banner button {
+    display: flex;
+    align-items: center;
+    background-color: var(--orange);
+    color: var(--blue-2);
+    font-weight: bold;
+    border: none;
+    text-align: center;
+    font-size: 20px;
+    text-indent: .9em;
+    border-radius: 34px;
+    font-family: var(--padrao);
+    border: none;
+    margin-left: 227px;
+    margin-top: 50px;
+}
+
+.banner__img-1 {
+    background-color: red;
+    transform: translate(900px, -70%);
+    width: 450px;
+    height: 450px;
+    border-radius: 32px;
+}
+
+.banner__img-2 {
+    background-color: blue;
+    transform: translate(-210%, -79%);
+    width: 240px;
+    height: 300px;
+    border-radius: 32px;
+}
+
+.banner__selo {
+    transform: translate(265%, -160%);
+}

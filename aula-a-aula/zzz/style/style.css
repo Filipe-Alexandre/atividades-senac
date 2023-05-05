@@ -1,0 +1,34 @@
+.site {
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.topo {
+    display: flex;
+    justify-content: space-between;
+}
+
+.menu ul {
+    display: flex;
+    justify-content: space-between;
+}
+
+.menu a {
+    padding: 10px 40px;
+    color: #333;
+    text-decoration: none;
+    border: 1px solid #000;
+}
+
+.topo div ul {
+    display: flex;
+    justify-content: space-between;
+}
+
+.topo h1 {
+    background: #333;
+    width: 150px;
+    height: 60px;
+    text-indent: -9999px;
+}

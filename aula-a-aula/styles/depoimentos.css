@@ -1,0 +1,73 @@
+/*  DEPOIMENTOS  */
+
+#depoimento {
+    display: grid;
+    grid-template-areas:
+        "teste1 teste1"
+        "teste2 teste3";
+    height: 500px;
+    max-width: 1200px;
+    margin: auto;
+    margin-bottom: 50px;
+}
+
+#depoimento h2 {
+    text-align: center;
+    grid-area: teste1;
+    height: 100px;
+    padding-top: 38px;
+}
+
+#depoimento-img {
+    grid-area: teste2;
+    height: 400px;
+    display: grid;
+    place-items: center;
+}
+
+.like {
+    width: 250px;
+    padding: 10px;
+}
+
+#depoimento-txt {
+    display: grid;
+    grid-template-areas: 
+    "img-perfil img-perfil"
+    "depo depo"
+    "avaliacao data";
+    grid-template-columns: 2;
+    grid-template-rows: 3;
+
+    grid-area: teste3;
+    background-color: var(--cor-3);
+    padding: 30px;
+    border-radius: 32px;
+}
+
+#img-pessoa {
+    grid-area: img-perfil;
+    text-align: center;
+}
+
+#depoimento-txt h3 {
+    grid-area: avaliacao;
+    margin-top: 10px;
+}
+#depoimento-txt h4 {
+    grid-area: data;
+    text-align: right;
+    margin-top: 10px;
+}
+
+.perfil {
+    height: 64px;
+    border-radius: 50%;
+}
+
+article {
+    background-color: var(--cor-5);
+    grid-area: depo;
+    padding: 10px;
+    border-radius: 16px;
+}

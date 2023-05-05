@@ -1,0 +1,15 @@
+@charset "UTF-8";
+
+:root {
+    /*Fontes*/
+    --fonte: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+    /*Cores*/
+    --cor-1: #0D141E;
+    --cor-2: #191F2A;
+    --cor-3: #2D3E55;
+    --cor-4: #5D749A;
+    --cor-5: #8EA6CC;
+    --black: #000;
+    --white: #FFF;
+}
