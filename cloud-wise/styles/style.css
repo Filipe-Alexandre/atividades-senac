@@ -377,7 +377,7 @@ button:hover {
 
 .num__categorias {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   text-align: center;
 }
@@ -389,4 +389,28 @@ button:hover {
 
 .num-cat p {
     font-size: 1.5em;
+}
+
+/* empresas */
+
+#empresas {
+    max-width: 1200px;
+    margin: 80px auto;
+}
+
+.empresas__marcas {
+    display: flex;
+    justify-content: space-around;
+    
+}
+
+.emp-marcas img {
+    width: 200px;
+    background-color: white;
+    filter: grayscale(1);
+    transition: .3s ease;
+}
+
+.emp-marcas img:hover {
+    filter: grayscale(0);
 }
