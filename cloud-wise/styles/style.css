@@ -212,7 +212,7 @@ header h1 a {
   color: var(--white-1);
   font-family: var(--padrao);
   font-size: 30px;
-  width: 515px;
+  width: 550px;
   padding: 10px 30px;
   margin: 10px 200px;
 }
@@ -435,7 +435,6 @@ button:hover {
 .met-img img {
   height: 650px;
   width: 650px;
-  background-color: var(--white-1);
   border-radius: 60px;
   margin: 60px;
   position: absolute;
