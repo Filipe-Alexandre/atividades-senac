@@ -44,6 +44,10 @@ header h1 {
   align-items: flex-end;
 }
 
+header h1 a {
+  text-decoration: none;
+}
+
 .cloud {
   color: var(--white-1);
   margin: 0 10px;
@@ -56,6 +60,7 @@ header h1 {
 .header__h1-logo {
   height: 82px;
   margin: 0 10px;
+  margin-top: 10px;
 }
 
 /*lista de categorias*/
@@ -133,7 +138,7 @@ header h1 {
   background-position: center;
   background-size: cover;
   position: absolute;
-  top: -150px;
+  top: 50px;
   left: -60px;
 }
 
@@ -224,7 +229,7 @@ header h1 {
   top: 72%;
   left: 50%;
   border-radius: 16px;
-  transition: .3s ease;
+  transition: 0.3s ease;
 }
 
 .rot:hover {
@@ -245,7 +250,6 @@ button {
   background-color: var(--orange-1);
   color: var(--blue-2);
   font-weight: bold;
-  border: none;
   text-align: center;
   font-size: 20px;
   text-indent: 0.9em;
@@ -388,29 +392,84 @@ button:hover {
 }
 
 .num-cat p {
-    font-size: 1.5em;
+  font-size: 1.5em;
 }
 
 /* empresas */
 
 #empresas {
-    max-width: 1200px;
-    margin: 80px auto;
+  max-width: 1200px;
+  margin: 80px auto;
 }
 
 .empresas__marcas {
-    display: flex;
-    justify-content: space-around;
-    
+  display: flex;
+  justify-content: space-around;
 }
 
 .emp-marcas img {
-    width: 200px;
-    background-color: white;
-    filter: grayscale(1);
-    transition: .3s ease;
+  width: 200px;
+  filter: grayscale(1);
+  transition: 0.3s ease;
 }
 
 .emp-marcas img:hover {
-    filter: grayscale(0);
+  filter: grayscale(0);
+}
+
+/* metodos */
+
+#metodos {
+  margin: 80px auto;
+  height: 800px;
+  display: grid;
+  grid-template-columns: 30% 70%;
+}
+
+.met-img {
+  background-color: var(--orange-1);
+  display: flex;
+  align-items: center;
+}
+
+.met-img img {
+  height: 650px;
+  width: 650px;
+  background-color: var(--white-1);
+  border-radius: 60px;
+  margin: 60px;
+  position: absolute;
+}
+
+.met-lista {
+  background-color: var(--blue-1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+
+.met-lista h2 {
+  font-size: 50px;
+  margin-bottom: 10px;
+}
+
+.met-lista h3 {
+  font-size: 30px;
+  text-indent: -.6em;
+  margin-bottom: 5px;
+}
+
+.met-lista p {
+  font-size: 20px;
+  margin-bottom: 30px;
+}
+
+.met-lista ul {
+  max-width: 50%;
+}
+
+.met-lista li{
+  list-style: none;
 }
