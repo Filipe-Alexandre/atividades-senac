@@ -44,7 +44,7 @@ Web Design - display
 #### Orçamento
 > Mostrar passo a passo de quanto falta para completar
 
-#### Duvidas
+#### Dúvidas
 >gaveta com duvidas
 
 #### Blog
@@ -52,3 +52,31 @@ Web Design - display
 
 ### CSS:
 > Criar um estilo de botão usando classe e colocar essa classe em todos os botões no html
+---
+## Início de CSS
+
+@charset "UTF-8";
+
+@import url("https://fonts.googleapis.com/css2?family=Lilita+One&family=Varela+Round&display=swap");
+
+:root {
+  --orange-1: #ff8900;
+  --orange-2: #ffa033;
+  --blue-1: #1b50d8;
+  --blue-2: #152039;
+  --black-1: #0d0d0d;
+  --black-2: #171717;
+  --white-1: #ffffff;
+  --white-2: #f2f2f2;
+  --shadow: #cc02ff;
+  --transparent: transparent;
+
+  --titulo: "Lilita One", cursive;
+  --padrao: "Varela Round", sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}

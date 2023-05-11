@@ -3,7 +3,7 @@
 
 :root {
   --orange-1: #ff8900;
-  --orange-2: hsl(32, 100%, 60%);
+  --orange-2: #ffa033;
   --blue-1: #1b50d8;
   --blue-2: #152039;
   --black-1: #0d0d0d;
@@ -231,12 +231,11 @@ header h1 a {
   left: 50%;
   border-radius: 16px;
   transition: 0.3s ease;
+  cursor: default;
 }
 
 .rot:hover {
-  cursor: default;
   color: var(--orange-1);
-
   box-shadow: inset 0px 0px 5px rgba(0, 0, 0, 0.5);
 }
 
@@ -262,6 +261,7 @@ button {
   transition: 0.5s ease;
   width: 243px;
   height: 55px;
+  cursor: pointer;
 }
 
 .fa-arrow-up {
@@ -275,7 +275,7 @@ button {
 button:hover {
   background-color: var(--orange-2);
   box-shadow: inset 0px 0px 5px rgba(0, 0, 0, 0.5);
-  cursor: pointer;
+
   text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3);
   font-size: 21px;
 }
