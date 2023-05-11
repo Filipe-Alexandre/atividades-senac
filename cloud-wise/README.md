@@ -6,6 +6,10 @@
 |Blog      |pool people  |
 |Serviços  | pen ruler   |
 |conheça   | play        |
+|menu      |bars         |
+
+## Redes
+Buscar redes sociais
 
 ## Buttons
 Seta - arrow up right
@@ -16,6 +20,14 @@ Ok - circle check
 Duvidas - plus
 
 orçamento - calculator
+
+Criação de sites - pen to square
+
+SEO - magnifying glass chart
+
+Identidade visual - fingerprint/ ruler triangle
+
+Web Design - display
 
 ---
 
@@ -38,5 +50,5 @@ orçamento - calculator
 #### Blog
 > Cada categoria ter uma cor específica
 
-##### CSS
+### CSS:
 > Criar um estilo de botão usando classe e colocar essa classe em todos os botões no html
