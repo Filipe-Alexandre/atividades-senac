@@ -26,7 +26,6 @@
 
 #banner-txt:hover {
     box-shadow: 0px 0px 50px var(--cor-5);
-    transition: ease .3s;
     filter: brightness(120%);
     width: 55%;
     height: 55%;

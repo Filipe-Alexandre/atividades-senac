@@ -24,6 +24,10 @@
     border-radius: 8px 0px 0px 8px;
 }
 
+.sobre-txt h2{
+    margin-bottom: 20px;
+}
+
 .sobre-img {
     display: flex;
     justify-content: center;

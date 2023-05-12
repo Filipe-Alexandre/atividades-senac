@@ -28,7 +28,6 @@
 }
 
 .fundo:hover {
-    transition: ease .5s;
     width: 260px;
     height: 260px;
 }

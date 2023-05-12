@@ -37,7 +37,6 @@
 }
 
 .card li:hover {
-    transition: ease .7s;
     text-shadow: 0px 0px 7px var(--cor-5);
     font-weight: bold;
     cursor: pointer;
@@ -65,4 +64,5 @@
 
 .img-card {
     width: 90%;
+    margin: 20px auto;
 }
