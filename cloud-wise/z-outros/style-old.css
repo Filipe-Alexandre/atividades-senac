@@ -337,6 +337,7 @@ button:hover {
   grid-template-areas:
     "teste1 teste2"
     "teste3 teste4";
+;
 }
 
 .sobre__img-1 {
@@ -344,6 +345,7 @@ button:hover {
   border-radius: 64px 0 0 0;
   width: 290px;
   height: 290px;
+      background-color: white
 }
 
 .sobre__img-2 {
@@ -353,6 +355,7 @@ button:hover {
   height: 250px;
   margin-top: 40px;
   margin-left: 10px;
+      background-color: white
 }
 
 .sobre__img-3 {
@@ -362,6 +365,7 @@ button:hover {
   height: 250px;
   margin-top: 10px;
   margin-left: 40px;
+      background-color: white
 }
 
 .sobre__img-4 {
@@ -371,6 +375,7 @@ button:hover {
   height: 290px;
   margin-top: 10px;
   margin-left: 10px;
+      background-color: white
 }
 
 /* numeros */
