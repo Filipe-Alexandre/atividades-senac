@@ -1,0 +1,271 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Lilita+One&family=Varela+Round&display=swap");
+@import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css);
+
+:root {
+  --orange-1: #ff8900;
+  --orange-2: #ffa033;
+  --blue-1: #1b50d8;
+  --blue-2: #152039;
+  --black-1: #0d0d0d;
+  --black-2: #171717;
+  --white-1: #ffffff;
+  --white-2: #f2f2f2;
+  --shadow: #cc02ff;
+  --transparent: transparent;
+
+  --titulo: "Lilita One", cursive;
+  --padrao: "Varela Round", sans-serif;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: var(--white-1);
+    font-family: var(--padrao);
+}
+
+body {
+    background: linear-gradient(to bottom, var(--black-1), var(--blue-2), var(--blue-1));
+    height: 100vh;
+}
+
+.site {
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* HEADER */
+
+header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    max-width: 1200px;
+    margin: auto;
+    margin-top: 20px;
+}
+
+header h1{
+    background: url(../assets/logos/logo-6.png) no-repeat;
+    background-size: contain;
+    height: 83px;
+    width: 115px;
+    text-indent: -99999px;
+    align-self: flex-start;
+}
+
+/* CATEGORIAS */
+
+.menu ul {
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+    gap: 50px;
+    font-size: 1.5rem;
+}
+
+.menu a {
+    text-decoration: none;
+    position: relative;
+}
+
+.menu a::before {
+    content: "";
+    position: absolute;
+    width: 120%;
+    height: 4px;
+    bottom: -10px;
+    left: -8%;
+    background-color: var(--orange-1);
+    visibility: hidden;
+    transform: scaleX(0);
+    transition: transform 300ms cubic-bezier(.57,-0.02,.31,.71);
+
+}
+
+.menu a:hover:before {
+    visibility: visible;
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+.menu a:hover i {
+    color: var(--orange-1);
+}
+
+/* REDES */
+
+.redes {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end;
+    gap: 20px;
+    font-size: 2rem;
+}
+
+.redes li {
+    list-style: none;
+}
+
+.redes li a i {
+    color: var(--blue-2);
+    background-color: var(--white-1);
+
+    text-align: center;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    padding-top: 8px;
+    transition: .2s ease;
+    font-weight: bold;
+}
+
+.redes li a i:hover {
+    color: var(--orange-1);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* BANNER */
+.banner-bg {
+    background: url(../assets/efeitos/fx__estrelas.svg) repeat right center;
+    background-size: 100vw contain;
+}
+.banner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 650px;
+    cursor: default;
+}
+
+.banner span {
+    font-size: 7em;
+    font-family: var(--titulo);
+}
+
+.cloud {
+    text-indent: .2em;
+}
+
+.fa-cloud {
+    transition: .5s ease;
+}
+
+.fa-cloud:hover {
+    text-shadow: 0 0 15px white;
+}
+
+.wise {
+    text-indent: -.5em;
+    color: var(--orange-1);
+}
+
+.wise i{
+    color: var(--orange-1);
+    text-indent: -.1em;
+}
+
+.banner p {
+    text-indent: -5em;
+    font-size: 30px;
+    margin-top: 20px;
+}
+
+.btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--orange-1);
+    color: var(--blue-2);
+    padding: 15px 20px;
+    border-radius: 34px;
+    border: none;
+    font-weight: bold;
+    cursor: url(../assets/efeitos/rocket-launch.cur), pointer;
+    text-decoration: none;
+    transition: .5s ease;
+}
+
+.btn:hover {
+    background-color: var(--orange-2);
+    box-shadow: inset 0px 0px 5px rgba(0, 0, 0);
+}
+
+.btn i {
+    color: var(--blue-2);
+    transform: rotate(-45deg);
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+.btn-banner {
+    transform: translate(-150%, 250%);
+}
+
+.conheca {
+    display: flex;
+    transform: rotate(-90deg) translateX(-130px);
+    cursor: default;
+    padding: 5px 10px;
+    border-radius: 36px;
+}
+
+.conheca span {
+    color: var(--blue-1);
+    font-family: var(--padrao);
+    font-size: 1.3rem;
+}
+
+.conheca i {
+    color: var(--blue-1);
+}
+
+.conheca:hover {
+    box-shadow: inset 0 0 5px black;
+}
+
+/* BANNER IMAGENS */
+
+.banner__img1{
+    position: absolute;
+    transform: translate(97%, 40%);
+    width: 400px;
+}
+
+.selo {
+    position: absolute;
+    transform: translate(270%, 240%);
+}
+
+.banner__nuvem-1 {
+    position: absolute;
+    left: -9%;
+    top: 0;
+}
+
+.banner__nuvem-1 .fa-cloud {
+    font-size: 10vw;
+}
+
+.banner__nuvem-2 {
+    position: absolute;
+    top: 700px;
+    right: 10px;
+}
+
+.banner__nuvem-2 .fa-cloud {
+    font-size: 9vw;
+}
+
+.banner__nuvem-3 {
+    position: absolute;
+    top: 700px;
+    left: 370px;
+}
+
+.banner__nuvem-3 .fa-cloud {
+    font-size: 10vw;
+}
