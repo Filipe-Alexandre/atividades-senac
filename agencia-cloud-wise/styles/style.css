@@ -132,6 +132,7 @@ header h1{
     background: url(../assets/efeitos/fx__estrelas.svg) repeat right center;
     background-size: 100vw contain;
 }
+
 .banner {
     display: flex;
     justify-content: center;
