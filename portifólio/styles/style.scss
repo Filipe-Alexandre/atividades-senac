@@ -1,13 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+// ---------------------------------------------------------------------------
+
+// FONTE
+$fonte: 'Poppins', sans-serif;
+// ---------------------------------------------------------------------------
+
+// DARK
 $dark-gradient: linear-gradient(214.02deg, #00FF85 6.04%, #0085FF 92.95%);
 $dark-bg: linear-gradient(113.49deg, #444C4D -30.3%, #111113 58.12%);
 $dark-null: linear-gradient(228.74deg, #949393CC 0%, #1F1E1ECC 84.9%);
+// ---------------------------------------------------------------------------
 
+// LIGHT
 $light-gradient: linear-gradient(214.02deg, #FF8A00 6.04%, #FFFF00 92.95%);
 $light-bg: linear-gradient(45deg, #FFFFFF 0%, #8D8D8D 100%);
 $light-null: linear-gradient(228.74deg, #D9D9D9CC 0%, #757575CC 84.9%);
+// ---------------------------------------------------------------------------
 
-$transparent: transparent;
-
+//DEFAULT
 $black-100: rgba(0, 0, 0, 1);
 $black-50: rgba(0, 0, 0, 0.5);
 $black-30: rgba(0, 0, 0, 0.3);
@@ -15,3 +25,86 @@ $black-30: rgba(0, 0, 0, 0.3);
 $white-100: rgba(255, 255, 255, 1);
 $white-50: rgba(255, 255, 255, 0.5);
 $white-30: rgba(255, 255, 255, 0.3);
+
+$transparent: transparent;
+// ---------------------------------------------------------------------------
+
+body {
+    background: $dark-bg;
+    font-family: $fonte;
+    font-size: 1.3rem;
+    max-width: 1200px;
+    margin: auto;
+    color: $white-100
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 20px auto;
+
+    .perfil {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 110px;
+        cursor: default;
+
+        .perfil__img {
+            display: grid;
+            place-items: center;
+            background: $dark-gradient;
+            border-radius: 6px 16px;
+            height: 40px;
+            width: 40px;
+        }
+    }
+
+    .menu ul {
+        display: flex;
+        align-items: center;
+        gap: 30px;
+
+        a {
+            color: white;
+            text-decoration: none;
+            position: relative;
+        
+            &::before {
+                content: "";
+                position: absolute;
+                width: 120%;
+                height: 3px;
+                bottom: -5px;
+                left: -8%;
+                background-color: $white-100;
+                visibility: hidden;
+                transform: scaleX(0);
+                transition: transform 300ms cubic-bezier(.57, -0.02, .31, .71);
+
+            }
+            &:hover:before {
+                visibility: visible;
+                transform: scaleX(1);
+                transform-origin: left;
+                color: $white-100;
+            }
+        }
+    }
+        .contato {
+            display: grid;
+            place-items: center;
+            background: $dark-gradient;
+            border-radius: 6px 16px;
+            width: 125px;
+            height: 50px;
+            cursor: pointer;
+            transition: .8s ease;
+            
+            &:hover {
+                font-weight: bold;
+            }
+        }
+    
+}

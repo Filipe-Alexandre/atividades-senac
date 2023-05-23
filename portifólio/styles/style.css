@@ -1,1 +1,72 @@
-/*# sourceMappingURL=style.css.map */
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+body {
+  background: linear-gradient(113.49deg, #444C4D -30.3%, #111113 58.12%);
+  font-family: "Poppins", sans-serif;
+  font-size: 1.3rem;
+  max-width: 1200px;
+  margin: auto;
+  color: rgb(255, 255, 255);
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 20px auto;
+}
+header .perfil {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 110px;
+  cursor: default;
+}
+header .perfil .perfil__img {
+  display: grid;
+  place-items: center;
+  background: linear-gradient(214.02deg, #00FF85 6.04%, #0085FF 92.95%);
+  border-radius: 6px 16px;
+  height: 40px;
+  width: 40px;
+}
+header .menu ul {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+header .menu ul a {
+  color: white;
+  text-decoration: none;
+  position: relative;
+}
+header .menu ul a::before {
+  content: "";
+  position: absolute;
+  width: 120%;
+  height: 3px;
+  bottom: -5px;
+  left: -8%;
+  background-color: rgb(255, 255, 255);
+  visibility: hidden;
+  transform: scaleX(0);
+  transition: transform 300ms cubic-bezier(0.57, -0.02, 0.31, 0.71);
+}
+header .menu ul a:hover:before {
+  visibility: visible;
+  transform: scaleX(1);
+  transform-origin: left;
+  color: rgb(255, 255, 255);
+}
+header .contato {
+  display: grid;
+  place-items: center;
+  background: linear-gradient(214.02deg, #00FF85 6.04%, #0085FF 92.95%);
+  border-radius: 6px 16px;
+  width: 125px;
+  height: 50px;
+  cursor: pointer;
+  transition: 0.8s ease;
+}
+header .contato:hover {
+  font-weight: bold;
+}/*# sourceMappingURL=style.css.map */
