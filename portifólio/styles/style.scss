@@ -27,15 +27,58 @@ $white-50: rgba(255, 255, 255, 0.5);
 $white-30: rgba(255, 255, 255, 0.3);
 
 $transparent: transparent;
+
+$size: 1.3rem;
 // ---------------------------------------------------------------------------
 
+@keyframes pump {
+    50% {
+        color: $black-50;
+    }
+}
+
+// GERAL
 body {
     background: $dark-bg;
     font-family: $fonte;
-    font-size: 1.3rem;
+    font-size: $size;
     max-width: 1200px;
     margin: auto;
     color: $white-100
+}
+
+// BOTÕES
+.btn {
+    display: grid;
+    place-items: center;
+    background: $dark-gradient;
+    border-radius: 6px 16px;
+    height: 50px;
+    cursor: pointer;
+    transition: 1s ease;
+
+    &:hover {
+        background: $light-gradient;
+        font-weight: bold;
+        font-size: $size * 1.15;
+        animation: pump .5s ease-in-out;
+    }
+}
+
+.bloco {
+    display: grid;
+    place-items: center;
+    background: $dark-gradient;
+    border-radius: 6px 16px;
+    transition: .8s ease;
+
+    &:hover {
+        font-weight: bold;
+        background: $light-gradient;
+        font-size: $size * 1.15;
+        animation: pump .5s ease-in-out;
+
+    }
 }
 
 header {
@@ -52,10 +95,6 @@ header {
         cursor: default;
 
         .perfil__img {
-            display: grid;
-            place-items: center;
-            background: $dark-gradient;
-            border-radius: 6px 16px;
             height: 40px;
             width: 40px;
         }
@@ -70,7 +109,7 @@ header {
             color: white;
             text-decoration: none;
             position: relative;
-        
+
             &::before {
                 content: "";
                 position: absolute;
@@ -82,8 +121,8 @@ header {
                 visibility: hidden;
                 transform: scaleX(0);
                 transition: transform 300ms cubic-bezier(.57, -0.02, .31, .71);
-
             }
+
             &:hover:before {
                 visibility: visible;
                 transform: scaleX(1);
@@ -92,19 +131,120 @@ header {
             }
         }
     }
-        .contato {
-            display: grid;
-            place-items: center;
-            background: $dark-gradient;
-            border-radius: 6px 16px;
-            width: 125px;
-            height: 50px;
-            cursor: pointer;
-            transition: .8s ease;
-            
-            &:hover {
-                font-weight: bold;
+
+    .contato {
+        width: 115px;
+    }
+}
+
+main {
+    section {
+        margin: 130px auto;
+    }
+    .home {
+        margin: 0;
+        display: grid;
+        grid-template-columns: repeat(2, 50%);
+        cursor: default;
+
+        .home__txt {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            align-items: baseline;
+            font-size: $size*1.1;
+
+            h1 {
+                font-size: $size*5;
+                font-weight: 900;
+
+                span {
+                    background: $dark-gradient;
+                    -webkit-background-clip: text;
+                    -webkit-text-fill-color: transparent;
+
+                    &:hover {
+                        background: $light-gradient;
+                        -webkit-background-clip: text;
+                        -webkit-text-fill-color: transparent;
+                    }
+                }
+            }
+
+            .home__link {
+                background: $dark-gradient;
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                font-weight: 900;
+                text-transform: uppercase;
+                cursor: pointer;
+
+                &:hover {
+                    background: $light-gradient;
+                    -webkit-background-clip: text;
+                    -webkit-text-fill-color: transparent;
+                }
             }
         }
-    
+
+        .home__img {
+            display: grid;
+            place-items: center;
+            grid-template-columns: 550px 50px;
+
+            .foto {
+                width: 90%;
+                height: 650px;
+                background: $light-bg;
+                border-radius: 36px 100px;
+            }
+
+            span {
+                transform: rotate(90deg);
+                width: 300px;
+                height: $size;
+                color: $white-30;
+                font-weight: bold;
+                letter-spacing: 5px;
+                text-align: center;
+                text-transform: uppercase;
+                transition: .5s ease-in-out;
+
+            &:hover {
+                color: $white-50;
+                text-shadow: 0px 0px 3px $white-100;
+            }
+            }
+        }
+    }
+
+    .redes {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        font-size: $size * 2;
+        div {
+            display: flex;
+            align-items: center;
+        }
+// mudar fontes das logos
+        div a {
+            color: $white-50;
+            text-decoration: none;
+            transition: .5s ease-in-out;
+            &:hover {
+                color: $white-100;
+                text-shadow: 0 0 5px $white-100;
+            }
+        }
+        div a i {
+            font-size: $size * 2.2;
+        }
+    }
+
+    .sobre {
+        display: grid;
+        grid-template-columns: 500px 1fr;
+        grid-template-rows: 500px;
+    }
 }

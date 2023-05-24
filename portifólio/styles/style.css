@@ -1,4 +1,14 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+@-webkit-keyframes pump {
+  50% {
+    color: rgba(0, 0, 0, 0.5);
+  }
+}
+@keyframes pump {
+  50% {
+    color: rgba(0, 0, 0, 0.5);
+  }
+}
 body {
   background: linear-gradient(113.49deg, #444C4D -30.3%, #111113 58.12%);
   font-family: "Poppins", sans-serif;
@@ -6,6 +16,38 @@ body {
   max-width: 1200px;
   margin: auto;
   color: rgb(255, 255, 255);
+}
+
+.btn {
+  display: grid;
+  place-items: center;
+  background: linear-gradient(214.02deg, #00FF85 6.04%, #0085FF 92.95%);
+  border-radius: 6px 16px;
+  height: 50px;
+  cursor: pointer;
+  transition: 1s ease;
+}
+.btn:hover {
+  background: linear-gradient(214.02deg, #FF8A00 6.04%, #FFFF00 92.95%);
+  font-weight: bold;
+  font-size: 1.495rem;
+  -webkit-animation: pump 0.5s ease-in-out;
+          animation: pump 0.5s ease-in-out;
+}
+
+.bloco {
+  display: grid;
+  place-items: center;
+  background: linear-gradient(214.02deg, #00FF85 6.04%, #0085FF 92.95%);
+  border-radius: 6px 16px;
+  transition: 0.8s ease;
+}
+.bloco:hover {
+  font-weight: bold;
+  background: linear-gradient(214.02deg, #FF8A00 6.04%, #FFFF00 92.95%);
+  font-size: 1.495rem;
+  -webkit-animation: pump 0.5s ease-in-out;
+          animation: pump 0.5s ease-in-out;
 }
 
 header {
@@ -22,10 +64,6 @@ header .perfil {
   cursor: default;
 }
 header .perfil .perfil__img {
-  display: grid;
-  place-items: center;
-  background: linear-gradient(214.02deg, #00FF85 6.04%, #0085FF 92.95%);
-  border-radius: 6px 16px;
   height: 40px;
   width: 40px;
 }
@@ -58,15 +96,102 @@ header .menu ul a:hover:before {
   color: rgb(255, 255, 255);
 }
 header .contato {
+  width: 115px;
+}
+
+main section {
+  margin: 130px auto;
+}
+main .home {
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(2, 50%);
+  cursor: default;
+}
+main .home .home__txt {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: baseline;
+  font-size: 1.43rem;
+}
+main .home .home__txt h1 {
+  font-size: 6.5rem;
+  font-weight: 900;
+}
+main .home .home__txt h1 span {
+  background: linear-gradient(214.02deg, #00FF85 6.04%, #0085FF 92.95%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+main .home .home__txt h1 span:hover {
+  background: linear-gradient(214.02deg, #FF8A00 6.04%, #FFFF00 92.95%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+main .home .home__txt .home__link {
+  background: linear-gradient(214.02deg, #00FF85 6.04%, #0085FF 92.95%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 900;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+main .home .home__txt .home__link:hover {
+  background: linear-gradient(214.02deg, #FF8A00 6.04%, #FFFF00 92.95%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+main .home .home__img {
   display: grid;
   place-items: center;
-  background: linear-gradient(214.02deg, #00FF85 6.04%, #0085FF 92.95%);
-  border-radius: 6px 16px;
-  width: 125px;
-  height: 50px;
-  cursor: pointer;
-  transition: 0.8s ease;
+  grid-template-columns: 550px 50px;
 }
-header .contato:hover {
+main .home .home__img .foto {
+  width: 90%;
+  height: 650px;
+  background: linear-gradient(45deg, #FFFFFF 0%, #8D8D8D 100%);
+  border-radius: 36px 100px;
+}
+main .home .home__img span {
+  transform: rotate(90deg);
+  width: 300px;
+  height: 1.3rem;
+  color: rgba(255, 255, 255, 0.3);
   font-weight: bold;
+  letter-spacing: 5px;
+  text-align: center;
+  text-transform: uppercase;
+  transition: 0.5s ease-in-out;
+}
+main .home .home__img span:hover {
+  color: rgba(255, 255, 255, 0.5);
+  text-shadow: 0px 0px 3px rgb(255, 255, 255);
+}
+main .redes {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-size: 2.6rem;
+}
+main .redes div {
+  display: flex;
+  align-items: center;
+}
+main .redes div a {
+  color: rgba(255, 255, 255, 0.5);
+  text-decoration: none;
+  transition: 0.5s ease-in-out;
+}
+main .redes div a:hover {
+  color: rgb(255, 255, 255);
+  text-shadow: 0 0 5px rgb(255, 255, 255);
+}
+main .redes div a i {
+  font-size: 2.86rem;
+}
+main .sobre {
+  display: grid;
+  grid-template-columns: 500px 1fr;
+  grid-template-rows: 500px;
 }/*# sourceMappingURL=style.css.map */
