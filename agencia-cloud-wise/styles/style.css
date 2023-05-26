@@ -28,7 +28,7 @@
 
 body {
     background: linear-gradient(to bottom, var(--black-1), var(--blue-2), var(--blue-1));
-    height: 100vh;
+    height: 1000vh;
 }
 
 .site {
@@ -129,8 +129,8 @@ header h1{
 
 /* BANNER */
 .banner-bg {
-    background: url(../assets/efeitos/fx__estrelas.svg) repeat right center;
-    background-size: 100vw contain;
+    background: url(../assets/efeitos/fx__estrelas.svg) no-repeat center center;
+    background-size: 100vw cover;
 }
 
 .banner {
