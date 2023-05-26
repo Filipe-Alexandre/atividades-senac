@@ -22,11 +22,9 @@ $light-null: linear-gradient(228.74deg, #D9D9D9CC 0%, #757575CC 84.9%);
 //DEFAULT
 $black-100: rgba(0, 0, 0, 1);
 $black-50: rgba(0, 0, 0, 0.5);
-$black-30: rgba(0, 0, 0, 0.3);
 
 $white-100: rgba(255, 255, 255, 1);
 $white-50: rgba(255, 255, 255, 0.5);
-$white-30: rgba(255, 255, 255, 0.3);
 
 $transparent: transparent;
 
@@ -526,7 +524,4 @@ main {
         }
     }
 
-    .social {
-    
-    }
 }
