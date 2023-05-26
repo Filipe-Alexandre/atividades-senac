@@ -404,6 +404,9 @@ main .numeros div {
   font-size: 3.9rem;
   font-weight: bold;
 }
+main .numeros div:hover {
+  animation: pump 1s ease-in-out;
+}
 main .numeros .line {
   height: 60%;
   width: 3px;
