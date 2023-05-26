@@ -390,7 +390,7 @@ main .portifolio h4 {
 }
 main .numeros {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
   align-items: center;
   height: 190px;
   padding: 10px;
@@ -410,28 +410,65 @@ main .numeros .line {
   background-color: rgba(255, 255, 255, 0.5);
 }
 main .social {
-  background-color: red;
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
   flex-direction: column;
-  gap: 20px;
-  width: 540px;
+  gap: 40px;
+  width: 650px;
   text-align: center;
 }
-main .social .bloco {
+main .social span {
   height: 80px;
   width: 80px;
+  font-size: 2.6rem;
+}
+main .social span:hover {
+  font-size: 3.25rem;
 }
 main .social p {
-  color: rgba(255, 255, 255, 0.5);
+  color: rgba(255, 255, 255, 0.3);
+  font-size: 1.56rem;
+  transition: 0.5s ease-in-out;
+}
+main .social p:hover {
+  color: rgb(255, 255, 255);
+  text-shadow: 0 0 5px rgb(255, 255, 255);
 }
 main .social .social-redes {
   display: flex;
   justify-content: space-around;
-  width: 410px;
+  align-items: center;
+  gap: 40px;
+  height: 60px;
 }
-main .social .social-redes .bloco {
+main .social .social-redes .redes {
   width: 50px;
   height: 50px;
+  transition: 0.5s ease-in-out;
+}
+main .social .social-redes .redes:hover {
+  height: 60px;
+  width: 60px;
+}
+main .social .social-redes .redes i {
+  font-size: 2.34rem;
+}
+main .social .social-redes .redes i:hover {
+  font-size: 2.6rem;
+}
+
+footer {
+  text-align: center;
+  margin-bottom: 60px;
+  color: rgba(255, 255, 255, 0.5);
+  font-weight: bold;
+}
+footer span::before {
+  content: "<>";
+  color: rgb(255, 255, 255);
+}
+footer span:after {
+  content: "</>";
+  color: rgb(255, 255, 255);
 }/*# sourceMappingURL=style.css.map */
