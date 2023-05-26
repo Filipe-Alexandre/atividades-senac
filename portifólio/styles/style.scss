@@ -549,6 +549,7 @@ main {
             color: $white-30;
             font-size: $size * 1.2;
             transition: .5s ease-in-out;
+
             &:hover {
                 color: $white-100;
                 text-shadow: 0 0 5px $white-100;
@@ -566,6 +567,7 @@ main {
                 width: 50px;
                 height: 50px;
                 transition: .5s ease-in-out;
+
                 &:hover {
                     height: 60px;
                     width: 60px;
@@ -573,6 +575,7 @@ main {
 
                 i {
                     font-size: $size * 1.8;
+
                     &:hover {
                         font-size: $size * 2;
                     }
@@ -593,6 +596,7 @@ footer {
             content: "<>";
             color: $white-100;
         }
+
         &:after {
             content: "</>";
             color: $white-100;
