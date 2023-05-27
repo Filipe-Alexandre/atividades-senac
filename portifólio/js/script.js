@@ -15,4 +15,3 @@ var instaHover = document.querySelector(".img-insta-hover")
 btnToggle.addEventListener("change", ()=> {
     html.classList.toggle('light')
 })
-
