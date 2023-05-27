@@ -16,7 +16,3 @@ btnToggle.addEventListener("change", ()=> {
     html.classList.toggle('light')
 })
 
-btnToggle.addEventListener("click", ()=> {
-    git.style
-})
-
