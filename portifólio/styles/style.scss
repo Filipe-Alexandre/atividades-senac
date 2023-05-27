@@ -9,6 +9,8 @@
   --gradient-hover: linear-gradient(214.02deg, #0085FF 6.04%, #00FF85 92.95%);
   --bg: linear-gradient(113.49deg, #444C4D -30.3%, #111113 58.12%);
   --null: linear-gradient(228.74deg, #949393CC 0%, #1F1E1ECC 84.9%);
+  --invert: linear-gradient(45deg, #FFFFFF 0%, #8D8D8D 100%);
+
 
   --cores-100: rgba(255, 255, 255, 1);
   --cores-50: rgba(255, 255, 255, 0.5);
@@ -28,6 +30,8 @@
   --gradient-hover: linear-gradient(214.02deg, #FFFF00 6.04%, #ff6600 92.95%);
   --bg: linear-gradient(45deg, #FFFFFF 0%, #8D8D8D 100%);
   --null: linear-gradient(228.74deg, #D9D9D9CC 0%, #757575CC 84.9%);
+  --invert: linear-gradient(113.49deg, #444C4D -30.3%, #111113 58.12%);
+
 
   --cores-100: rgba(0, 0, 0, 1);
   --cores-50: rgba(0, 0, 0, 0.5);
@@ -53,7 +57,6 @@ body {
   margin: auto;
   color: var(--cores-100);
   cursor: default;
-  transition: .5 ease-in-out;
 }
 
 // BOTÕES
@@ -255,6 +258,7 @@ main {
       flex-direction: column;
       justify-content: space-evenly;
       align-items: baseline;
+      transition: .5s ease-in-out;
       font-size: calc(var(--size) * 1.1);
 
       h1 {
@@ -310,7 +314,7 @@ main {
       .foto {
         width: 90%;
         height: 650px;
-        background: var(--bg);
+        background: var(--invert);
         border-radius: 36px 100px;
       }
 
@@ -416,7 +420,7 @@ main {
       background-size: cover;
 
       .img {
-        background: var(--bg);
+        background: var(--invert);
         border-radius: 50px 160px;
         width: 500px;
         height: 500px;
@@ -535,7 +539,7 @@ main {
 
 
       iframe {
-        background: var(--null);
+        background: var(--invert);
         border-radius: 16px 36px;
         width: 390px;
         height: 515px;
@@ -618,12 +622,11 @@ main {
       align-items: center;
       gap: 40px;
       height: 60px;
-
+      
       .redes {
         width: 50px;
         height: 50px;
         transition: .5s ease-in-out;
-
         &:hover {
           height: 60px;
           width: 60px;
@@ -631,6 +634,7 @@ main {
 
         i {
           font-size: calc(var(--size) * 1.8);
+          transform: translateX(3px);
 
           &:hover {
             font-size: calc(var(--size) * 2);
@@ -656,6 +660,38 @@ footer {
     &:after {
       content: "</>";
       color: var(--cores-100);
+    }
+  }
+
+  .voltar {
+    display: grid;
+    place-items: center;
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    margin: 15px;
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    background: var(--gradient);
+    transition: .5s ease;
+    box-shadow: inset 0 0 7px black;
+    cursor: pointer;
+    &:hover {
+      background: var(--gradient-hover);
+      width: 60px;
+      height: 60px;
+    box-shadow: 0 0 7px black;
+
+    }
+    i {
+      color: var(--cores-50);
+      font-size: calc(var(--size) * 1.5);
+      transition: .5s ease;
+      &:hover {
+        color: var(--cores-100);
+        font-size: calc(var(--size) * 1.7);
+      }
     }
   }
 }
