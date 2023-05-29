@@ -1,21 +1,22 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
 :root {
   // FONTE
   --fonte: 'Poppins', sans-serif;
   --size: 1.3rem;
 
-  // DARK
+  // DARK MODE
   --gradient: linear-gradient(214deg, #00FF85 6.04%, #0085FF 92.95%);
   --gradient-hover: linear-gradient(214.02deg, #0085FF 6.04%, #00FF85 92.95%);
   --bg: linear-gradient(113.49deg, #444C4D -30.3%, #111113 58.12%);
   --null: linear-gradient(228.74deg, #949393CC 0%, #1F1E1ECC 84.9%);
   --invert: linear-gradient(45deg, #FFFFFF 0%, #8D8D8D 100%);
 
-
   --cores-100: rgba(255, 255, 255, 1);
   --cores-50: rgba(255, 255, 255, 0.5);
   --cores-30: rgba(255, 255, 255, 0.3);
-
+  
+  // IMAGENS
   --github: url(../assets/github.svg) no-repeat center center;
   --github-hover: url(../assets/github-hover.svg) no-repeat center center;
 
@@ -25,18 +26,20 @@
   --instagram: url(../assets/instagram.svg) no-repeat center center;
   --instagram-hover: url(../assets/instagram-hover.svg) no-repeat center center;
 }
+
 .light:root {
+  //LIGHT MODE
   --gradient: linear-gradient(214.02deg, #ff6600 6.04%, #FFFF00 92.95%);
   --gradient-hover: linear-gradient(214.02deg, #FFFF00 6.04%, #ff6600 92.95%);
   --bg: linear-gradient(45deg, #FFFFFF 0%, #8D8D8D 100%);
   --null: linear-gradient(228.74deg, #D9D9D9CC 0%, #757575CC 84.9%);
   --invert: linear-gradient(113.49deg, #444C4D -30.3%, #111113 58.12%);
 
-
   --cores-100: rgba(0, 0, 0, 1);
   --cores-50: rgba(0, 0, 0, 0.5);
   --cores-30: rgba(0, 0, 0, 0.3);
 
+  // IMAGENS
   --github: url(../assets/github-preto.svg) no-repeat center center;
   --github-hover: url(../assets/github-preto-hover.svg) no-repeat center center;
 
@@ -622,11 +625,12 @@ main {
       align-items: center;
       gap: 40px;
       height: 60px;
-      
+
       .redes {
         width: 50px;
         height: 50px;
         transition: .5s ease-in-out;
+
         &:hover {
           height: 60px;
           width: 60px;
@@ -677,17 +681,20 @@ footer {
     transition: .5s ease;
     box-shadow: inset 0 0 7px black;
     cursor: pointer;
+
     &:hover {
       background: var(--gradient-hover);
       width: 60px;
       height: 60px;
-    box-shadow: 0 0 7px black;
+      box-shadow: 0 0 7px black;
 
     }
+
     i {
       color: var(--cores-50);
       font-size: calc(var(--size) * 1.5);
       transition: .5s ease;
+
       &:hover {
         color: var(--cores-100);
         font-size: calc(var(--size) * 1.7);

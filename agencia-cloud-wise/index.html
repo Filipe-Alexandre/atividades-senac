@@ -5,15 +5,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Agência Cloud Wise</title>
-    <link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon">
-
+    <link rel="stylesheet" href="styles/reset.css">
+    <link rel="stylesheet" href="styles/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
         integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-
-    <link rel="stylesheet" href="styles/style.css">
-
+    <title>Cloud Wise</title>
 </head>
 
 <body>
@@ -21,8 +18,8 @@
         <h1>
             <a href="index.html">Cloud Wise</a>
         </h1>
-        <nav class="menu">
-            <ul>
+        <nav>
+            <ul class="categorias">
                 <li><a href="#"><i class="fa-solid fa-rocket"></i> Quem somos</a></li>
                 <li><a href="#"><i class="fa-solid fa-newspaper"></i> Blog</a></li>
                 <li><a href="#"><i class="fa-solid fa-pen-ruler"></i> Serviços</a></li>
@@ -37,36 +34,174 @@
 
     <main>
         <div class="banner-bg">
-
-            <section class="banner site">
-                <span class="banner__nuvem-1">
-                    <i class="fa-solid fa-cloud"></i>
-                </span>
-                <span class="banner__nuvem-2">
-                    <i class="fa-solid fa-cloud"></i>
-                </span>
-                <span class="banner__nuvem-3">
-                    <i class="fa-solid fa-cloud"></i>
-                </span>
-                <span class="cloud">
-                    <i class="fa-solid fa-cloud"></i> Cloud
-                </span>
-                <span class="wise">
-                    Wise <i class="fa-solid fa-code"></i>
-                </span>
-                <p>Sua presença online voa mais alto</p>
-
-                <a href="#" class="btn-banner btn">Nossos projetos<i class="fa-solid fa-arrow-right"></i></a>
-                
-                <!-- ELEMENTOS BANNER -->
-
+            <section class="banner">
+                <img src="assets/itens/trilha.svg" alt="A trilha para o sucesso">
+                <span class="cloud"><i class="fa-solid fa-cloud"></i> Cloud</span>
+                <span class="wise">Wise <i class="fa-solid fa-code"></i></span>
+                <p>Sua presença online voa mais alto!</p>
             </section>
+        </div>
+
+        <section class="sobre">
+            <div class="sobre__txt">
+                <h2>Sobre a agência</h2>
+                <p>
+                    A Cloud Wise é uma agência de criação de sites especializada em atender pequenos e médios
+                    empreendedores
+                    que buscam se destacar na internet, nossa equipe é formada por ainda estudantes que buscam oferecer
+                    soluções personalizadas e sob medida para cada cliente.
+                    <br>
+                    Nosso objetivo é ajudar os empreendedores a impulsionar seus negócios através da presença digital,
+                    criando sites modernos, responsivos e de fácil navegação.
+                </p>
+                <a href="#">Nossos projetos <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+            </div>
+            <div class="sobre__imgs">
+                <img src="assets/img/sobre-1.jpg">
+                <img src="assets/img/sobre-5.jpg">
+                <img src="assets/img/sobre-3.jpg">
+                <img src="assets/img/sobre-6.jpg">
+            </div>
+        </section>
+
+        <!-- <section class="como">
+            <div class="como__img">
+                <img src="assets/img/como-1.jpg" alt="">
+            </div>
+            <div class="como__txt">
+                <h2><i class="fa-solid fa-list-ul"></i> Como trabalhamos</h2>
+                <ul>
+                    <li>
+                        <h3><i class="fa-regular fa-circle-check"></i> Análise de problemas</h3>
+                        <p>Realizamos uma análise dos problemas e necessidades do cliente. Dessa forma, conseguimos
+                            oferecer soluções personalizadas, efetivas e que atendam às expectativas e objetivos do
+                            negócio.</p>
+                        </i>
+                    <li>
+                        <h3><i class="fa-regular fa-circle-check"></i> Soluções funcionais para o usuário</h3>
+                        <p>Nosso foco é sempre o usuário. Por isso, criamos soluções funcionais e intuitivas, que visam
+                            proporcionar a melhor experiência possível para o público-alvo de cada projeto.</p>
+                        </i>
+                    <li>
+                        <h3><i class="fa-regular fa-circle-check"></i> Uso de tecnologias atuais</h3>
+                        <p>
+                            Mantemos nossos projetos sempre atualizados com as tecnologias mais recentes, garantindo a
+                            qualidade, segurança e eficiência em nossas soluções. Buscamos sempre estar à frente do
+                            mercado e oferecer o que há de melhor aos nossos clientes.
+                        </p>
+                </ul>
+            </div>
+        </section>
+
+        <section class="servicos">
+            <h2>Serviços que podem te ajudar</h2>
+            <a href="#">Veja tudo<i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+            <div class="cards">
+                <div class="card-1">
+                    <span><i class="fa-regular fa-pen-to-square"></i></span>
+                    <h3>Criação de sites</h3>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eligendi magni dolore doloribus iusto, porro at hic ratione nostrum distinctio, laboriosam aspernatur accusamus nobis cumque et, officia atque quod explicabo similique!</p>
+                    <a href="#">Leia mais <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </div>
+                <div class="card-2">
+                    <span><i class="fa-solid fa-magnifying-glass-dollar"></i></span>
+                    <h3>SEO - Otimização de sites</h3>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eligendi magni dolore doloribus iusto, porro at hic ratione nostrum distinctio, laboriosam aspernatur accusamus nobis cumque et, officia atque quod explicabo similique!</p>
+                    <a href="#">Leia mais <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </div>
+                <div class="card-3">
+                    <span><i class="fa-solid fa-palette"></i></span>
+                    <h3>Identidade visual</h3>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eligendi magni dolore doloribus iusto, porro at hic ratione nostrum distinctio, laboriosam aspernatur accusamus nobis cumque et, officia atque quod explicabo similique!</p>
+                    <a href="#">Leia mais <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </div>
+                <div class="card-4">
+                    <span><i class="fa-solid fa-tv"></i></span>
+                    <h3>Web Design</h3>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eligendi magni dolore doloribus iusto, porro at hic ratione nostrum distinctio, laboriosam aspernatur accusamus nobis cumque et, officia atque quod explicabo similique!</p>
+                    <a href="#">Leia mais <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </div>
+            </div>
+        </section>
+        <section class="blog">
+            <h2>Blog</h2>
+            <div class="blog-1">
+                <img src="assets/img/blog-1-briefing.jpg">
+                <span class="blog__tag">Business</span>
+                <h3>Nome &#x2022; 01 Jun 2023</h3>
+                <p>Começando um novo projeto com o cliente.</p>
+                <a href="#">Leia mais <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+            </div>
+            <div class="blog-2">
+                <img src="assets/img/blog-2-criatividade.jpg">
+                <span class="blog__tag">Design</span>
+                <h3>Nome &#x2022; 01 Jun 2023</h3>
+                <p>Técnicas para aumentar a sua criatividade.</p>
+                <a href="#">Leia mais <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+            </div>
+        </section>
+        <section class="orcamento">
+            <p>
+                Transforme seu <strong>sonho</strong> em <strong>realidade</strong>.
+                Faça um <strong>orçamento</strong> e veja como podemos levar seu negócio as <strong>alturas</strong>
+            </p>
+            <a href="#">Solicite um orçamento <i class="fa-solid fa-calculator"></i></a>
+        </section>
+        <section class="duvidas">
+            <h2><i class="fa-solid fa-plus"></i> Duvidas frequentes</h2>
+        </section>
+        <div class="voltar">
+            <img src="assets/itens/rkt.svg" alt="voltar ao inicio">
         </div>
     </main>
 
     <footer>
+        <div class="rodape">
+            <div class="acompanhe">
+                <h2>Acompanhe de perto</h2>
+                <hr>
+                <ul>
+                    <li><i class="fa-brands fa-facebook"></i></li>
+                    <li><i class="fa-brands fa-instagram"></i></li>
+                    <li><i class="fa-brands fa-twitter"></i></li>
+                    <li><i class="fa-brands fa-whatsapp"></i></li>
+                    <li><i class="fa-brands fa-linkedin"></i></li>
+                    <li><i class="fa-brands fa-github"></i></li>
 
-    </footer>
+                </ul>
+            </div>
+            <div class="menu">
+                <ul>
+                    <h3>Menu</h3>
+                    <li><a href="#"></a>Home</li>
+                    <li><a href="#"></a>Sobre</li>
+                    <li><a href="#"></a>Serviços</li>
+                    <li><a href="#"></a>Contato</li>
+                </ul>
+                <ul>
+                    <h3>Agência</h3>
+                    <address>
+                        <a href="https://goo.gl/maps/nWsuFA5Y4YdWxJb57?coh=178573&entry=tt" target="_blank">
+                            Av. Marechal Tito, 1500
+                            <br>
+                            São Paulo - SP
+                        </a>
+                    </address>
+                </ul>
+                <ul>
+                    <h3>Contato</h3>
+                    <p>+55 (11) 912 345 678</p>
+                    <p>cloudwisedevs@gmail.com</p>
+                </ul>
+            </div>
+        </div>
+
+        <div class="direito">
+            <p>2023. Todos os direitos reservados &COPY;</p>
+            <p>Termos & Condições &#x2022; Privacidade</p>
+            <p><img src="assets/logos/logo-branco.png" alt="Cloud Wise"></p>
+        </div>
+    </footer> -->
 </body>
 
 </html>
