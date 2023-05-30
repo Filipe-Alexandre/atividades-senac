@@ -17,11 +17,35 @@
     --size: 1.8rem;
 }
 
+@keyframes pulse {
+    50% {
+        background-color: var(--laranja-1);
+    }
+}
+
+.btn {
+    background-color: var(--laranja-1);
+    border-radius: 34px;
+    padding: 15px;
+    text-decoration: none;
+    color: var(--azul-2);
+    transition: .5s ease;
+
+    &:hover {
+        text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+    }
+
+    i {
+        font-size: calc(var(--size) * .9);
+    }
+}
+
 body {
     background: linear-gradient(to bottom, var(--preto-1), var(--azul-2), var(--azul-1));
     color: var(--branco-1);
     font-size: var(--size);
     font-family: var(--padrao);
+    height: 1000vh;
 }
 
 header {
@@ -30,7 +54,8 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 30px auto;
+    margin: 20px auto;
+    height: 85px;
 
     h1 {
         background: url(../assets/logos/logo-vazio.png) no-repeat center center;
@@ -101,6 +126,15 @@ header {
             display: grid;
             place-items: center;
             border-radius: 50%;
+            cursor: pointer;
+
+            &:hover {
+                i {
+
+                    color: var(--laranja-1);
+                    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+                }
+            }
 
             i {
                 color: var(--azul-2);
@@ -108,62 +142,73 @@ header {
                 transition: .3s ease;
                 margin-top: 2px;
 
+            }
+
+            &:nth-child(3) {
+                animation: pulse 2.5s infinite;
+
                 &:hover {
-                    color: var(--laranja-1);
-                    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+                    animation: none;
+                    background-color: var(--laranja-1);
+
+                    i {
+                        color: var(--azul-1);
+                    }
                 }
             }
         }
+
     }
 }
 
+
+
 .banner-bg {
+    z-index: 1;
     background: url(../assets/itens/estrelas.svg) repeat;
     background-size: contain 100vw;
 
-    .banner {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        cursor: default;
-        height: 600px;
+    .trilha {
+        background: url(../assets/itens/trilha.svg) no-repeat;
+        background-size: 100% 100%;
+        background-position: 45% -6px;
 
-        .cloud {
-            color: var(--branco-1);
 
-            i {
-                transition: .3s ease;
+        .banner {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            cursor: default;
+            height: 600px;
 
-                &:hover {
-                    text-shadow: 0 0 10px white;
+            .cloud {
+                color: var(--branco-1);
+
+                i {
+                    transition: .3s ease;
+
+                    &:hover {
+                        text-shadow: 0 0 10px white;
+                    }
                 }
             }
-        }
 
-        .wise {
-            color: var(--laranja-1);
-            margin: 30px auto;
-        }
+            .wise {
+                color: var(--laranja-1);
+                margin: 30px auto;
+            }
 
-        span {
-            font-size: calc(var(--size) * 5);
-            font-weight: 900;
-            font-family: var(--destaque);
-            letter-spacing: 5px;
-        }
+            span {
+                font-size: calc(var(--size) * 5);
+                font-weight: 900;
+                font-family: var(--destaque);
+                letter-spacing: 5px;
+            }
 
-        p {
-            font-size: calc(var(--size) * 1.2);
-        }
-
-        img {
-            position: absolute;
-            z-index: 0;
-            top: 10%;
-            left: 32%;
-            width: 950px;
-            height: 510px;
+            p {
+                font-size: calc(var(--size) * 1.2);
+            }
         }
     }
 }
@@ -250,6 +295,31 @@ header {
 
         }
     }
+}
+
+.como {
+    max-width: 1200px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+    grid-template-rows: 700px;
+
+
+    .como__img {
+        display: grid;
+        place-items: center;
+        background: url(../assets/itens/sombra.svg) no-repeat;
+        background-size: 100% 100%;
+        background-position: -20% 50%;
+
+        img {
+            border-radius: 50px;
+            width: 400px;
+            height: 400px;
+        }
+    }
+
+
 }
 
 img {

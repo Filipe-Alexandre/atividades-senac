@@ -446,7 +446,7 @@ main {
       div {
         background: var(--gradient);
         border-radius: 16px 36px;
-        width: 380px;
+        flex-grow: 1;
         height: 380px;
         margin: 5px;
         display: flex;

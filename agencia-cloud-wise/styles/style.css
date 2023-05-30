@@ -12,11 +12,38 @@
   --size: 1.8rem;
 }
 
+@-webkit-keyframes pulse {
+  50% {
+    background-color: var(--laranja-1);
+  }
+}
+
+@keyframes pulse {
+  50% {
+    background-color: var(--laranja-1);
+  }
+}
+.btn {
+  background-color: var(--laranja-1);
+  border-radius: 34px;
+  padding: 15px;
+  text-decoration: none;
+  color: var(--azul-2);
+  transition: 0.5s ease;
+}
+.btn:hover {
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+.btn i {
+  font-size: calc(var(--size) * 0.9);
+}
+
 body {
   background: linear-gradient(to bottom, var(--preto-1), var(--azul-2), var(--azul-1));
   color: var(--branco-1);
   font-size: var(--size);
   font-family: var(--padrao);
+  height: 1000vh;
 }
 
 header {
@@ -25,7 +52,8 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 30px auto;
+  margin: 20px auto;
+  height: 85px;
 }
 header h1 {
   background: url(../assets/logos/logo-vazio.png) no-repeat center center;
@@ -86,6 +114,11 @@ header .redes li {
   display: grid;
   place-items: center;
   border-radius: 50%;
+  cursor: pointer;
+}
+header .redes li:hover i {
+  color: var(--laranja-1);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
 }
 header .redes li i {
   color: var(--azul-2);
@@ -93,16 +126,30 @@ header .redes li i {
   transition: 0.3s ease;
   margin-top: 2px;
 }
-header .redes li i:hover {
-  color: var(--laranja-1);
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+header .redes li:nth-child(3) {
+  -webkit-animation: pulse 2.5s infinite;
+          animation: pulse 2.5s infinite;
+}
+header .redes li:nth-child(3):hover {
+  -webkit-animation: none;
+          animation: none;
+  background-color: var(--laranja-1);
+}
+header .redes li:nth-child(3):hover i {
+  color: var(--azul-1);
 }
 
 .banner-bg {
+  z-index: 1;
   background: url(../assets/itens/estrelas.svg) repeat;
   background-size: contain 100vw;
 }
-.banner-bg .banner {
+.banner-bg .trilha {
+  background: url(../assets/itens/trilha.svg) no-repeat;
+  background-size: 100% 100%;
+  background-position: 45% -6px;
+}
+.banner-bg .trilha .banner {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -110,35 +157,27 @@ header .redes li i:hover {
   cursor: default;
   height: 600px;
 }
-.banner-bg .banner .cloud {
+.banner-bg .trilha .banner .cloud {
   color: var(--branco-1);
 }
-.banner-bg .banner .cloud i {
+.banner-bg .trilha .banner .cloud i {
   transition: 0.3s ease;
 }
-.banner-bg .banner .cloud i:hover {
+.banner-bg .trilha .banner .cloud i:hover {
   text-shadow: 0 0 10px white;
 }
-.banner-bg .banner .wise {
+.banner-bg .trilha .banner .wise {
   color: var(--laranja-1);
   margin: 30px auto;
 }
-.banner-bg .banner span {
+.banner-bg .trilha .banner span {
   font-size: calc(var(--size) * 5);
   font-weight: 900;
   font-family: var(--destaque);
   letter-spacing: 5px;
 }
-.banner-bg .banner p {
+.banner-bg .trilha .banner p {
   font-size: calc(var(--size) * 1.2);
-}
-.banner-bg .banner img {
-  position: absolute;
-  z-index: 0;
-  top: 10%;
-  left: 32%;
-  width: 950px;
-  height: 510px;
 }
 
 .sobre {
@@ -209,6 +248,26 @@ header .redes li i:hover {
   width: 90%;
   height: 90%;
   transform: translate(-7px, 0);
+}
+
+.como {
+  max-width: 1200px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(2, 50%);
+  grid-template-rows: 700px;
+}
+.como .como__img {
+  display: grid;
+  place-items: center;
+  background: url(../assets/itens/sombra.svg) no-repeat;
+  background-size: 100% 100%;
+  background-position: -20% 50%;
+}
+.como .como__img img {
+  border-radius: 50px;
+  width: 400px;
+  height: 400px;
 }
 
 img {
