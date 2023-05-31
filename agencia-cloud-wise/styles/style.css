@@ -26,7 +26,7 @@
 .btn {
   background-color: var(--laranja-1);
   border-radius: 34px;
-  padding: 15px;
+  padding: 10px 20px;
   text-decoration: none;
   color: var(--azul-2);
   transition: 0.5s ease;
@@ -38,12 +38,55 @@
   font-size: calc(var(--size) * 0.9);
 }
 
+.btn-white {
+  background: transparent;
+  border-radius: 34px;
+  padding: 10px 20px;
+  color: var(--branco-1);
+  text-decoration: none;
+  transition: 0.5s ease;
+  border: 3px solid var(--branco-1);
+}
+.btn-white:hover {
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+.btn-white i {
+  font-size: calc(var(--size) * 0.9);
+}
+
+h2 {
+  position: relative;
+  text-decoration: none;
+  font-size: calc(var(--size) * 2);
+}
+h2::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 4px;
+  bottom: -10px;
+  background-color: currentColor;
+  visibility: hidden;
+  transform: scaleX(0);
+  transition: transform 300ms cubic-bezier(0.57, -0.02, 0.31, 0.71);
+}
+h2:hover:before {
+  visibility: visible;
+  transform: scaleX(1);
+  transform-origin: left;
+  color: currentColor;
+}
+
+section {
+  margin: 100px auto;
+}
+
 body {
   background: linear-gradient(to bottom, var(--preto-1), var(--azul-2), var(--azul-1));
   color: var(--branco-1);
   font-size: var(--size);
   font-family: var(--padrao);
-  height: 1000vh;
+  cursor: default;
 }
 
 header {
@@ -139,137 +182,203 @@ header .redes li:nth-child(3):hover i {
   color: var(--azul-1);
 }
 
-.banner-bg {
+main .banner-bg {
   z-index: 1;
   background: url(../assets/itens/estrelas.svg) repeat;
   background-size: contain 100vw;
 }
-.banner-bg .trilha {
+main .banner-bg .trilha {
   background: url(../assets/itens/trilha.svg) no-repeat;
   background-size: 100% 100%;
-  background-position: 45% -6px;
+  background-position: -6px;
 }
-.banner-bg .trilha .banner {
+main .banner-bg .trilha .banner {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   cursor: default;
   height: 600px;
+  margin: auto;
 }
-.banner-bg .trilha .banner .cloud {
+main .banner-bg .trilha .banner .cloud {
   color: var(--branco-1);
 }
-.banner-bg .trilha .banner .cloud i {
+main .banner-bg .trilha .banner .cloud i {
   transition: 0.3s ease;
 }
-.banner-bg .trilha .banner .cloud i:hover {
+main .banner-bg .trilha .banner .cloud i:hover {
   text-shadow: 0 0 10px white;
 }
-.banner-bg .trilha .banner .wise {
+main .banner-bg .trilha .banner .wise {
   color: var(--laranja-1);
   margin: 30px auto;
 }
-.banner-bg .trilha .banner span {
+main .banner-bg .trilha .banner span {
   font-size: calc(var(--size) * 5);
   font-weight: 900;
   font-family: var(--destaque);
   letter-spacing: 5px;
 }
-.banner-bg .trilha .banner p {
+main .banner-bg .trilha .banner p {
   font-size: calc(var(--size) * 1.2);
 }
-
-.sobre {
+main .sobre {
   max-width: 1200px;
-  margin: auto;
   display: grid;
   grid-template-columns: repeat(2, 50%);
   grid-template-rows: 600px;
 }
-.sobre .sobre__txt {
+main .sobre .sobre__txt {
   padding: 30px;
   cursor: default;
 }
-.sobre .sobre__txt h2 {
-  font-size: calc(var(--size) * 2);
-  position: relative;
+main .sobre .sobre__txt p {
+  margin: 40px auto;
 }
-.sobre .sobre__txt h2::before {
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 4px;
-  bottom: -3px;
-  left: 0;
-  background-color: currentColor;
-  visibility: hidden;
-  transform: scaleX(0);
-  transition: transform 300ms cubic-bezier(0.57, -0.02, 0.31, 0.71);
-}
-.sobre .sobre__txt h2:hover:before {
-  visibility: visible;
-  transform: scaleX(1);
-  transform-origin: left;
-  color: currentColor;
-}
-.sobre .sobre__txt p {
-  margin: 30px auto;
-}
-.sobre .sobre__imgs {
+main .sobre .sobre__imgs {
   display: grid;
   grid-template-columns: repeat(2, 50%);
   grid-template-rows: repeat(2, 50%);
   justify-content: center;
 }
-.sobre .sobre__imgs img {
+main .sobre .sobre__imgs img {
   margin: auto;
 }
-.sobre .sobre__imgs img:nth-child(1) {
+main .sobre .sobre__imgs img:nth-child(1) {
   border-radius: 50px 0 0 0;
   width: 90%;
   height: 90%;
   transform: translate(5px, 10px);
 }
-.sobre .sobre__imgs img:nth-child(2) {
+main .sobre .sobre__imgs img:nth-child(2) {
   border-radius: 0 50px 0 0;
   width: 78%;
   height: 78%;
   transform: translate(-25px, 30px);
 }
-.sobre .sobre__imgs img:nth-child(3) {
+main .sobre .sobre__imgs img:nth-child(3) {
   border-radius: 0 0 0 50px;
   width: 78%;
   height: 78%;
   transform: translate(23px, -20px);
 }
-.sobre .sobre__imgs img:nth-child(4) {
+main .sobre .sobre__imgs img:nth-child(4) {
   border-radius: 0 0 50px 0;
   width: 90%;
   height: 90%;
   transform: translate(-7px, 0);
 }
-
-.como {
+main .como {
   max-width: 1200px;
-  margin: auto;
   display: grid;
   grid-template-columns: repeat(2, 50%);
   grid-template-rows: 700px;
 }
-.como .como__img {
+main .como .como__img {
   display: grid;
   place-items: center;
   background: url(../assets/itens/sombra.svg) no-repeat;
   background-size: 100% 100%;
   background-position: -20% 50%;
 }
-.como .como__img img {
+main .como .como__img img {
   border-radius: 50px;
   width: 400px;
   height: 400px;
 }
-
-img {
+main .como .como__txt {
+  display: grid;
+  align-items: center;
+}
+main .como .como__txt ul {
+  margin: auto;
+}
+main .como .como__txt h3 {
+  font-weight: bold;
+  font-size: calc(var(--size) * 1.1);
+  transform: translateX(-7%);
+  margin-top: 10px;
+}
+main .como .como__txt p {
+  margin: 20px auto;
+  font-size: calc(var(--size) * 0.75);
+}
+main .servicos {
+  max-width: 1200px;
+  margin: auto;
+  display: grid;
+  place-items: center;
+  gap: 50px;
+  grid-template-columns: repeat(2, 50%);
+  grid-template-rows: repeat(2, auto);
+  grid-template-areas: "h2 btn" "cards cards";
+}
+main .servicos h2 {
+  font-size: calc(var(--size) * 1.47);
+  grid-area: h2;
+}
+main .servicos a {
+  grid-area: btn;
+  place-self: end;
+  align-self: center;
+}
+main .servicos .btn-white {
+  align-self: flex-start;
+}
+main .servicos .btn-white:hover {
+  background-color: var(--laranja-1);
+  color: var(--azul-2);
+  border-color: var(--laranja-1);
+}
+main .servicos .cards {
+  display: grid;
+  grid-area: cards;
+  grid-template-areas: "card1 card2" "card3 card4";
+  gap: 30px;
+}
+main .servicos .cards div {
+  height: 500px;
+  width: 500px;
+  padding: 30px;
+  background: var(--azul-1);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: flex-start;
+}
+main .servicos .cards div:hover > span i {
+  color: var(--azul-2);
+  font-size: calc(var(--size) * 2);
+}
+main .servicos .cards div span i {
+  color: var(--laranja-1);
+  font-size: calc(var(--size) * 1.8);
+  transition: 0.5s ease;
+}
+main .servicos .cards div h3 {
+  font-size: calc(var(--size) * 1.3);
+  font-weight: bold;
+}
+main .servicos .cards div p {
+  font-size: calc(var(--size) * 0.9);
+}
+main .servicos .cards .card-1 {
+  grid-area: card1;
+  border-radius: 50px 0 0 0;
+}
+main .servicos .cards .card-2 {
+  grid-area: card2;
+  border-radius: 0 50px 0 0;
+}
+main .servicos .cards .card-3 {
+  grid-area: card3;
+  border-radius: 0 0 0 50px;
+}
+main .servicos .cards .card-4 {
+  grid-area: card4;
+  border-radius: 0 0 50px 0;
+}
+main img {
   width: 200px;
 }/*# sourceMappingURL=style.css.map */
