@@ -379,6 +379,51 @@ main .servicos .cards .card-4 {
   grid-area: card4;
   border-radius: 0 0 50px 0;
 }
-main img {
-  width: 200px;
+main .blog {
+  max-width: 1200px;
+  display: grid;
+  grid-template-columns: repeat(2, 50%);
+  grid-template-areas: "h2 h2" "blog1 blog2";
+  gap: 50px;
+}
+main .blog h2 {
+  grid-area: h2;
+  margin-bottom: 50px;
+}
+main .blog h2:before {
+  width: 10%;
+}
+main .blog div {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  background-color: gray;
+}
+main .blog div img {
+  border-radius: 50px;
+  width: 550px;
+  height: 350px;
+}
+main .blog div .blog__tag {
+  background-color: var(--branco-1);
+  border-radius: 34px;
+  padding: 5px 20px;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  text-align: center;
+  font-size: calc(var(--size) * 0.8);
+  text-transform: uppercase;
+}
+main .blog .blog-1 {
+  grid-area: blog1;
+}
+main .blog .blog-1 .blog__tag {
+  color: var(--azul-1);
+}
+main .blog .blog-2 {
+  grid-area: blog2;
+}
+main .blog .blog-2 .blog__tag {
+  color: var(--laranja-1);
 }/*# sourceMappingURL=style.css.map */

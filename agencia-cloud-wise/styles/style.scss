@@ -458,8 +458,62 @@ main {
         }
     }
 
-    img {
-        width: 200px;
+    .blog {
+        max-width: 1200px;
+        display: grid;
+        grid-template-columns: repeat(2, 50%);
+        grid-template-areas:
+            "h2 h2"
+            "blog1 blog2";
+        gap: 50px;
 
+        h2 {
+            grid-area: h2;
+            margin-bottom: 50px;
+
+            &:before {
+                width: 10%;
+
+            }
+        }
+
+        div {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            background-color: gray;
+
+            img {
+                border-radius: 50px;
+                width: 550px;
+                height: 350px;
+            }
+
+            .blog__tag {
+                background-color: var(--branco-1);
+                border-radius: 34px;
+                padding: 5px 20px;
+                width: max-content;
+                text-align: center;
+                font-size: calc(var(--size) * .8);
+                text-transform: uppercase;
+            }
+        }
+
+        .blog-1 {
+            grid-area: blog1;
+            .blog__tag {
+                color: var(--azul-1);
+            }
+
+        }
+
+        .blog-2 {
+            grid-area: blog2;
+            .blog__tag {
+                color: var(--laranja-1);
+            }
+
+        }
     }
 }
