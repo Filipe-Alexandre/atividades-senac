@@ -23,6 +23,48 @@
     }
 }
 
+@keyframes wiggle {
+
+    0%,
+    80%,
+    100% {
+        transform: rotate(35deg);
+    }
+
+    85% {
+        transform: rotate(45deg);
+    }
+
+    95% {
+        transform: rotate(25deg);
+    }
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: linear-gradient(to bottom, var(--preto-1), var(--azul-2), var(--azul-1));
+    color: var(--branco-1);
+    font-size: var(--size);
+    font-family: var(--padrao);
+    cursor: default;
+}
+
+body::-webkit-scrollbar {
+    width: 8px;
+}
+
+body::-webkit-scrollbar-track {
+    background: linear-gradient(to bottom, var(--preto-2), var(--azul-2), var(--azul-1));
+}
+
+body::-webkit-scrollbar-thumb {
+    background: var(--laranja-1);
+    border-radius: 16px;
+}
+
 .btn {
     background-color: var(--laranja-1);
     border-radius: 34px;
@@ -47,7 +89,7 @@
     color: var(--branco-1);
     text-decoration: none;
     transition: .5s ease;
-    border: 3px solid var(--branco-1);
+    border: 2px solid var(--branco-1);
 
     &:hover {
         text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
@@ -85,15 +127,6 @@ h2 {
 
 section {
     margin: 100px auto;
-}
-
-
-body {
-    background: linear-gradient(to bottom, var(--preto-1), var(--azul-2), var(--azul-1));
-    color: var(--branco-1);
-    font-size: var(--size);
-    font-family: var(--padrao);
-    cursor: default;
 }
 
 header {
@@ -377,17 +410,19 @@ main {
         h2 {
             font-size: calc(var(--size) * 1.47);
             grid-area: h2;
+            transform: translateX(50px);
         }
 
-        a {
+        a.svc-btn {
             grid-area: btn;
             place-self: end;
             align-self: center;
+            transform: translateX(-50px);
+
         }
 
         .btn-white {
             align-self: flex-start;
-
             &:hover {
                 background-color: var(--laranja-1);
                 color: var(--azul-2);
@@ -413,17 +448,23 @@ main {
                 flex-direction: column;
                 justify-content: space-evenly;
                 align-items: flex-start;
+                gap: 15px;
+                line-height: calc(var(--size) * 1.3);
 
                 &:hover>span i {
                     color: var(--azul-2);
-                    font-size: calc(var(--size) * 2);
+                }
+
+                &:hover>.btn-white {
+                    background-color: var(--laranja-1);
+                    color: var(--azul-2);
+                    border-color: var(--laranja-1);
                 }
 
                 span i {
                     color: var(--laranja-1);
                     font-size: calc(var(--size) * 1.8);
                     transition: .5s ease;
-
                 }
 
                 h3 {
@@ -462,6 +503,7 @@ main {
         max-width: 1200px;
         display: grid;
         grid-template-columns: repeat(2, 50%);
+        grid-template-rows: 50px auto;
         grid-template-areas:
             "h2 h2"
             "blog1 blog2";
@@ -473,7 +515,7 @@ main {
 
             &:before {
                 width: 10%;
-
+                bottom: -70px;
             }
         }
 
@@ -481,7 +523,7 @@ main {
             display: flex;
             flex-direction: column;
             justify-content: space-evenly;
-            background-color: gray;
+            gap: 20px;
 
             img {
                 border-radius: 50px;
@@ -498,10 +540,30 @@ main {
                 font-size: calc(var(--size) * .8);
                 text-transform: uppercase;
             }
+
+            h3 {
+                font-size: calc(var(--size) * .85);
+            }
+
+            p {
+                width: 90%;
+                line-height: calc(var(--size) * 1.3);
+            }
+
+            a {
+                align-self: flex-start;
+
+                &:hover {
+                    background-color: var(--laranja-1);
+                    color: var(--azul-2);
+                    border-color: var(--laranja-1);
+                }
+            }
         }
 
         .blog-1 {
             grid-area: blog1;
+
             .blog__tag {
                 color: var(--azul-1);
             }
@@ -510,10 +572,116 @@ main {
 
         .blog-2 {
             grid-area: blog2;
+
             .blog__tag {
                 color: var(--laranja-1);
             }
 
+        }
+    }
+
+    .orcamento {
+        max-width: 1200px;
+        background-color: var(--branco-1);
+        border-radius: 20px 50px 4px 4px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px 0;
+        margin-bottom: 15px;
+
+        strong {
+            color: var(--laranja-1);
+        }
+
+        p {
+            color: var(--azul-1);
+            padding: 30px;
+        }
+
+        a {
+            background-color: var(--laranja-1);
+            color: var(--azul-1);
+            padding: 15px 10px;
+            margin: auto;
+            text-decoration: none;
+            border-radius: 4px 16px 16px 16px;
+            transition: .5s ease;
+
+            &:hover {
+                text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+            }
+
+            &:hover>i {
+                @keyframes pisca {
+                    50% {
+                        color: white;
+                    }
+                }
+
+                animation: pisca 1.5s ease-in-out;
+            }
+
+            i {
+                transform: rotate(35deg);
+                padding-left: 5px;
+                animation: wiggle 2.5s infinite;
+            }
+        }
+    }
+
+    .duvidas {
+        max-width: 1200px;
+        background-color: var(--branco-1);
+        border-radius: 4px 4px 50px 20px;
+        padding: 20px 0;
+        margin-top: 15px;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        height: 50px;
+
+        p {
+            color: var(--laranja-1);
+            padding-left: calc(var(--size) * 4);
+            font-size: calc(var(--size) * 1.2);
+            line-height: calc(var(--size) * 2);
+            cursor: pointer;
+            transition: .5s ease;
+
+            &:hover {
+                text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+            }
+
+            i {
+                font-weight: bolder;
+                font-size: calc(var(--size) * 1.2);
+            }
+        }
+    }
+
+    .voltar {
+        position: fixed;
+        right: 15px;
+        bottom: 15px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 10px;
+        height: 40px;
+        width: 40px;
+        border-radius: 50%;
+        background: var(--laranja-1);
+        transition: .5s ease;
+        cursor: pointer;
+
+        &:hover {
+            background: var(--azul-2);
+            box-shadow: 0 0 10px black;
+        }
+
+        img {
+            height: 50px;
         }
     }
 }
