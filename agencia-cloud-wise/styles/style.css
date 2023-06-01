@@ -10,6 +10,7 @@
   --destaque: "Lilita One", cursive;
   --padrao: "Varela Round", sans-serif;
   --size: 1.8rem;
+  --suave: .5s ease;
 }
 
 @keyframes pulse {
@@ -28,6 +29,18 @@
     transform: rotate(25deg);
   }
 }
+@keyframes pisca {
+  50% {
+    color: white;
+  }
+}
+@keyframes pisca2 {
+  50% {
+    color: var(--laranja-1);
+    font-size: calc(var(--size) * 1.1);
+    text-shadow: 0 0 4px rgba(0, 0, 0, 0.5);
+  }
+}
 html {
   scroll-behavior: smooth;
 }
@@ -38,6 +51,7 @@ body {
   font-size: var(--size);
   font-family: var(--padrao);
   cursor: default;
+  overflow-x: hidden;
 }
 
 body::-webkit-scrollbar {
@@ -59,7 +73,7 @@ body::-webkit-scrollbar-thumb {
   padding: 10px 20px;
   text-decoration: none;
   color: var(--azul-2);
-  transition: 0.5s ease;
+  transition: var(--suave);
 }
 .btn:hover {
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
@@ -74,11 +88,14 @@ body::-webkit-scrollbar-thumb {
   padding: 10px 20px;
   color: var(--branco-1);
   text-decoration: none;
-  transition: 0.5s ease;
+  transition: var(--suave);
   border: 2px solid var(--branco-1);
 }
 .btn-white:hover {
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+  background-color: var(--laranja-1);
+  color: var(--azul-2);
+  border-color: var(--laranja-1);
 }
 .btn-white i {
   font-size: calc(var(--size) * 0.9);
@@ -202,6 +219,55 @@ header .redes li:nth-child(3):hover i {
   color: var(--azul-1);
 }
 
+main .nuvens i {
+  font-size: calc(var(--size) * 4.5);
+  position: absolute;
+  transition: 0.3s ease;
+  transform: translateX(-50%);
+}
+main .nuvens i:hover {
+  text-shadow: 0 0 10px white;
+}
+main .nuvens .nuvem_1 {
+  left: 0;
+  top: 50px;
+}
+main .nuvens .nuvem_2 {
+  left: 100%;
+  top: 300px;
+}
+main .nuvens .nuvem_3 {
+  left: 0;
+  top: 550px;
+}
+main .nuvens .nuvem_4 {
+  left: 100%;
+  top: 1050px;
+}
+main .nuvens .nuvem_5 {
+  left: 0;
+  top: 1570px;
+}
+main .nuvens .nuvem_6 {
+  left: 100%;
+  top: 2180px;
+}
+main .nuvens .nuvem_7 {
+  left: 0;
+  top: 3000px;
+}
+main .nuvens .nuvem_8 {
+  left: 100%;
+  top: 3650px;
+}
+main .nuvens .nuvem_9 {
+  left: 0;
+  top: 4000px;
+}
+main .nuvens .nuvem_10 {
+  left: 100%;
+  top: 4800px;
+}
 main .banner-bg {
   z-index: 1;
   background: url(../assets/itens/estrelas.svg) repeat;
@@ -309,16 +375,22 @@ main .como .como__img img {
 }
 main .como .como__txt {
   display: grid;
-  align-items: center;
+  align-items: flex-end;
 }
 main .como .como__txt ul {
   margin: auto;
+}
+main .como .como__txt li:hover i {
+  color: var(--laranja-1);
 }
 main .como .como__txt h3 {
   font-weight: bold;
   font-size: calc(var(--size) * 1.1);
   transform: translateX(-7%);
   margin-top: 10px;
+}
+main .como .como__txt h3 i {
+  transition: var(--suave);
 }
 main .como .como__txt p {
   margin: 20px auto;
@@ -339,7 +411,7 @@ main .servicos h2 {
   grid-area: h2;
   transform: translateX(50px);
 }
-main .servicos a.svc-btn {
+main .servicos .svc-btn {
   grid-area: btn;
   place-self: end;
   align-self: center;
@@ -347,11 +419,6 @@ main .servicos a.svc-btn {
 }
 main .servicos .btn-white {
   align-self: flex-start;
-}
-main .servicos .btn-white:hover {
-  background-color: var(--laranja-1);
-  color: var(--azul-2);
-  border-color: var(--laranja-1);
 }
 main .servicos .cards {
   display: grid;
@@ -382,7 +449,7 @@ main .servicos .cards div:hover > .btn-white {
 main .servicos .cards div span i {
   color: var(--laranja-1);
   font-size: calc(var(--size) * 1.8);
-  transition: 0.5s ease;
+  transition: var(--suave);
 }
 main .servicos .cards div h3 {
   font-size: calc(var(--size) * 1.3);
@@ -394,18 +461,22 @@ main .servicos .cards div p {
 main .servicos .cards .card-1 {
   grid-area: card1;
   border-radius: 50px 0 0 0;
+  transform: translateY(-15px);
 }
 main .servicos .cards .card-2 {
   grid-area: card2;
   border-radius: 0 50px 0 0;
+  transform: translateY(15px);
 }
 main .servicos .cards .card-3 {
   grid-area: card3;
   border-radius: 0 0 0 50px;
+  transform: translateY(-15px);
 }
 main .servicos .cards .card-4 {
   grid-area: card4;
   border-radius: 0 0 50px 0;
+  transform: translateY(15px);
 }
 main .blog {
   max-width: 1200px;
@@ -454,11 +525,6 @@ main .blog div p {
 main .blog div a {
   align-self: flex-start;
 }
-main .blog div a:hover {
-  background-color: var(--laranja-1);
-  color: var(--azul-2);
-  border-color: var(--laranja-1);
-}
 main .blog .blog-1 {
   grid-area: blog1;
 }
@@ -479,14 +545,16 @@ main .orcamento {
   flex-direction: column;
   align-items: center;
   padding: 20px 0;
-  margin-bottom: 15px;
+  margin-bottom: 5px;
 }
 main .orcamento strong {
   color: var(--laranja-1);
 }
 main .orcamento p {
   color: var(--azul-1);
-  padding: 30px;
+  width: 85%;
+  padding: 30px 0;
+  margin: auto;
 }
 main .orcamento a {
   background-color: var(--laranja-1);
@@ -495,18 +563,13 @@ main .orcamento a {
   margin: auto;
   text-decoration: none;
   border-radius: 4px 16px 16px 16px;
-  transition: 0.5s ease;
+  transition: var(--suave);
 }
 main .orcamento a:hover {
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
 }
 main .orcamento a:hover > i {
-  animation: pisca 1.5s ease-in-out;
-}
-@keyframes pisca {
-  50% {
-    color: white;
-  }
+  animation: pisca 1.5s ease;
 }
 main .orcamento a i {
   transform: rotate(35deg);
@@ -518,7 +581,7 @@ main .duvidas {
   background-color: var(--branco-1);
   border-radius: 4px 4px 50px 20px;
   padding: 20px 0;
-  margin-top: 15px;
+  margin-top: 5px;
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -526,11 +589,12 @@ main .duvidas {
 }
 main .duvidas p {
   color: var(--laranja-1);
-  padding-left: calc(var(--size) * 4);
   font-size: calc(var(--size) * 1.2);
   line-height: calc(var(--size) * 2);
   cursor: pointer;
-  transition: 0.5s ease;
+  transition: var(--suave);
+  width: 85%;
+  margin: auto;
 }
 main .duvidas p:hover {
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
@@ -542,7 +606,7 @@ main .duvidas p i {
 main .voltar {
   position: fixed;
   right: 15px;
-  bottom: 15px;
+  bottom: 30px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -550,14 +614,149 @@ main .voltar {
   height: 40px;
   width: 40px;
   border-radius: 50%;
-  background: var(--laranja-1);
-  transition: 0.5s ease;
+  background: var(--azul-2);
+  transition: var(--suave);
   cursor: pointer;
 }
 main .voltar:hover {
-  background: var(--azul-2);
+  background: var(--laranja-1);
   box-shadow: 0 0 10px black;
 }
 main .voltar img {
   height: 50px;
+}
+
+footer .rodape {
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  gap: 20px;
+  height: 200px;
+}
+footer .rodape .acompanhe {
+  display: flex;
+  flex-direction: column;
+  height: 180px;
+  justify-content: space-evenly;
+}
+footer .rodape .acompanhe:hover .fa-facebook {
+  animation: pisca2 0.7s ease normal;
+  animation-delay: 0s;
+}
+footer .rodape .acompanhe:hover .fa-instagram {
+  animation: pisca2 0.7s ease normal;
+  animation-delay: 0.5s;
+}
+footer .rodape .acompanhe:hover .fa-twitter {
+  animation: pisca2 0.7s ease normal;
+  animation-delay: 1s;
+}
+footer .rodape .acompanhe:hover .fa-whatsapp {
+  animation: pisca2 0.7s ease normal;
+  animation-delay: 1.5s;
+}
+footer .rodape .acompanhe:hover .fa-linkedin {
+  animation: pisca2 0.7s ease normal;
+  animation-delay: 2s;
+}
+footer .rodape .acompanhe:hover .fa-github {
+  animation: pisca2 0.7s ease normal;
+  animation-delay: 2.5s;
+}
+footer .rodape .acompanhe h2 {
+  font-size: calc(var(--size) * 1.2);
+  color: var(--azul-2);
+  cursor: pointer;
+  font-weight: bold;
+  transition: var(--suave);
+}
+footer .rodape .acompanhe h2:hover {
+  text-shadow: 1px 1px 3px rgba(255, 255, 255, 0.5);
+}
+footer .rodape .acompanhe h2:hover::before {
+  visibility: hidden;
+}
+footer .rodape .acompanhe hr {
+  border: 1px dashed var(--azul-2);
+  width: 100%;
+}
+footer .rodape .acompanhe ul {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 20px;
+  height: calc(var(--size) * 1.1);
+}
+footer .rodape .acompanhe ul li {
+  width: calc(var(--size) * 1.1);
+}
+footer .rodape .acompanhe ul li a {
+  color: var(--branco-1);
+  transition: var(--suave);
+}
+footer .rodape .acompanhe ul li a:hover {
+  color: var(--azul-2);
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+footer .rodape .acompanhe img {
+  width: 95px;
+  align-self: flex-end;
+  filter: brightness(70%);
+  transition: var(--suave);
+}
+footer .rodape .acompanhe img:hover {
+  filter: brightness(100%);
+}
+footer .rodape .menu {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-evenly;
+  gap: 30px;
+}
+footer .rodape .menu ul {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  font-size: calc(var(--size) * 0.8);
+  line-height: calc(var(--size) * 0.9);
+  height: 180px;
+}
+footer .rodape .menu ul h3 {
+  font-size: calc(var(--size) * 1.2);
+  color: var(--azul-2);
+  font-weight: bold;
+  line-height: calc(var(--size) * 1.5);
+}
+footer .rodape .menu ul a {
+  color: var(--branco-1);
+  text-decoration: none;
+  position: relative;
+}
+footer .rodape .menu ul a::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: -3px;
+  background-color: var(--azul-2);
+  visibility: hidden;
+  transform: scaleX(0);
+  transition: transform 300ms cubic-bezier(0.57, -0.02, 0.31, 0.71);
+}
+footer .rodape .menu ul a:hover:before {
+  visibility: visible;
+  transform: scaleX(1);
+  transform-origin: left;
+  color: currentColor;
+}
+footer .direito {
+  max-width: 1200px;
+  margin: 30px auto;
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+  font-size: calc(var(--size) * 0.7);
 }/*# sourceMappingURL=style.css.map */
