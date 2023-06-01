@@ -51,14 +51,31 @@
 }
 
 // GERAL
+html {
+  scroll-behavior: smooth;
+}
+
 body {
-  background-image: var(--bg);
+  background: var(--bg);
   font-family: var(--fonte);
   font-size: var(--size);
   max-width: 1200px;
   margin: auto;
   color: var(--cores-100);
   cursor: default;
+}
+
+body::-webkit-scrollbar {
+  width: 10px;
+}
+
+body::-webkit-scrollbar-track {
+  background: var(--cores-30);
+}
+
+body::-webkit-scrollbar-thumb {
+  background: var(--gradient);
+  border-radius: 16px;
 }
 
 // BOTÕES
@@ -249,7 +266,7 @@ main {
     margin: 130px auto;
   }
 
-  .home {
+  #home {
     margin: 0;
     display: grid;
     grid-template-columns: repeat(2, 50%);
@@ -339,12 +356,11 @@ main {
     }
   }
 
-  .redes {
+  #redes {
     display: flex;
     justify-content: space-around;
     align-items: center;
     font-size: calc(var(--size) * 2);
-    letter-spacing: 5px;
 
     a {
       color: transparent;
@@ -385,7 +401,7 @@ main {
 
   }
 
-  .sobre {
+  #sobre {
     display: grid;
     grid-template-columns: 500px 1fr;
     grid-template-rows: 500px;
@@ -430,12 +446,13 @@ main {
     }
   }
 
-  .habilidades {
+  #habilidades {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
     gap: 50px;
+    
 
     .cards__hab {
       display: flex;
@@ -445,14 +462,13 @@ main {
       div {
         background: var(--gradient);
         border-radius: 16px 36px;
-        flex-grow: 1;
+        width: 380px;
         height: 380px;
         margin: 5px;
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        gap: 10px;
         text-align: center;
         transition: .5s ease;
 
@@ -487,12 +503,13 @@ main {
       justify-content: space-between;
 
       div {
+        display: flex;
         background: var(--null);
         border-radius: 16px 36px;
         width: 380px;
         height: 85px;
         margin: 5px;
-        display: flex;
+
         transition: .5s ease;
 
         &:hover {
@@ -521,7 +538,7 @@ main {
     }
   }
 
-  .portifolio {
+  #portifolio {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
@@ -562,7 +579,7 @@ main {
     }
   }
 
-  .numeros {
+  #numeros {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
@@ -577,7 +594,7 @@ main {
       align-items: center;
       justify-content: space-evenly;
 
-      font-size: calc(var(--size) * 1.3);
+      font-size: calc(var(--size) * 2.5);
       font-weight: bold;
     }
 
@@ -588,7 +605,7 @@ main {
     }
   }
 
-  .social {
+  #social {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -685,7 +702,12 @@ footer {
       background: var(--gradient-hover);
       width: 60px;
       height: 60px;
-      box-shadow: 0 0 7px black;
+      box-shadow: 0 0 7px rgba(0, 0, 0, 0.5);
+      transform: translate(2px, 2px);
+      i {
+          color: var(--cores-100);
+          font-size: calc(var(--size) * 1.7);
+      }
 
     }
 
@@ -693,11 +715,24 @@ footer {
       color: var(--cores-50);
       font-size: calc(var(--size) * 1.5);
       transition: .5s ease;
-
-      &:hover {
-        color: var(--cores-100);
-        font-size: calc(var(--size) * 1.7);
-      }
     }
   }
+}
+
+//tablet
+@media screen and (max-width: 1199px) {
+
+  body {
+    background: green;
+  }
+
+}
+
+//celular
+@media screen and (max-width: 768px) {
+
+  body {
+    background: purple;
+  }
+
 }
