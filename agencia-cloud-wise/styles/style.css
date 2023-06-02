@@ -13,9 +13,26 @@
   --suave: .5s ease;
 }
 
+@-webkit-keyframes pulse {
+  50% {
+    background-color: var(--laranja-1);
+  }
+}
+
 @keyframes pulse {
   50% {
     background-color: var(--laranja-1);
+  }
+}
+@-webkit-keyframes wiggle {
+  0%, 80%, 100% {
+    transform: rotate(35deg);
+  }
+  85% {
+    transform: rotate(45deg);
+  }
+  95% {
+    transform: rotate(25deg);
   }
 }
 @keyframes wiggle {
@@ -29,9 +46,21 @@
     transform: rotate(25deg);
   }
 }
+@-webkit-keyframes pisca {
+  50% {
+    color: white;
+  }
+}
 @keyframes pisca {
   50% {
     color: white;
+  }
+}
+@-webkit-keyframes pisca2 {
+  50% {
+    color: var(--laranja-1);
+    font-size: calc(var(--size) * 1.1);
+    text-shadow: 0 0 4px rgba(0, 0, 0, 0.5);
   }
 }
 @keyframes pisca2 {
@@ -39,6 +68,22 @@
     color: var(--laranja-1);
     font-size: calc(var(--size) * 1.1);
     text-shadow: 0 0 4px rgba(0, 0, 0, 0.5);
+  }
+}
+@-webkit-keyframes float {
+  0%, 100% {
+    transform: translateY(3%);
+  }
+  50% {
+    transform: translateY(-3%);
+  }
+}
+@keyframes float {
+  0%, 100% {
+    transform: translateY(3%);
+  }
+  50% {
+    transform: translateY(-3%);
   }
 }
 html {
@@ -209,10 +254,12 @@ header .redes li i {
   margin-top: 2px;
 }
 header .redes li:nth-child(3) {
-  animation: pulse 2.5s infinite;
+  -webkit-animation: pulse 2.5s infinite;
+          animation: pulse 2.5s infinite;
 }
 header .redes li:nth-child(3):hover {
-  animation: none;
+  -webkit-animation: none;
+          animation: none;
   background-color: var(--laranja-1);
 }
 header .redes li:nth-child(3):hover i {
@@ -229,7 +276,7 @@ main .nuvens i:hover {
   text-shadow: 0 0 10px white;
 }
 main .nuvens .nuvem_1 {
-  left: 0;
+  left: 0%;
   top: 50px;
 }
 main .nuvens .nuvem_2 {
@@ -237,7 +284,7 @@ main .nuvens .nuvem_2 {
   top: 300px;
 }
 main .nuvens .nuvem_3 {
-  left: 0;
+  left: 0%;
   top: 550px;
 }
 main .nuvens .nuvem_4 {
@@ -245,7 +292,7 @@ main .nuvens .nuvem_4 {
   top: 1050px;
 }
 main .nuvens .nuvem_5 {
-  left: 0;
+  left: 0%;
   top: 1570px;
 }
 main .nuvens .nuvem_6 {
@@ -253,7 +300,7 @@ main .nuvens .nuvem_6 {
   top: 2180px;
 }
 main .nuvens .nuvem_7 {
-  left: 0;
+  left: 0%;
   top: 3000px;
 }
 main .nuvens .nuvem_8 {
@@ -261,7 +308,7 @@ main .nuvens .nuvem_8 {
   top: 3650px;
 }
 main .nuvens .nuvem_9 {
-  left: 0;
+  left: 0%;
   top: 4000px;
 }
 main .nuvens .nuvem_10 {
@@ -437,6 +484,12 @@ main .servicos .cards div {
   align-items: flex-start;
   gap: 15px;
   line-height: calc(var(--size) * 1.3);
+  -webkit-animation: float 9s ease infinite;
+          animation: float 9s ease infinite;
+}
+main .servicos .cards div:hover {
+  -webkit-animation-play-state: paused;
+          animation-play-state: paused;
 }
 main .servicos .cards div:hover > span i {
   color: var(--azul-2);
@@ -460,23 +513,31 @@ main .servicos .cards div p {
 }
 main .servicos .cards .card-1 {
   grid-area: card1;
-  border-radius: 50px 0 0 0;
+  border-radius: 50px 4px 4px 4px;
   transform: translateY(-15px);
+  -webkit-animation-delay: 0.2s;
+          animation-delay: 0.2s;
 }
 main .servicos .cards .card-2 {
   grid-area: card2;
-  border-radius: 0 50px 0 0;
+  border-radius: 4px 50px 4px 4px;
   transform: translateY(15px);
+  -webkit-animation-delay: 0.5s;
+          animation-delay: 0.5s;
 }
 main .servicos .cards .card-3 {
   grid-area: card3;
-  border-radius: 0 0 0 50px;
+  border-radius: 4px 4px 4px 50px;
   transform: translateY(-15px);
+  -webkit-animation-delay: 0s;
+          animation-delay: 0s;
 }
 main .servicos .cards .card-4 {
   grid-area: card4;
-  border-radius: 0 0 50px 0;
+  border-radius: 4px 4px 50px 4px;
   transform: translateY(15px);
+  -webkit-animation-delay: 0.8s;
+          animation-delay: 0.8s;
 }
 main .blog {
   max-width: 1200px;
@@ -509,6 +570,7 @@ main .blog div .blog__tag {
   background-color: var(--branco-1);
   border-radius: 34px;
   padding: 5px 20px;
+  width: -webkit-max-content;
   width: -moz-max-content;
   width: max-content;
   text-align: center;
@@ -569,12 +631,14 @@ main .orcamento a:hover {
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
 }
 main .orcamento a:hover > i {
-  animation: pisca 1.5s ease;
+  -webkit-animation: pisca 1.5s ease;
+          animation: pisca 1.5s ease;
 }
 main .orcamento a i {
   transform: rotate(35deg);
   padding-left: 5px;
-  animation: wiggle 2.5s infinite;
+  -webkit-animation: wiggle 2.5s infinite;
+          animation: wiggle 2.5s infinite;
 }
 main .duvidas {
   max-width: 1200px;
@@ -642,28 +706,43 @@ footer .rodape .acompanhe {
   justify-content: space-evenly;
 }
 footer .rodape .acompanhe:hover .fa-facebook {
-  animation: pisca2 0.7s ease normal;
-  animation-delay: 0s;
+  -webkit-animation: pisca2 0.7s ease normal;
+          animation: pisca2 0.7s ease normal;
+  -webkit-animation-delay: 0s;
+          animation-delay: 0s;
 }
 footer .rodape .acompanhe:hover .fa-instagram {
-  animation: pisca2 0.7s ease normal;
-  animation-delay: 0.5s;
+  -webkit-animation: pisca2 0.7s ease normal;
+          animation: pisca2 0.7s ease normal;
+  -webkit-animation-delay: 0.5s;
+          animation-delay: 0.5s;
 }
 footer .rodape .acompanhe:hover .fa-twitter {
-  animation: pisca2 0.7s ease normal;
-  animation-delay: 1s;
+  -webkit-animation: pisca2 0.7s ease normal;
+          animation: pisca2 0.7s ease normal;
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
 }
 footer .rodape .acompanhe:hover .fa-whatsapp {
-  animation: pisca2 0.7s ease normal;
-  animation-delay: 1.5s;
+  -webkit-animation: pisca2 0.7s ease normal;
+          animation: pisca2 0.7s ease normal;
+  -webkit-animation-delay: 1.5s;
+          animation-delay: 1.5s;
 }
 footer .rodape .acompanhe:hover .fa-linkedin {
-  animation: pisca2 0.7s ease normal;
-  animation-delay: 2s;
+  -webkit-animation: pisca2 0.7s ease normal;
+          animation: pisca2 0.7s ease normal;
+  -webkit-animation-delay: 2s;
+          animation-delay: 2s;
 }
 footer .rodape .acompanhe:hover .fa-github {
-  animation: pisca2 0.7s ease normal;
-  animation-delay: 2.5s;
+  -webkit-animation: pisca2 0.7s ease normal;
+          animation: pisca2 0.7s ease normal;
+  -webkit-animation-delay: 2.5s;
+          animation-delay: 2.5s;
+}
+footer .rodape .acompanhe:hover img {
+  filter: brightness(100%);
 }
 footer .rodape .acompanhe h2 {
   font-size: calc(var(--size) * 1.2);
@@ -705,9 +784,6 @@ footer .rodape .acompanhe img {
   align-self: flex-end;
   filter: brightness(70%);
   transition: var(--suave);
-}
-footer .rodape .acompanhe img:hover {
-  filter: brightness(100%);
 }
 footer .rodape .menu {
   display: flex;
