@@ -15,7 +15,7 @@
   --cores-100: rgba(255, 255, 255, 1);
   --cores-50: rgba(255, 255, 255, 0.5);
   --cores-30: rgba(255, 255, 255, 0.3);
-  
+
   // IMAGENS
   --github: url(../assets/github.svg) no-repeat center center;
   --github-hover: url(../assets/github-hover.svg) no-repeat center center;
@@ -255,9 +255,13 @@ header {
       }
     }
   }
-  
+
   .contato {
     width: 115px;
+  }
+
+  .burger {
+    display: none;
   }
 }
 
@@ -452,7 +456,7 @@ main {
     align-items: center;
     justify-content: space-evenly;
     gap: 50px;
-    
+
 
     .cards__hab {
       display: flex;
@@ -650,15 +654,14 @@ main {
         &:hover {
           height: 60px;
           width: 60px;
+          i {
+            font-size: calc(var(--size) * 2);
+          }
         }
 
         i {
           font-size: calc(var(--size) * 1.8);
-          transform: translateX(3px);
-
-          &:hover {
-            font-size: calc(var(--size) * 2);
-          }
+          transition: .5s ease-in-out;
         }
       }
     }
@@ -704,9 +707,10 @@ footer {
       height: 60px;
       box-shadow: 0 0 7px rgba(0, 0, 0, 0.5);
       transform: translate(2px, 2px);
+
       i {
-          color: var(--cores-100);
-          font-size: calc(var(--size) * 1.7);
+        color: var(--cores-100);
+        font-size: calc(var(--size) * 1.7);
       }
 
     }
@@ -720,16 +724,59 @@ footer {
 }
 
 //tablet
-@media screen and (max-width: 1199px) {
+@media screen and (max-width: 900px) {
 
-  body {
-    background: green;
+
+  header {
+
+    .menu,
+    .switch,
+    .contato {
+      display: none;
+    }
+
+    .fa-bars {
+      font-size: calc(var(--size) * 1.5);
+    }
   }
 
+  main {
+    section {
+      margin: auto;
+    }
+
+    #home {
+      display: flex;
+      flex-direction: column;
+      width: 600px;
+      margin: auto;
+      line-height: calc(var(--size) * 5);
+
+      .home__txt {
+        display: grid;
+        grid-template-rows: repeat(2, 1fr);
+      }
+
+      .home__img {
+        display: none;
+      }
+
+      .home__link {
+        align-self: flex-end;
+      }
+    }
+
+    #sobre {
+      display: flex;
+      flex-direction: column;
+    }
+  }
 }
 
+
+
 //celular
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 600px) {
 
   body {
     background: purple;
