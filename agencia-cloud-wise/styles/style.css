@@ -835,4 +835,61 @@ footer .direito {
   align-items: baseline;
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
   font-size: calc(var(--size) * 0.7);
+}
+
+@media screen and (max-width: 769px) {
+  .servicos {
+    background-color: red;
+    max-width: 769px;
+  }
+  .servicos .cards {
+    display: flex;
+    grid-area: cards;
+  }
+  .servicos .cards div {
+    height: 300px !important;
+    width: 300px !important;
+    padding: 10px !important;
+    gap: 10px;
+    line-height: calc(var(--size) * 0.5);
+  }
+  .servicos .cards div span i {
+    color: var(--laranja-1);
+    font-size: calc(var(--size) * 1.3) !important;
+    transition: var(--suave);
+  }
+  .servicos .cards div h3 {
+    font-size: calc(var(--size) * 1) !important;
+    font-weight: bold;
+  }
+  .servicos .cards div p {
+    font-size: calc(var(--size) * 0.8) !important;
+  }
+  .servicos .cards .card-1 {
+    border-radius: 50px 4px;
+    transform: translateY(-15px);
+    -webkit-animation-delay: 0.2s;
+            animation-delay: 0.2s;
+  }
+  .servicos .cards .card-2 {
+    grid-area: card2;
+    border-radius: 4px 50px 4px 4px;
+    transform: translateY(15px);
+    -webkit-animation-delay: 0.5s;
+            animation-delay: 0.5s;
+  }
+  .servicos .cards .card-3 {
+    grid-area: card3;
+    border-radius: 4px 4px 4px 50px;
+    transform: translateY(-15px);
+    -webkit-animation-delay: 0s;
+            animation-delay: 0s;
+  }
+  .servicos .cards .card-4 {
+    grid-area: card4;
+    border-radius: 4px 4px 50px 4px;
+    transform: translateY(15px);
+    -webkit-animation-delay: 0.8s;
+            animation-delay: 0.8s;
+  }
 }/*# sourceMappingURL=style.css.map */
