@@ -954,70 +954,24 @@ footer {
     }
 }
 
+// médio+
+@media screen and (max-width: 1024px) {
+    main {
+        background-color: lightblue;
+    }
+}
+
+
 // médio
 @media screen and (max-width: 769px) {
-    .servicos {
-        background-color: red;
-        max-width: 769px;
-
-        .cards {
-            display: flex;
-            grid-area: cards;
-
-            div {
-                height: 300px!important;
-                width: 300px!important;
-                padding: 10px!important;
-                gap: 10px;
-                line-height: calc(var(--size) * .5);
-
-                span i {
-                    color: var(--laranja-1);
-                    font-size: calc(var(--size) * 1.3)!important;
-                    transition: var(--suave);
-                }
-
-                h3 {
-                    font-size: calc(var(--size) * 1)!important;
-                    font-weight: bold;
-                }
-
-                p {
-                    font-size: calc(var(--size) * .8)!important;
-                }
-            }
-
-            .card-1 {
-                border-radius: 50px 4px;
-                transform: translateY(-15px);
-                animation-delay: 0.2s;
-            }
-
-            .card-2 {
-                grid-area: card2;
-                border-radius: 4px 50px 4px 4px;
-                transform: translateY(15px);
-                animation-delay: 0.5s;
-            }
-
-            .card-3 {
-                grid-area: card3;
-                border-radius: 4px 4px 4px 50px;
-                transform: translateY(-15px);
-                animation-delay: 0s;
-            }
-
-            .card-4 {
-                grid-area: card4;
-                border-radius: 4px 4px 50px 4px;
-                transform: translateY(15px);
-                animation-delay: 0.8s;
-            }
-        }
+    main {
+        background-color: lightcoral;
     }
 }
 
 //p
 @media screen and (max-width: 480px) {
-    
+    main {
+        background-color: lightgreen;
+    }
 }
