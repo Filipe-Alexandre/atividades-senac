@@ -442,7 +442,7 @@ main .servicos .cards div:hover {
   animation-play-state: paused;
 }
 main .servicos .cards div:hover > span i {
-  color: var(--azul-2);
+  color: var(--laranja-1);
 }
 main .servicos .cards div:hover > .btn-white {
   background-color: var(--laranja-1);
@@ -450,7 +450,7 @@ main .servicos .cards div:hover > .btn-white {
   border-color: var(--laranja-1);
 }
 main .servicos .cards div span i {
-  color: var(--laranja-1);
+  color: var(--azul-2);
   font-size: calc(var(--size) * 1.8);
   transition: var(--suave);
 }
@@ -823,7 +823,7 @@ footer .direito {
   main .servicos #cards__tab .card-2,
   main .servicos #cards__tab .card-3,
   main .servicos #cards__tab .card-4 {
-    transform: translate(-55px, 0px);
+    transform: translate(-69px, 0px);
     gap: 5px;
     width: 50%;
     height: 250px;
@@ -831,9 +831,10 @@ footer .direito {
   }
   main .servicos #cards__tab .btn-white {
     padding: 5px;
-    width: 60%;
+    width: 55%;
     align-self: flex-end;
     font-size: calc(var(--size) * 0.8);
+    text-align: center;
   }
   main .servicos #cards__tab .btn-white i {
     font-size: calc(var(--size) * 0.7);

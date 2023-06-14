@@ -558,7 +558,7 @@ main {
                 }
 
                 &:hover>span i {
-                    color: var(--azul-2);
+                    color: var(--laranja-1);
                 }
 
                 &:hover>.btn-white {
@@ -568,7 +568,7 @@ main {
                 }
 
                 span i {
-                    color: var(--laranja-1);
+                    color: var(--azul-2);
                     font-size: calc(var(--size) * 1.8);
                     transition: var(--suave);
                 }
@@ -977,7 +977,6 @@ footer {
                 margin: auto;
                 display: flex;
                 
-
                 div {
                     // carrossel
                     display: block;
@@ -1015,8 +1014,6 @@ footer {
 
                         border-radius: 30px 15px !important;
                     }
-    
-
                 }
                 .slick-prev,
                 .slick-next {
@@ -1027,7 +1024,7 @@ footer {
                 .card-2,
                 .card-3,
                 .card-4 {
-                    transform: translate(-55px, 0px);
+                    transform: translate(-69px, 0px);
                     gap: 5px;
                     width: 50%;
                     height: 250px;
@@ -1036,13 +1033,13 @@ footer {
 
                 .btn-white {
                     padding: 5px;
-                    width: 60%;
+                    width: 55%;
                     align-self: flex-end;
                     font-size: calc(var(--size) * .8);
+                    text-align: center;
 
                     i {
                         font-size: calc(var(--size) * .7);
-
                     }
                 }
             }
