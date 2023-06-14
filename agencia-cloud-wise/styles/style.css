@@ -70,22 +70,6 @@
     text-shadow: 0 0 4px rgba(0, 0, 0, 0.5);
   }
 }
-@-webkit-keyframes float {
-  0%, 100% {
-    transform: translateY(3%);
-  }
-  50% {
-    transform: translateY(-3%);
-  }
-}
-@keyframes float {
-  0%, 100% {
-    transform: translateY(3%);
-  }
-  50% {
-    transform: translateY(-3%);
-  }
-}
 html {
   scroll-behavior: smooth;
 }
@@ -96,7 +80,6 @@ body {
   font-size: var(--size);
   font-family: var(--padrao);
   cursor: default;
-  overflow-x: hidden;
 }
 
 body::-webkit-scrollbar {
@@ -845,6 +828,68 @@ footer .direito {
 @media screen and (max-width: 769px) {
   main {
     background-color: lightcoral;
+  }
+  main .servicos {
+    max-width: 769px;
+    margin: auto;
+    gap: 0;
+  }
+  main .servicos .cards__tab {
+    grid-area: cards;
+    margin: auto;
+    display: flex;
+  }
+  main .servicos .cards__tab div {
+    display: block;
+    background-color: transparent;
+    width: 769px;
+    line-height: calc(var(--size) * 1);
+    -webkit-animation: none;
+            animation: none;
+  }
+  main .servicos .cards__tab div span i {
+    font-size: calc(var(--size) * 1.1);
+  }
+  main .servicos .cards__tab div h3 {
+    font-size: calc(var(--size) * 0.9);
+    font-weight: bold;
+  }
+  main .servicos .cards__tab div p {
+    font-size: calc(var(--size) * 0.6);
+  }
+  main .servicos .cards__tab div .slick-track {
+    display: flex;
+    flex-direction: row;
+  }
+  main .servicos .cards__tab div .slick-slide {
+    width: 300px !important;
+    height: 300px !important;
+    display: flex;
+    justify-content: space-between;
+    border-radius: 30px 15px !important;
+  }
+  main .servicos .cards__tab .slick-prev,
+main .servicos .cards__tab .slick-next {
+    display: none !important;
+  }
+  main .servicos .cards__tab .card-1,
+main .servicos .cards__tab .card-2,
+main .servicos .cards__tab .card-3,
+main .servicos .cards__tab .card-4 {
+    transform: translate(-55px, 0px);
+    gap: 5px;
+    width: 50%;
+    height: 250px;
+    background-color: var(--azul-1);
+  }
+  main .servicos .cards__tab .btn-white {
+    padding: 5px;
+    width: 60%;
+    align-self: flex-end;
+    font-size: calc(var(--size) * 0.8);
+  }
+  main .servicos .cards__tab .btn-white i {
+    font-size: calc(var(--size) * 0.7);
   }
 }
 @media screen and (max-width: 480px) {

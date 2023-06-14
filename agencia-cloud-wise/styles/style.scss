@@ -56,17 +56,17 @@
     }
 }
 
-@keyframes float {
+// @keyframes float {
 
-    0%,
-    100% {
-        transform: translateY(3%);
-    }
+//     0%,
+//     100% {
+//         transform: translateY(3%);
+//     }
 
-    50% {
-        transform: translateY(-3%);
-    }
-}
+//     50% {
+//         transform: translateY(-3%);
+//     }
+// }
 
 html {
     scroll-behavior: smooth;
@@ -78,7 +78,7 @@ body {
     font-size: var(--size);
     font-family: var(--padrao);
     cursor: default;
-    overflow-x: hidden;
+    // overflow-x: hidden;
 }
 
 body::-webkit-scrollbar {
@@ -160,6 +160,7 @@ h2 {
 section {
     margin: 100px auto;
 }
+
 // ↑ PADRÕES ↑
 header {
     max-width: 1200px;
@@ -612,6 +613,7 @@ main {
         }
     }
 
+
     .blog {
         max-width: 1200px;
         display: grid;
@@ -961,11 +963,95 @@ footer {
     }
 }
 
-
 // médio
 @media screen and (max-width: 769px) {
     main {
         background-color: lightcoral;
+
+        .servicos {
+            max-width: 769px;
+            margin: auto;
+            gap: 0;
+
+            .cards__tab {
+                grid-area: cards;
+                margin: auto;
+                display: flex;
+                
+
+                div {
+                    // carrossel
+                    display: block;
+                    background-color: transparent;
+                    width: 769px;
+
+                    line-height: calc(var(--size) * 1);
+                    animation: none;
+
+                    span i {
+                        font-size: calc(var(--size) * 1.1);
+                        // display: none;
+                    }
+
+                    h3 {
+                        font-size: calc(var(--size) * .9);
+                        font-weight: bold;
+                    }
+
+                    p {
+                        font-size: calc(var(--size) * .6);
+                    }
+
+                    .slick-track {
+                        display: flex;
+                        flex-direction: row;
+                    }
+    
+                    .slick-slide {
+                        width: 300px!important;
+                        height: 300px!important;
+
+                        display: flex;
+                        justify-content: space-between;
+
+                        border-radius: 30px 15px !important;
+                    }
+    
+
+                }
+                .slick-prev,
+                .slick-next {
+                    display: none !important;
+                }
+
+                .card-1,
+                .card-2,
+                .card-3,
+                .card-4 {
+                    transform: translate(-55px, 0px);
+                    gap: 5px;
+                    width: 50%;
+                    height: 250px;
+                    background-color: var(--azul-1);
+                }
+
+                .btn-white {
+                    padding: 5px;
+                    width: 60%;
+                    align-self: flex-end;
+                    font-size: calc(var(--size) * .8);
+
+                    i {
+                        font-size: calc(var(--size) * .7);
+
+                    }
+                }
+            }
+
+
+        }
+
+
     }
 }
 

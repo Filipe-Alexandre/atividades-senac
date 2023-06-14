@@ -5,11 +5,35 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- STYLES -->
     <link rel="stylesheet" href="styles/reset.css">
     <link rel="stylesheet" href="styles/style.css">
+    <!-- ICONS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
         integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- SLICK -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"
+        integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"
+        integrity="sha512-XtmMtDEcNz2j7ekrtHvOVR4iwwaD6o/FUJe6+Zq+HgcCsk3kj4uSQQR8weQ2QVj1o0Pk6PwYLohm206ZzNfubg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css"
+        integrity="sha512-17EgCFERpgZKcm0j0fEq1YCJuyAWdz9KUtv1EjVuaOz8pDnh/0nZxmU6BBXwaaxqoi9PQXnRWqlcDB027hgv9A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"
+        integrity="sha512-yHknP1/AwR+yx26cB1y0cjvQUMvEa2PFzt1c9LlS4pRQ5NOTZFWbhBig+X9G9eYW/8m0/4OXNx8pxJ6z57x0dw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick.min.js"></script> -->
+
     <title>Cloud Wise</title>
 </head>
 
@@ -113,7 +137,7 @@
         <section class="servicos">
             <h2>Serviços que podem te ajudar</h2>
             <a href="#" class="btn-white svc-btn">Veja tudo <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-            <div class="cards slide">
+            <div class="cards cards__tab">
                 <div class="card-1">
                     <span><i class="fa-regular fa-pen-to-square"></i></span>
                     <h3>Criação de sites</h3>
@@ -148,6 +172,7 @@
                 </div>
             </div>
         </section>
+
         <section class="blog">
             <h2>Blog</h2>
             <div class="blog-1">
@@ -165,6 +190,7 @@
                 <a href="#" class="btn-white">Leia mais <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
             </div>
         </section>
+
         <section class="orcamento">
             <p>
                 Transforme seu <strong>sonho</strong> em <strong>realidade</strong>.
@@ -173,9 +199,11 @@
             </p>
             <a href="#">Solicite um orçamento <i class="fa-solid fa-calculator"></i></a>
         </section>
+
         <section class="duvidas">
             <p><i class="fa-solid fa-plus"></i> Duvidas frequentes</p>
         </section>
+
         <div class="voltar" onclick="window.scroll(0, 0)">
             <img src="assets/itens/rkt.svg" alt="voltar ao inicio">
         </div>
@@ -226,6 +254,7 @@
             <p>2023 &#x2022; Todos os direitos reservados &COPY;</p>
         </div>
     </footer>
+    <script src="js/script.js"></script>
 </body>
 
 </html>
