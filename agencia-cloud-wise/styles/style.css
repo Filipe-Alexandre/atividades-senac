@@ -13,9 +13,26 @@
   --suave: .5s ease;
 }
 
+@-webkit-keyframes pulse {
+  50% {
+    background-color: var(--laranja-1);
+  }
+}
+
 @keyframes pulse {
   50% {
     background-color: var(--laranja-1);
+  }
+}
+@-webkit-keyframes wiggle {
+  0%, 80%, 100% {
+    transform: rotate(35deg);
+  }
+  85% {
+    transform: rotate(45deg);
+  }
+  95% {
+    transform: rotate(25deg);
   }
 }
 @keyframes wiggle {
@@ -29,9 +46,21 @@
     transform: rotate(25deg);
   }
 }
+@-webkit-keyframes pisca {
+  50% {
+    color: white;
+  }
+}
 @keyframes pisca {
   50% {
     color: white;
+  }
+}
+@-webkit-keyframes pisca2 {
+  50% {
+    color: var(--laranja-1);
+    font-size: calc(var(--size) * 1.1);
+    text-shadow: 0 0 4px rgba(0, 0, 0, 0.5);
   }
 }
 @keyframes pisca2 {
@@ -39,6 +68,22 @@
     color: var(--laranja-1);
     font-size: calc(var(--size) * 1.1);
     text-shadow: 0 0 4px rgba(0, 0, 0, 0.5);
+  }
+}
+@-webkit-keyframes float {
+  0%, 100% {
+    transform: translateY(3%);
+  }
+  50% {
+    transform: translateY(-3%);
+  }
+}
+@keyframes float {
+  0%, 100% {
+    transform: translateY(3%);
+  }
+  50% {
+    transform: translateY(-3%);
   }
 }
 html {
@@ -51,6 +96,7 @@ body {
   font-size: var(--size);
   font-family: var(--padrao);
   cursor: default;
+  overflow-x: hidden;
 }
 
 body::-webkit-scrollbar {
@@ -208,10 +254,12 @@ header .redes li i {
   margin-top: 2px;
 }
 header .redes li:nth-child(3) {
-  animation: pulse 2.5s infinite;
+  -webkit-animation: pulse 2.5s infinite;
+          animation: pulse 2.5s infinite;
 }
 header .redes li:nth-child(3):hover {
-  animation: none;
+  -webkit-animation: none;
+          animation: none;
   background-color: var(--laranja-1);
 }
 header .redes li:nth-child(3):hover i {
@@ -436,10 +484,12 @@ main .servicos .cards div {
   align-items: flex-start;
   gap: 15px;
   line-height: calc(var(--size) * 1.3);
-  animation: float 9s ease infinite;
+  -webkit-animation: float 9s ease infinite;
+          animation: float 9s ease infinite;
 }
 main .servicos .cards div:hover {
-  animation-play-state: paused;
+  -webkit-animation-play-state: paused;
+          animation-play-state: paused;
 }
 main .servicos .cards div:hover > span i {
   color: var(--laranja-1);
@@ -465,25 +515,32 @@ main .servicos .cards .card-1 {
   grid-area: card1;
   border-radius: 50px 4px 4px 4px;
   transform: translateY(-15px);
-  animation-delay: 0.2s;
+  -webkit-animation-delay: 0.2s;
+          animation-delay: 0.2s;
 }
 main .servicos .cards .card-2 {
   grid-area: card2;
   border-radius: 4px 50px 4px 4px;
   transform: translateY(15px);
-  animation-delay: 0.5s;
+  -webkit-animation-delay: 0.5s;
+          animation-delay: 0.5s;
 }
 main .servicos .cards .card-3 {
   grid-area: card3;
   border-radius: 4px 4px 4px 50px;
   transform: translateY(-15px);
-  animation-delay: 0s;
+  -webkit-animation-delay: 0s;
+          animation-delay: 0s;
 }
 main .servicos .cards .card-4 {
   grid-area: card4;
   border-radius: 4px 4px 50px 4px;
   transform: translateY(15px);
-  animation-delay: 0.8s;
+  -webkit-animation-delay: 0.8s;
+          animation-delay: 0.8s;
+}
+main .servicos__tab {
+  display: none;
 }
 main .blog {
   max-width: 1200px;
@@ -516,6 +573,7 @@ main .blog div .blog__tag {
   background-color: var(--branco-1);
   border-radius: 34px;
   padding: 5px 20px;
+  width: -webkit-max-content;
   width: -moz-max-content;
   width: max-content;
   text-align: center;
@@ -576,12 +634,14 @@ main .orcamento a:hover {
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
 }
 main .orcamento a:hover > i {
-  animation: pisca 1.5s ease;
+  -webkit-animation: pisca 1.5s ease;
+          animation: pisca 1.5s ease;
 }
 main .orcamento a i {
   transform: rotate(35deg);
   padding-left: 5px;
-  animation: wiggle 2.5s infinite;
+  -webkit-animation: wiggle 2.5s infinite;
+          animation: wiggle 2.5s infinite;
 }
 main .duvidas {
   max-width: 1200px;
@@ -649,28 +709,40 @@ footer .rodape .acompanhe {
   justify-content: space-evenly;
 }
 footer .rodape .acompanhe:hover .fa-facebook {
-  animation: pisca2 0.7s ease normal;
-  animation-delay: 0s;
+  -webkit-animation: pisca2 0.7s ease normal;
+          animation: pisca2 0.7s ease normal;
+  -webkit-animation-delay: 0s;
+          animation-delay: 0s;
 }
 footer .rodape .acompanhe:hover .fa-instagram {
-  animation: pisca2 0.7s ease normal;
-  animation-delay: 0.5s;
+  -webkit-animation: pisca2 0.7s ease normal;
+          animation: pisca2 0.7s ease normal;
+  -webkit-animation-delay: 0.5s;
+          animation-delay: 0.5s;
 }
 footer .rodape .acompanhe:hover .fa-twitter {
-  animation: pisca2 0.7s ease normal;
-  animation-delay: 1s;
+  -webkit-animation: pisca2 0.7s ease normal;
+          animation: pisca2 0.7s ease normal;
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
 }
 footer .rodape .acompanhe:hover .fa-whatsapp {
-  animation: pisca2 0.7s ease normal;
-  animation-delay: 1.5s;
+  -webkit-animation: pisca2 0.7s ease normal;
+          animation: pisca2 0.7s ease normal;
+  -webkit-animation-delay: 1.5s;
+          animation-delay: 1.5s;
 }
 footer .rodape .acompanhe:hover .fa-linkedin {
-  animation: pisca2 0.7s ease normal;
-  animation-delay: 2s;
+  -webkit-animation: pisca2 0.7s ease normal;
+          animation: pisca2 0.7s ease normal;
+  -webkit-animation-delay: 2s;
+          animation-delay: 2s;
 }
 footer .rodape .acompanhe:hover .fa-github {
-  animation: pisca2 0.7s ease normal;
-  animation-delay: 2.5s;
+  -webkit-animation: pisca2 0.7s ease normal;
+          animation: pisca2 0.7s ease normal;
+  -webkit-animation-delay: 2.5s;
+          animation-delay: 2.5s;
 }
 footer .rodape .acompanhe:hover img {
   filter: brightness(100%);
@@ -775,69 +847,110 @@ footer .direito {
 }
 @media screen and (max-width: 769px) {
   main {
-    background-color: lightcoral;
+    background-color: red;
   }
   main .servicos {
+    display: none;
+  }
+  main .servicos__tab {
     max-width: 769px;
-    margin: auto;
-    gap: 0;
-  }
-  main .servicos #cards__tab {
-    grid-area: cards;
-    margin: auto;
-    display: flex;
-  }
-  main .servicos #cards__tab div {
     display: block;
-    background-color: transparent;
-    width: 769px;
-    line-height: calc(var(--size) * 1);
-    animation: none;
+    flex-flow: column wrap;
+    align-items: center;
   }
-  main .servicos #cards__tab div span i {
+  main .servicos__tab .heade-svc {
+    max-width: 769px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 15px;
+  }
+  main .servicos__tab .heade-svc h2 {
+    font-size: calc(var(--size) * 1.2);
+    width: 50%;
+  }
+  main .servicos__tab .heade-svc .svc-btn {
+    align-self: flex-end;
+    font-size: calc(var(--size) * 0.8);
+  }
+  main .servicos__tab .heade-svc .svc-btn i {
+    font-size: calc(var(--size) * 0.8);
+  }
+  main .servicos__tab .cards__tab {
+    max-width: 769px;
+  }
+  main .servicos__tab .cards__tab .slick-track {
+    display: flex;
+    gap: 1%;
+  }
+  main .servicos__tab .cards__tab .slick-arrow {
+    display: none !important;
+  }
+  main .servicos__tab .cards__tab .card-1,
+main .servicos__tab .cards__tab .card-2,
+main .servicos__tab .cards__tab .card-3,
+main .servicos__tab .cards__tab .card-4 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    background-color: var(--azul-1);
+    padding: 15px 20px;
+    border-radius: 50px 50px;
+  }
+  main .servicos__tab .cards__tab .card-1:hover > span i,
+main .servicos__tab .cards__tab .card-2:hover > span i,
+main .servicos__tab .cards__tab .card-3:hover > span i,
+main .servicos__tab .cards__tab .card-4:hover > span i {
+    color: var(--laranja-1);
+  }
+  main .servicos__tab .cards__tab .card-1:hover.btn-white,
+main .servicos__tab .cards__tab .card-2:hover.btn-white,
+main .servicos__tab .cards__tab .card-3:hover.btn-white,
+main .servicos__tab .cards__tab .card-4:hover.btn-white {
+    background-color: var(--laranja-1);
+    color: var(--azul-2);
+    border-color: var(--laranja-1);
+  }
+  main .servicos__tab .cards__tab .card-1 span i,
+main .servicos__tab .cards__tab .card-2 span i,
+main .servicos__tab .cards__tab .card-3 span i,
+main .servicos__tab .cards__tab .card-4 span i {
+    color: var(--azul-2);
     font-size: calc(var(--size) * 1.1);
+    transition: var(--suave);
   }
-  main .servicos #cards__tab div h3 {
+  main .servicos__tab .cards__tab .card-1 h3,
+main .servicos__tab .cards__tab .card-2 h3,
+main .servicos__tab .cards__tab .card-3 h3,
+main .servicos__tab .cards__tab .card-4 h3 {
     font-size: calc(var(--size) * 0.9);
     font-weight: bold;
   }
-  main .servicos #cards__tab div p {
+  main .servicos__tab .cards__tab .card-1 p,
+main .servicos__tab .cards__tab .card-2 p,
+main .servicos__tab .cards__tab .card-3 p,
+main .servicos__tab .cards__tab .card-4 p {
     font-size: calc(var(--size) * 0.6);
   }
-  main .servicos #cards__tab div .slick-track {
-    display: flex;
-    flex-direction: row;
-  }
-  main .servicos #cards__tab div .slick-slide {
-    width: 300px !important;
-    height: 300px !important;
-    display: flex;
-    justify-content: space-between;
-    border-radius: 30px 15px !important;
-  }
-  main .servicos #cards__tab .slick-prev,
-  main .servicos #cards__tab .slick-next {
-    display: none !important;
-  }
-  main .servicos #cards__tab .card-1,
-  main .servicos #cards__tab .card-2,
-  main .servicos #cards__tab .card-3,
-  main .servicos #cards__tab .card-4 {
-    transform: translate(-69px, 0px);
-    gap: 5px;
-    width: 50%;
-    height: 250px;
-    background-color: var(--azul-1);
-  }
-  main .servicos #cards__tab .btn-white {
-    padding: 5px;
-    width: 55%;
-    align-self: flex-end;
+  main .servicos__tab .cards__tab .card-1 .btn-white,
+main .servicos__tab .cards__tab .card-2 .btn-white,
+main .servicos__tab .cards__tab .card-3 .btn-white,
+main .servicos__tab .cards__tab .card-4 .btn-white {
     font-size: calc(var(--size) * 0.8);
+    width: 55%;
+    padding: 5px;
+    align-self: flex-end;
     text-align: center;
   }
-  main .servicos #cards__tab .btn-white i {
+  main .servicos__tab .cards__tab .card-1 .btn-white i,
+main .servicos__tab .cards__tab .card-2 .btn-white i,
+main .servicos__tab .cards__tab .card-3 .btn-white i,
+main .servicos__tab .cards__tab .card-4 .btn-white i {
     font-size: calc(var(--size) * 0.7);
+  }
+  main .servicos__tab .cards__tab .slick-slide {
+    width: 350px !important;
+    height: 350px !important;
   }
 }
 @media screen and (max-width: 480px) {
