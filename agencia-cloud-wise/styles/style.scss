@@ -57,6 +57,7 @@
 }
 
 @keyframes float {
+
     0%,
     100% {
         transform: translateY(3%);
@@ -77,7 +78,7 @@ body {
     font-size: var(--size);
     font-family: var(--padrao);
     cursor: default;
-    overflow-x: hidden;
+    // overflow-x: hidden;
 }
 
 body::-webkit-scrollbar {
@@ -273,7 +274,6 @@ header {
 
     }
 }
-
 main {
     .nuvens {
         i {
@@ -408,7 +408,6 @@ main {
             display: grid;
             grid-template-columns: repeat(2, 50%);
             grid-template-rows: repeat(2, 50%);
-            justify-content: center;
 
             img {
                 margin: auto;
@@ -618,16 +617,11 @@ main {
 
     .blog {
         max-width: 1200px;
-        display: grid;
-        grid-template-columns: repeat(2, 50%);
-        grid-template-rows: 50px auto;
-        grid-template-areas:
-            "h2 h2"
-            "blog1 blog2";
-        gap: 50px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
 
         h2 {
-            grid-area: h2;
             margin-bottom: 50px;
 
             &:before {
@@ -636,59 +630,97 @@ main {
             }
         }
 
-        div {
+        // container que pega todos os blocos
+        .blogs {
+            width: auto;
+            max-width: 1200px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+
+            div {
+
+                img {
+                    border-radius: 50px;
+                    width: 550px;
+                    height: 350px;
+                    margin-bottom: 20px;
+
+                }
+
+                .blog__tag {
+                    background-color: var(--branco-1);
+                    border-radius: 34px;
+                    padding: 5px 20px;
+                    width: max-content;
+                    text-align: center;
+                    font-size: calc(var(--size) * .8);
+                    text-transform: uppercase;
+                    display: block;
+                    margin-bottom: 10px;
+                }
+
+                h3 {
+                    font-size: calc(var(--size) * .85);
+                }
+
+                p {
+                    width: 90%;
+                    line-height: calc(var(--size) * 1.3);
+                    display: block;
+                }
+
+                a {
+                    align-self: flex-start;
+                }
+            }
+        }
+
+        // configs gerais
+        .blog-1,
+        .blog-2,
+        .blog-3,
+        .blog-4,
+        .blog-5 {
+            width: 100%;
             display: flex;
             flex-direction: column;
             justify-content: space-evenly;
-            gap: 20px;
-
-            img {
-                border-radius: 50px;
-                width: 550px;
-                height: 350px;
-            }
-
-            .blog__tag {
-                background-color: var(--branco-1);
-                border-radius: 34px;
-                padding: 5px 20px;
-                width: max-content;
-                text-align: center;
-                font-size: calc(var(--size) * .8);
-                text-transform: uppercase;
-            }
-
-            h3 {
-                font-size: calc(var(--size) * .85);
-            }
-
-            p {
-                width: 90%;
-                line-height: calc(var(--size) * 1.3);
-            }
-
-            a {
-                align-self: flex-start;
-            }
         }
 
+        // cards separados (para modificar cor das tags)
         .blog-1 {
-            grid-area: blog1;
-
             .blog__tag {
                 color: var(--azul-1);
             }
-
         }
 
         .blog-2 {
-            grid-area: blog2;
-
             .blog__tag {
                 color: var(--laranja-1);
             }
-
         }
+
+        .blog-3 {
+            .blog__tag {
+                color: var(--azul-2);
+            }
+        }
+
+        .slick-arrow::before {
+            display: block;
+            color: var(--laranja-1);
+            transform: translateX(-25px);
+        }
+
+        .slick-slide {
+            &:hover a {
+                background-color: var(--laranja-1);
+                color: var(--azul-2);
+                border-color: var(--laranja-1);
+            }
+        }
+
     }
 
     .orcamento {
@@ -959,22 +991,54 @@ footer {
 }
 
 // médio+
-@media screen and (max-width: 1024px) {
-    main {
-        background-color: lightblue;
-    }
-}
+// @media screen and (max-width: 1024px) {
+//     main {
+//         background-color: lightblue;
+//     }
+// }
 
-// médio
 @media screen and (max-width: 769px) {
     main {
         background-color: red;
+
+        .sobre {
+            max-width: 769px;
+
+            display: flex;
+            flex-flow: column wrap;
+            justify-content: center;
+            align-items: center;
+
+            .sobre__imgs {
+                display: grid;
+                grid-template-columns: repeat(2, 350px);
+                grid-template-rows: repeat(2, 350px);
+            }
+        }
+
+        .como {
+            max-width: 769px;
+            display: flex;
+            flex-flow: column-reverse wrap;
+            justify-content: center;
+            align-items: center;
+
+            .como__txt {
+                width: 90%;
+
+                ul {
+                    padding: 45px;
+                }
+            }
+        }
+
         .servicos {
             display: none;
         }
 
         .servicos__tab {
             max-width: 769px;
+            width: 90%;
             display: block;
             flex-flow: column wrap;
             align-items: center;
@@ -987,12 +1051,12 @@ footer {
                 margin-bottom: 15px;
 
                 h2 {
-                    font-size: calc(var(--size) * 1.2);
+                    font-size: calc(var(--size) * 1.3);
                     width: 50%;
                 }
 
                 .svc-btn {
-                    align-self: flex-end;
+                    align-self: center;
                     font-size: calc(var(--size) * .8);
 
                     i {
@@ -1012,10 +1076,8 @@ footer {
                 }
 
                 .slick-arrow {
-                    display: none!important;
-                    
+                    display: none !important;
                 }
-
 
                 .card-1,
                 .card-2,
@@ -1066,13 +1128,71 @@ footer {
                     }
 
                 }
-                
+
                 .slick-slide {
-                    width: 350px!important;
-                    height: 350px!important;
+                    width: 350px !important;
+                    height: 350px !important;
                 }
 
             }
+        }
+
+        .blog {
+            max-width: 769px;
+            width: 90%;
+
+            h2 {
+                &:before {
+                    width: 17%;
+                    bottom: -10px;
+                }
+            }
+
+            // container que pega todos os blocos (carrossel)
+            .blogs {
+
+                div {
+                    img {
+                        width: 550px;
+                    }
+                }
+            }
+
+            // configs gerais
+            .blog-1,
+            .blog-2,
+            .blog-3,
+            .blog-4,
+            .blog-5 {
+                width: 669px;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-evenly;
+            }
+
+            // cards separados (para modificar cor das tags)
+            .blog-1 {
+                .blog__tag {
+                    color: var(--azul-1);
+                }
+            }
+
+            .blog-2 {
+                .blog__tag {
+                    color: var(--laranja-1);
+                }
+            }
+
+            .blog-3 {
+                .blog__tag {
+                    color: var(--azul-2);
+                }
+            }
+
+            .slick-arrow::before {
+                display: none;
+            }
+
         }
     }
 }

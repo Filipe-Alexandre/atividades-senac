@@ -24,5 +24,22 @@ $(".cards__tab").slick({
   slidesToShow: 2,
   slidesToScroll: 1,
   autoplay: true,
-  speed: 00,
+  speed: 3000,
+});
+
+$(".blogs").slick({
+  infinite: true,
+  slidesToShow: 2,
+  slidesToScroll: 1,
+  autoplay: true,
+  speed: 100,
+  responsive: [
+    {
+      breakpoint: 769,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1
+      }
+    },
+  ]
 });

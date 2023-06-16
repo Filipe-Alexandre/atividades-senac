@@ -96,7 +96,6 @@ body {
   font-size: var(--size);
   font-family: var(--padrao);
   cursor: default;
-  overflow-x: hidden;
 }
 
 body::-webkit-scrollbar {
@@ -373,7 +372,6 @@ main .sobre .sobre__imgs {
   display: grid;
   grid-template-columns: repeat(2, 50%);
   grid-template-rows: repeat(2, 50%);
-  justify-content: center;
 }
 main .sobre .sobre__imgs img {
   margin: auto;
@@ -544,32 +542,31 @@ main .servicos__tab {
 }
 main .blog {
   max-width: 1200px;
-  display: grid;
-  grid-template-columns: repeat(2, 50%);
-  grid-template-rows: 50px auto;
-  grid-template-areas: "h2 h2" "blog1 blog2";
-  gap: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 main .blog h2 {
-  grid-area: h2;
   margin-bottom: 50px;
 }
 main .blog h2:before {
   width: 10%;
   bottom: -70px;
 }
-main .blog div {
+main .blog .blogs {
+  width: auto;
+  max-width: 1200px;
   display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  gap: 20px;
+  flex-direction: row;
+  justify-content: space-around;
 }
-main .blog div img {
+main .blog .blogs div img {
   border-radius: 50px;
   width: 550px;
   height: 350px;
+  margin-bottom: 20px;
 }
-main .blog div .blog__tag {
+main .blog .blogs div .blog__tag {
   background-color: var(--branco-1);
   border-radius: 34px;
   padding: 5px 20px;
@@ -579,28 +576,48 @@ main .blog div .blog__tag {
   text-align: center;
   font-size: calc(var(--size) * 0.8);
   text-transform: uppercase;
+  display: block;
+  margin-bottom: 10px;
 }
-main .blog div h3 {
+main .blog .blogs div h3 {
   font-size: calc(var(--size) * 0.85);
 }
-main .blog div p {
+main .blog .blogs div p {
   width: 90%;
   line-height: calc(var(--size) * 1.3);
+  display: block;
 }
-main .blog div a {
+main .blog .blogs div a {
   align-self: flex-start;
 }
-main .blog .blog-1 {
-  grid-area: blog1;
+main .blog .blog-1,
+main .blog .blog-2,
+main .blog .blog-3,
+main .blog .blog-4,
+main .blog .blog-5 {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
 }
 main .blog .blog-1 .blog__tag {
   color: var(--azul-1);
 }
-main .blog .blog-2 {
-  grid-area: blog2;
-}
 main .blog .blog-2 .blog__tag {
   color: var(--laranja-1);
+}
+main .blog .blog-3 .blog__tag {
+  color: var(--azul-2);
+}
+main .blog .slick-arrow::before {
+  display: block;
+  color: var(--laranja-1);
+  transform: translateX(-25px);
+}
+main .blog .slick-slide:hover a {
+  background-color: var(--laranja-1);
+  color: var(--azul-2);
+  border-color: var(--laranja-1);
 }
 main .orcamento {
   max-width: 1200px;
@@ -840,20 +857,41 @@ footer .direito {
   font-size: calc(var(--size) * 0.7);
 }
 
-@media screen and (max-width: 1024px) {
-  main {
-    background-color: lightblue;
-  }
-}
 @media screen and (max-width: 769px) {
   main {
     background-color: red;
+  }
+  main .sobre {
+    max-width: 769px;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+  }
+  main .sobre .sobre__imgs {
+    display: grid;
+    grid-template-columns: repeat(2, 350px);
+    grid-template-rows: repeat(2, 350px);
+  }
+  main .como {
+    max-width: 769px;
+    display: flex;
+    flex-flow: column-reverse wrap;
+    justify-content: center;
+    align-items: center;
+  }
+  main .como .como__txt {
+    width: 90%;
+  }
+  main .como .como__txt ul {
+    padding: 45px;
   }
   main .servicos {
     display: none;
   }
   main .servicos__tab {
     max-width: 769px;
+    width: 90%;
     display: block;
     flex-flow: column wrap;
     align-items: center;
@@ -866,11 +904,11 @@ footer .direito {
     margin-bottom: 15px;
   }
   main .servicos__tab .heade-svc h2 {
-    font-size: calc(var(--size) * 1.2);
+    font-size: calc(var(--size) * 1.3);
     width: 50%;
   }
   main .servicos__tab .heade-svc .svc-btn {
-    align-self: flex-end;
+    align-self: center;
     font-size: calc(var(--size) * 0.8);
   }
   main .servicos__tab .heade-svc .svc-btn i {
@@ -951,6 +989,39 @@ main .servicos__tab .cards__tab .card-4 .btn-white i {
   main .servicos__tab .cards__tab .slick-slide {
     width: 350px !important;
     height: 350px !important;
+  }
+  main .blog {
+    max-width: 769px;
+    width: 90%;
+  }
+  main .blog h2:before {
+    width: 17%;
+    bottom: -10px;
+  }
+  main .blog .blogs div img {
+    width: 550px;
+  }
+  main .blog .blog-1,
+main .blog .blog-2,
+main .blog .blog-3,
+main .blog .blog-4,
+main .blog .blog-5 {
+    width: 669px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
+  main .blog .blog-1 .blog__tag {
+    color: var(--azul-1);
+  }
+  main .blog .blog-2 .blog__tag {
+    color: var(--laranja-1);
+  }
+  main .blog .blog-3 .blog__tag {
+    color: var(--azul-2);
+  }
+  main .blog .slick-arrow::before {
+    display: none;
   }
 }
 @media screen and (max-width: 480px) {
