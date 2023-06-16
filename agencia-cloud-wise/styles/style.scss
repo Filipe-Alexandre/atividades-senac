@@ -1160,6 +1160,9 @@ footer {
 
                 .slick-slide {
                     max-width: 100vw !important;
+                    img {
+                        width: 100%;
+                    }
                 }
             }
 
@@ -1214,6 +1217,6 @@ footer {
 //p
 @media screen and (max-width: 480px) {
     main {
-        background-color: lightgreen;
+        background-color: lightblue;
     }
 }
