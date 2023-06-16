@@ -149,6 +149,7 @@ h2 {
   position: relative;
   text-decoration: none;
   font-size: calc(var(--size) * 2);
+  align-self: flex-start;
 }
 h2::before {
   content: "";
@@ -550,8 +551,7 @@ main .blog h2 {
   margin-bottom: 50px;
 }
 main .blog h2:before {
-  width: 10%;
-  bottom: -70px;
+  bottom: -10px;
 }
 main .blog .blogs {
   width: auto;
@@ -608,6 +608,9 @@ main .blog .blog-2 .blog__tag {
 }
 main .blog .blog-3 .blog__tag {
   color: var(--azul-2);
+}
+main .blog .slick-arrow {
+  top: 32%;
 }
 main .blog .slick-arrow::before {
   display: block;
@@ -941,10 +944,10 @@ main .servicos__tab .cards__tab .card-3:hover > span i,
 main .servicos__tab .cards__tab .card-4:hover > span i {
     color: var(--laranja-1);
   }
-  main .servicos__tab .cards__tab .card-1:hover.btn-white,
-main .servicos__tab .cards__tab .card-2:hover.btn-white,
-main .servicos__tab .cards__tab .card-3:hover.btn-white,
-main .servicos__tab .cards__tab .card-4:hover.btn-white {
+  main .servicos__tab .cards__tab .card-1:hover .btn-white,
+main .servicos__tab .cards__tab .card-2:hover .btn-white,
+main .servicos__tab .cards__tab .card-3:hover .btn-white,
+main .servicos__tab .cards__tab .card-4:hover .btn-white {
     background-color: var(--laranja-1);
     color: var(--azul-2);
     border-color: var(--laranja-1);
@@ -990,6 +993,9 @@ main .servicos__tab .cards__tab .card-4 .btn-white i {
     width: 350px !important;
     height: 350px !important;
   }
+  main .blog .blogs div div div {
+    border: 1px solid black;
+  }
   main .blog {
     max-width: 769px;
     width: 90%;
@@ -998,8 +1004,10 @@ main .servicos__tab .cards__tab .card-4 .btn-white i {
     width: 17%;
     bottom: -10px;
   }
-  main .blog .blogs div img {
-    width: 550px;
+  main .blog .blogs div {
+    height: 620px;
+    display: flex;
+    justify-content: space-between;
   }
   main .blog .blog-1,
 main .blog .blog-2,

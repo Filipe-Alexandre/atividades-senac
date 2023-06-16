@@ -136,6 +136,7 @@ h2 {
     position: relative;
     text-decoration: none;
     font-size: calc(var(--size) * 2);
+    align-self: flex-start;
 
     &::before {
         content: "";
@@ -244,7 +245,6 @@ header {
 
             &:hover {
                 i {
-
                     color: var(--laranja-1);
                     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
                 }
@@ -274,6 +274,7 @@ header {
 
     }
 }
+
 main {
     .nuvens {
         i {
@@ -625,8 +626,7 @@ main {
             margin-bottom: 50px;
 
             &:before {
-                width: 10%;
-                bottom: -70px;
+                bottom: -10px;
             }
         }
 
@@ -705,6 +705,10 @@ main {
             .blog__tag {
                 color: var(--azul-2);
             }
+        }
+
+        .slick-arrow {
+            top: 32%;
         }
 
         .slick-arrow::before {
@@ -1094,11 +1098,14 @@ footer {
                         color: var(--laranja-1);
                     }
 
-                    &:hover.btn-white {
-                        background-color: var(--laranja-1);
-                        color: var(--azul-2);
-                        border-color: var(--laranja-1);
+                    &:hover {
+                        .btn-white {
+                            background-color: var(--laranja-1);
+                            color: var(--azul-2);
+                            border-color: var(--laranja-1);
+                        }
                     }
+
 
                     span i {
                         color: var(--azul-2);
@@ -1137,6 +1144,10 @@ footer {
             }
         }
 
+        .blog .blogs div div div {
+            border: 1px solid black;
+        }
+
         .blog {
             max-width: 769px;
             width: 90%;
@@ -1152,9 +1163,10 @@ footer {
             .blogs {
 
                 div {
-                    img {
-                        width: 550px;
-                    }
+                    height: 620px;
+                    display: flex;
+                    justify-content: space-between;
+
                 }
             }
 
