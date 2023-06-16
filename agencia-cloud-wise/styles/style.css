@@ -863,6 +863,9 @@ footer .direito {
 
 @media screen and (max-width: 769px) {
   main {
+    max-width: 769px;
+    width: 90%;
+    margin: auto;
     background-color: red;
   }
   main section {
@@ -898,7 +901,6 @@ footer .direito {
   }
   main .servicos__tab {
     max-width: 769px;
-    width: 90%;
     display: block;
     flex-flow: column wrap;
     align-items: center;
@@ -1011,6 +1013,7 @@ main .servicos__tab .cards__tab .card-4 .btn-white i {
   }
   main .blog .slick-track .slick-slide img {
     width: 100%;
+    max-height: 300px;
   }
   main .blog .blogs div {
     height: 620px;
@@ -1038,6 +1041,89 @@ main .blog .blog-5 {
   }
   main .blog .slick-arrow::before {
     display: none;
+  }
+  main .orcamento {
+    max-width: 769px;
+    border-radius: 50px 50px 0 0;
+  }
+  main .orcamento p {
+    width: 90%;
+    text-align: center;
+    padding: 20px 0;
+  }
+  main .orcamento a {
+    border-radius: 16px;
+    padding: 10px;
+  }
+  main .duvidas {
+    max-width: 769px;
+    border-radius: 0 0 50px 50px;
+    text-align: center;
+    padding: 10px 0;
+    height: auto;
+  }
+  main .duvidas p {
+    font-size: calc(var(--size) * 1.1);
+    width: 90%;
+  }
+  footer .rodape {
+    background-color: red;
+    max-width: 769px;
+    width: 90%;
+    flex-direction: column;
+    height: auto;
+  }
+  footer .rodape .acompanhe {
+    order: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
+  footer .rodape .acompanhe ul {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 50%;
+    gap: 20px;
+    height: calc(var(--size) * 1.1);
+  }
+  footer .rodape .acompanhe ul li {
+    width: calc(var(--size) * 1.1);
+  }
+  footer .rodape .acompanhe ul li a {
+    color: var(--branco-1);
+    transition: var(--suave);
+  }
+  footer .rodape .acompanhe ul li a:hover {
+    color: var(--azul-2);
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+  }
+  footer .rodape .acompanhe img {
+    transform: translateY(-50%);
+  }
+  footer .rodape .menu {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: flex-start;
+    width: 90%;
+    gap: 10px;
+  }
+  footer .rodape .menu ul {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    font-size: calc(var(--size) * 0.8);
+    line-height: calc(var(--size) * 0.9);
+    background-color: black;
+    height: auto;
+  }
+  footer .rodape .menu ul:nth-child(1) {
+    order: 1;
+  }
+  footer .direito {
+    max-width: 769px;
+    width: 90%;
   }
 }
 @media screen and (max-width: 480px) {
