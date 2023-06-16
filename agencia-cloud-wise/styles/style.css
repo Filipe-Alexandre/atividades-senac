@@ -552,6 +552,7 @@ main .blog h2 {
 }
 main .blog h2:before {
   bottom: -10px;
+  width: 100%;
 }
 main .blog .blogs {
   width: auto;
@@ -864,6 +865,9 @@ footer .direito {
   main {
     background-color: red;
   }
+  main section {
+    margin: 50px auto;
+  }
   main .sobre {
     max-width: 769px;
     display: flex;
@@ -993,16 +997,17 @@ main .servicos__tab .cards__tab .card-4 .btn-white i {
     width: 350px !important;
     height: 350px !important;
   }
-  main .blog .blogs div div div {
-    border: 1px solid black;
-  }
   main .blog {
     max-width: 769px;
     width: 90%;
   }
-  main .blog h2:before {
-    width: 17%;
-    bottom: -10px;
+  main .blog .slick-track {
+    display: flex;
+    align-items: flex-start;
+    gap: 50px;
+  }
+  main .blog .slick-track .slick-slide {
+    max-width: 100vw !important;
   }
   main .blog .blogs div {
     height: 620px;

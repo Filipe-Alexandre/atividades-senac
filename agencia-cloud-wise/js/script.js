@@ -32,7 +32,7 @@ $(".blogs").slick({
   slidesToShow: 2,
   slidesToScroll: 1,
   autoplay: true,
-  speed: 100,
+  speed: 0,
   responsive: [
     {
       breakpoint: 769,
