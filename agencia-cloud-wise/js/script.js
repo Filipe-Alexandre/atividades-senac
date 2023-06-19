@@ -50,15 +50,15 @@ $(".blogs").slick({
 
 let open = document.querySelector(".btn-open")
 let close = document.querySelector(".btn-close")
-let nav = document.querySelector('.nav')
+let nav = document.querySelector("nav")
 
 // buscar o elemento do nav e dar um display block
 
 
 open.addEventListener('click', () => {
-  document.nav.style.display = 'block'
+  nav.classList.add("ativo")
 })
 
 close.addEventListener('click', () => {
-  document.documentElement.classList.remove("menu-ativo")
+  nav.classList.remove("ativo")
 })

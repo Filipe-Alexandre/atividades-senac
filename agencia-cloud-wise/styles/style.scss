@@ -136,11 +136,13 @@ body::-webkit-scrollbar-thumb {
 
 .btn-open,
 .btn-close {
+    display: none;
     height: 50px;
     width: 50px;
     background: none;
     border: none;
     transition: var(--suave);
+
     &:hover i {
         filter: brightness(120%);
         cursor: pointer;
@@ -1045,26 +1047,35 @@ footer {
             margin: auto;
         }
 
-        .btn-open {
+        .btn-open,
+        .btn-close {
             display: block;
         }
 
         nav {
+            display: none;
+        }
+
+        .ativo {
+            display: flex;
+            align-items: center;
             position: absolute;
             flex-flow: column wrap;
             justify-content: center;
             align-items: center;
             gap: 5%;
             top: 0;
-            right: 0;
+            right: 0px;
             height: 100%;
             width: 50%;
             background-color: var(--azul-2);
+            z-index: 1;
+            transition: var(--suave);
 
             .categorias {
                 flex-direction: column;
                 justify-content: space-evenly;
-                height: 40%;
+                height: 50%;
             }
         }
     }
