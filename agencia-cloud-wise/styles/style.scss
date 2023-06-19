@@ -80,7 +80,7 @@ body {
     font-size: var(--size);
     font-family: var(--padrao);
     cursor: default;
-    // overflow-x: hidden;
+    overflow-x: hidden;
 }
 
 body::-webkit-scrollbar {
@@ -1038,13 +1038,13 @@ footer {
 
 @media screen and (max-width: 769px) {
     header {
-        background-color: red;
         max-width: 769px;
         width: 90%;
 
         h1 {
             display: block;
             margin: auto;
+            transform: translateX(50%) - 50%;
         }
 
         .btn-open,
@@ -1053,7 +1053,26 @@ footer {
         }
 
         nav {
-            display: none;
+            display: flex;
+            align-items: center;
+            position: absolute;
+            flex-flow: column wrap;
+            justify-content: center;
+            align-items: center;
+            gap: 5%;
+            top: 0;
+            right: -110%;
+            height: 100%;
+            width: 50%;
+            background: var(--azul-2);
+            z-index: 1;
+            transition: var(--suave);
+
+            .categorias {
+                flex-direction: column;
+                justify-content: space-evenly;
+                height: 50%;
+            }
         }
 
         .ativo {
@@ -1068,9 +1087,8 @@ footer {
             right: 0px;
             height: 100%;
             width: 50%;
-            background-color: var(--azul-2);
+            background: var(--azul-2);
             z-index: 1;
-            transition: var(--suave);
 
             .categorias {
                 flex-direction: column;
