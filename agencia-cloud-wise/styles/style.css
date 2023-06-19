@@ -899,7 +899,6 @@ footer .direito {
   }
   main .trilha .banner {
     height: auto !important;
-    height: 100vh !important;
   }
   main .sobre {
     max-width: 769px;
@@ -1107,6 +1106,7 @@ footer .direito {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
+    margin-top: 30px;
   }
   footer .rodape .acompanhe ul {
     display: flex;
@@ -1134,7 +1134,7 @@ footer .direito {
   footer .rodape .menu {
     display: grid;
     grid-template-columns: 200px 400px;
-    grid-template-rows: repeat(2, 15vh);
+    grid-template-rows: repeat(2, 20vh);
     grid-template-areas: "menu contato" "menu agencia";
     place-items: start;
   }

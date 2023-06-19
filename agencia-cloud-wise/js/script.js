@@ -34,7 +34,7 @@ $(".blogs").slick({
   slidesToShow: 2,
   slidesToScroll: 1,
   autoplay: true,
-  speed: 0,
+  speed: 3000,
   responsive: [
     {
       breakpoint: 769,
@@ -51,9 +51,6 @@ $(".blogs").slick({
 let open = document.querySelector(".btn-open")
 let close = document.querySelector(".btn-close")
 let nav = document.querySelector("nav")
-
-// buscar o elemento do nav e dar um display block
-
 
 open.addEventListener('click', () => {
   nav.classList.add("ativo")
