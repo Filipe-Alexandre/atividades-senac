@@ -145,6 +145,25 @@ body::-webkit-scrollbar-thumb {
   font-size: calc(var(--size) * 0.9);
 }
 
+.btn-open,
+.btn-close {
+  height: 50px;
+  width: 50px;
+  background: none;
+  border: none;
+  transition: var(--suave);
+}
+.btn-open:hover i,
+.btn-close:hover i {
+  filter: brightness(120%);
+  cursor: pointer;
+}
+.btn-open i,
+.btn-close i {
+  font-size: calc(var(--size) * 1.5);
+  color: var(--laranja-1);
+}
+
 h2 {
   position: relative;
   text-decoration: none;
@@ -182,6 +201,9 @@ header {
   margin: 20px auto;
   height: 85px;
 }
+header input {
+  display: none;
+}
 header h1 {
   background: url(../assets/logos/logo-vazio.png) no-repeat center center;
   background-size: contain;
@@ -194,6 +216,11 @@ header h1 {
 }
 header h1 a {
   color: transparent;
+}
+header nav {
+  display: flex;
+  justify-content: space-between;
+  width: 75%;
 }
 header .categorias {
   display: flex;
@@ -862,14 +889,50 @@ footer .direito {
 }
 
 @media screen and (max-width: 769px) {
+  header {
+    background-color: red;
+    max-width: 769px;
+    width: 90%;
+  }
+  header h1 {
+    display: block;
+    margin: auto;
+  }
+  header .btn-open {
+    display: block;
+  }
+  header nav {
+    position: absolute;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 5%;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 50%;
+    background-color: var(--azul-2);
+  }
+  header nav .categorias {
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 40%;
+  }
   main {
     max-width: 769px;
     width: 90%;
     margin: auto;
-    background-color: red;
   }
   main section {
     margin: 50px auto;
+  }
+  main .trilha {
+    background-position: 0px, -10px !important;
+    background-position-y: -23px !important;
+  }
+  main .trilha .banner {
+    height: auto !important;
+    height: 100vh !important;
   }
   main .sobre {
     max-width: 769px;
@@ -880,8 +943,8 @@ footer .direito {
   }
   main .sobre .sobre__imgs {
     display: grid;
-    grid-template-columns: repeat(2, 350px);
-    grid-template-rows: repeat(2, 350px);
+    grid-template-columns: repeat(2, 50%);
+    grid-template-rows: repeat(2, 50%);
   }
   main .como {
     max-width: 769px;
@@ -1012,8 +1075,8 @@ main .servicos__tab .cards__tab .card-4 .btn-white i {
     width: 90%;
   }
   main .blog .slick-track .slick-slide img {
-    width: 100%;
-    max-height: 300px;
+    width: 250px;
+    max-height: 250px;
   }
   main .blog .blogs div {
     height: 620px;
@@ -1067,7 +1130,6 @@ main .blog .blog-5 {
     width: 90%;
   }
   footer .rodape {
-    background-color: red;
     max-width: 769px;
     width: 90%;
     flex-direction: column;
@@ -1103,23 +1165,39 @@ main .blog .blog-5 {
     transform: translateY(-50%);
   }
   footer .rodape .menu {
-    display: flex;
-    flex-flow: row wrap;
-    align-items: flex-start;
-    width: 90%;
-    gap: 10px;
+    display: grid;
+    grid-template-columns: 200px 400px;
+    grid-template-rows: repeat(2, 15vh);
+    grid-template-areas: "menu contato" "menu agencia";
+    place-items: start;
   }
   footer .rodape .menu ul {
     display: flex;
     flex-direction: column;
-    gap: 10px;
-    font-size: calc(var(--size) * 0.8);
+    justify-content: flex-start;
+    font-size: calc(var(--size) * 1);
     line-height: calc(var(--size) * 0.9);
-    background-color: black;
-    height: auto;
+    min-height: 100%;
+    min-width: 100%;
+    height: 100%;
   }
   footer .rodape .menu ul:nth-child(1) {
-    order: 1;
+    grid-area: menu;
+    align-items: center;
+    width: 100px;
+    border-right: 2px solid var(--azul-2);
+  }
+  footer .rodape .menu ul:nth-child(1) li {
+    margin: 7% auto;
+  }
+  footer .rodape .menu ul:nth-child(2) {
+    grid-area: agencia;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+  footer .rodape .menu ul:nth-child(3) {
+    grid-area: contato;
+    border-bottom: 2px solid var(--azul-2);
   }
   footer .direito {
     max-width: 769px;
