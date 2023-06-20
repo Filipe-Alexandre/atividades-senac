@@ -939,6 +939,59 @@ header .btn-close {
   main section {
     margin: 50px auto;
   }
+  main .nuvens {
+    max-width: 769px;
+    width: 100%;
+    display: flex;
+  }
+  main .nuvens i {
+    font-size: calc(var(--size) * 3);
+    position: absolute;
+    transition: 0.3s ease;
+  }
+  main .nuvens i:hover {
+    text-shadow: 0 0 10px white;
+  }
+  main .nuvens .nuvem_1 {
+    left: 7.5%;
+    top: 50px;
+  }
+  main .nuvens .nuvem_2 {
+    left: 92%;
+    top: 250px;
+  }
+  main .nuvens .nuvem_3 {
+    left: 7.5%;
+    top: 500px;
+  }
+  main .nuvens .nuvem_4 {
+    left: 92%;
+    top: 1050px;
+  }
+  main .nuvens .nuvem_5 {
+    left: 7.5%;
+    top: 1800px;
+  }
+  main .nuvens .nuvem_6 {
+    left: 92%;
+    top: 2180px;
+  }
+  main .nuvens .nuvem_7 {
+    left: 7.5%;
+    top: 2800px;
+  }
+  main .nuvens .nuvem_8 {
+    left: 92%;
+    top: 3570px;
+  }
+  main .nuvens .nuvem_9 {
+    left: 7.5%;
+    top: 3900px;
+  }
+  main .nuvens .nuvem_10 {
+    left: 92%;
+    top: 4700px;
+  }
   main .trilha {
     background-position: 0px, -5px !important;
   }
@@ -1179,7 +1232,7 @@ main .blog .blog-5 {
   footer .rodape .menu {
     display: grid;
     grid-template-columns: 200px 400px;
-    grid-template-rows: repeat(2, 20vh);
+    grid-template-rows: repeat(2, 150px);
     grid-template-areas: "menu contato" "menu agencia";
     place-items: start;
   }
