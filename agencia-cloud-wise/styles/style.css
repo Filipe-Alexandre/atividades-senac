@@ -502,9 +502,9 @@ main .servicos .cards {
   gap: 30px;
 }
 main .servicos .cards div {
-  height: 500px;
-  width: 500px;
-  padding: 30px;
+  height: 38vh;
+  width: 350px;
+  padding: 60px;
   background: var(--azul-1);
   display: flex;
   flex-direction: column;
@@ -529,15 +529,15 @@ main .servicos .cards div:hover > .btn-white {
 }
 main .servicos .cards div span i {
   color: var(--azul-2);
-  font-size: calc(var(--size) * 1.8);
+  font-size: calc(var(--size) * 1.6);
   transition: var(--suave);
 }
 main .servicos .cards div h3 {
-  font-size: calc(var(--size) * 1.3);
+  font-size: calc(var(--size) * 1.1);
   font-weight: bold;
 }
 main .servicos .cards div p {
-  font-size: calc(var(--size) * 0.9);
+  font-size: calc(var(--size) * 0.7);
 }
 main .servicos .cards .card-1 {
   grid-area: card1;

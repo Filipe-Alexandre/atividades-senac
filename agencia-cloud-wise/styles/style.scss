@@ -571,9 +571,9 @@ main {
             gap: 30px;
 
             div {
-                height: 500px;
-                width: 500px;
-                padding: 30px;
+                height: 38vh;
+                width: 350px;
+                padding: 60px;
                 background: var(--azul-1);
 
                 display: flex;
@@ -600,17 +600,17 @@ main {
 
                 span i {
                     color: var(--azul-2);
-                    font-size: calc(var(--size) * 1.8);
+                    font-size: calc(var(--size) * 1.6);
                     transition: var(--suave);
                 }
 
                 h3 {
-                    font-size: calc(var(--size) * 1.3);
+                    font-size: calc(var(--size) * 1.1);
                     font-weight: bold;
                 }
 
                 p {
-                    font-size: calc(var(--size) * .9);
+                    font-size: calc(var(--size) * .7);
                 }
             }
 
