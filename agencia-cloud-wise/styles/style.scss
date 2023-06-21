@@ -1193,7 +1193,7 @@ footer {
                 width: 90%;
 
                 ul {
-                    padding: 45px;
+                    padding: 30px;
                 }
             }
         }
@@ -1218,7 +1218,7 @@ footer {
                 h2 {
                     font-size: calc(var(--size) * 1.3);
                     width: 50%;
-                    
+
                 }
 
                 .svc-btn {
@@ -1238,7 +1238,7 @@ footer {
 
                 .slick-track {
                     display: flex;
-                    gap: 1%;
+                    gap: .5%;
                 }
 
                 .slick-arrow {
@@ -1313,13 +1313,15 @@ footer {
             .slick-track {
                 display: flex;
                 align-items: flex-start;
-                gap: 50px;
+                gap: .5%;
 
                 div {
                     width: 90%;
                 }
 
                 .slick-slide {
+                    height: fit-content;
+
                     img {
                         width: 250px;
                         max-height: 250px;
@@ -1490,7 +1492,6 @@ footer {
                 ul:nth-child(3) {
                     grid-area: contato;
                     border-bottom: 2px solid var(--azul-2);
-
                 }
             }
         }
@@ -1553,7 +1554,6 @@ footer {
 
                 p {
                     font-size: calc(var(--size) * .9) !important;
-
                 }
             }
         }
@@ -1567,8 +1567,6 @@ footer {
             align-items: center;
 
             .sobre__txt {
-
-
                 p {
                     font-size: calc(var(--size) * .8);
                     margin: 20px auto;
@@ -1651,13 +1649,10 @@ footer {
                     padding: 10px;
                 }
 
-
-
                 h3 {
                     font-size: calc(var(--size) * .8);
                     transform: translateX(0);
                 }
-
             }
         }
 
@@ -1669,6 +1664,7 @@ footer {
                 max-width: 380px;
                 display: flex;
                 flex-flow: column wrap;
+
                 h2 {
                     width: 100%;
                 }
@@ -1687,44 +1683,92 @@ footer {
         }
 
         .blog {
-            max-width: 769px;
+            max-width: 380px;
             width: 90%;
+
+            h2 {
+                margin-bottom: 10px;
+            }
 
             .slick-track {
                 display: block;
                 align-items: flex-start;
-                gap: 0px;
+                gap: 1%;
+                display: flex;
 
                 div {
-                    width: 380px!important;
-                }
-
-                .slick-slide {
-                    display: block;
-                    img {
-                        width: 100%;
-                    }
+                    width: 120% !important;
+                    align-self: flex-start;
                 }
             }
 
             // container que pega todos os blocos (carrossel)
             .blogs {
                 div {
-                    border: 1px solid black;
                     height: 620px;
                     width: 380px;
                     display: flex;
                     justify-content: space-between;
                 }
             }
+
             .slick-track {
-                background-color: rgba(255, 255, 255, 0.43);
+                width: 380px;
                 display: flex;
                 flex-direction: row;
+                gap: 10px;
             }
 
             .slick-arrow::before {
                 display: none;
+            }
+        }
+
+        .orcamento {
+            max-width: 380px;
+            border-radius: 50px 50px 0 0;
+
+            p {
+                width: 90%;
+                text-align: center;
+                padding: 20px 0;
+                font-size: calc(var(--size)*.9);
+            }
+
+            a {
+                border-radius: 30px;
+                padding: 10px;
+                width: 90%;
+                font-size: calc(var(--size)*.9);
+            }
+        }
+
+        .duvidas {
+            max-width: 380px;
+            border-radius: 0 0 50px 50px;
+            text-align: center;
+            padding: 10px 0;
+            height: auto;
+
+            p {
+                font-size: calc(var(--size) * .9);
+                width: 90%;
+
+                i {
+                    font-size: calc(var(--size) * 1);
+                    align-self: center;
+                }
+            }
+        }
+
+        .voltar {
+            bottom: 10px;
+            right: 10px;
+            height: 30px;
+            width: 30px;
+
+            img {
+                height: 35px;
             }
         }
     }

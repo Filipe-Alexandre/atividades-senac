@@ -53,7 +53,7 @@ $(".blogs").slick({
       },
     },
     {
-      breakpoint: 380,
+      breakpoint: 390,
       settings: {
         slidesToShow: 1,
         slidesToScroll: 1,

@@ -13,26 +13,9 @@
   --suave: .5s ease;
 }
 
-@-webkit-keyframes pulse {
-  50% {
-    background-color: var(--laranja-1);
-  }
-}
-
 @keyframes pulse {
   50% {
     background-color: var(--laranja-1);
-  }
-}
-@-webkit-keyframes wiggle {
-  0%, 80%, 100% {
-    transform: rotate(35deg);
-  }
-  85% {
-    transform: rotate(45deg);
-  }
-  95% {
-    transform: rotate(25deg);
   }
 }
 @keyframes wiggle {
@@ -46,21 +29,9 @@
     transform: rotate(25deg);
   }
 }
-@-webkit-keyframes pisca {
-  50% {
-    color: white;
-  }
-}
 @keyframes pisca {
   50% {
     color: white;
-  }
-}
-@-webkit-keyframes pisca2 {
-  50% {
-    color: var(--laranja-1);
-    font-size: calc(var(--size) * 1.1);
-    text-shadow: 0 0 4px rgba(0, 0, 0, 0.5);
   }
 }
 @keyframes pisca2 {
@@ -68,14 +39,6 @@
     color: var(--laranja-1);
     font-size: calc(var(--size) * 1.1);
     text-shadow: 0 0 4px rgba(0, 0, 0, 0.5);
-  }
-}
-@-webkit-keyframes float {
-  0%, 100% {
-    transform: translateY(3%);
-  }
-  50% {
-    transform: translateY(-3%);
   }
 }
 @keyframes float {
@@ -283,12 +246,10 @@ header .redes li i {
   margin-top: 2px;
 }
 header .redes li:nth-child(3) {
-  -webkit-animation: pulse 2.5s infinite;
-          animation: pulse 2.5s infinite;
+  animation: pulse 2.5s infinite;
 }
 header .redes li:nth-child(3):hover {
-  -webkit-animation: none;
-          animation: none;
+  animation: none;
   background-color: var(--laranja-1);
 }
 header .redes li:nth-child(3):hover i {
@@ -512,12 +473,10 @@ main .servicos .cards div {
   align-items: flex-start;
   gap: 15px;
   line-height: calc(var(--size) * 1.3);
-  -webkit-animation: float 9s ease infinite;
-          animation: float 9s ease infinite;
+  animation: float 9s ease infinite;
 }
 main .servicos .cards div:hover {
-  -webkit-animation-play-state: paused;
-          animation-play-state: paused;
+  animation-play-state: paused;
 }
 main .servicos .cards div:hover > span i {
   color: var(--laranja-1);
@@ -543,29 +502,25 @@ main .servicos .cards .card-1 {
   grid-area: card1;
   border-radius: 50px 4px 4px 4px;
   transform: translateY(-15px);
-  -webkit-animation-delay: 0.2s;
-          animation-delay: 0.2s;
+  animation-delay: 0.2s;
 }
 main .servicos .cards .card-2 {
   grid-area: card2;
   border-radius: 4px 50px 4px 4px;
   transform: translateY(15px);
-  -webkit-animation-delay: 0.5s;
-          animation-delay: 0.5s;
+  animation-delay: 0.5s;
 }
 main .servicos .cards .card-3 {
   grid-area: card3;
   border-radius: 4px 4px 4px 50px;
   transform: translateY(-15px);
-  -webkit-animation-delay: 0s;
-          animation-delay: 0s;
+  animation-delay: 0s;
 }
 main .servicos .cards .card-4 {
   grid-area: card4;
   border-radius: 4px 4px 50px 4px;
   transform: translateY(15px);
-  -webkit-animation-delay: 0.8s;
-          animation-delay: 0.8s;
+  animation-delay: 0.8s;
 }
 main .servicos__tab {
   display: none;
@@ -600,7 +555,6 @@ main .blog .blogs div .blog__tag {
   background-color: var(--branco-1);
   border-radius: 34px;
   padding: 5px 20px;
-  width: -webkit-max-content;
   width: -moz-max-content;
   width: max-content;
   text-align: center;
@@ -684,14 +638,12 @@ main .orcamento a:hover {
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
 }
 main .orcamento a:hover > i {
-  -webkit-animation: pisca 1.5s ease;
-          animation: pisca 1.5s ease;
+  animation: pisca 1.5s ease;
 }
 main .orcamento a i {
   transform: rotate(35deg);
   padding-left: 5px;
-  -webkit-animation: wiggle 2.5s infinite;
-          animation: wiggle 2.5s infinite;
+  animation: wiggle 2.5s infinite;
 }
 main .duvidas {
   max-width: 1200px;
@@ -759,40 +711,28 @@ footer .rodape .acompanhe {
   justify-content: space-evenly;
 }
 footer .rodape .acompanhe:hover .fa-facebook {
-  -webkit-animation: pisca2 0.7s ease normal;
-          animation: pisca2 0.7s ease normal;
-  -webkit-animation-delay: 0s;
-          animation-delay: 0s;
+  animation: pisca2 0.7s ease normal;
+  animation-delay: 0s;
 }
 footer .rodape .acompanhe:hover .fa-instagram {
-  -webkit-animation: pisca2 0.7s ease normal;
-          animation: pisca2 0.7s ease normal;
-  -webkit-animation-delay: 0.5s;
-          animation-delay: 0.5s;
+  animation: pisca2 0.7s ease normal;
+  animation-delay: 0.5s;
 }
 footer .rodape .acompanhe:hover .fa-twitter {
-  -webkit-animation: pisca2 0.7s ease normal;
-          animation: pisca2 0.7s ease normal;
-  -webkit-animation-delay: 1s;
-          animation-delay: 1s;
+  animation: pisca2 0.7s ease normal;
+  animation-delay: 1s;
 }
 footer .rodape .acompanhe:hover .fa-whatsapp {
-  -webkit-animation: pisca2 0.7s ease normal;
-          animation: pisca2 0.7s ease normal;
-  -webkit-animation-delay: 1.5s;
-          animation-delay: 1.5s;
+  animation: pisca2 0.7s ease normal;
+  animation-delay: 1.5s;
 }
 footer .rodape .acompanhe:hover .fa-linkedin {
-  -webkit-animation: pisca2 0.7s ease normal;
-          animation: pisca2 0.7s ease normal;
-  -webkit-animation-delay: 2s;
-          animation-delay: 2s;
+  animation: pisca2 0.7s ease normal;
+  animation-delay: 2s;
 }
 footer .rodape .acompanhe:hover .fa-github {
-  -webkit-animation: pisca2 0.7s ease normal;
-          animation: pisca2 0.7s ease normal;
-  -webkit-animation-delay: 2.5s;
-          animation-delay: 2.5s;
+  animation: pisca2 0.7s ease normal;
+  animation-delay: 2.5s;
 }
 footer .rodape .acompanhe:hover img {
   filter: brightness(100%);
@@ -904,7 +844,7 @@ footer .direito {
     transform: translateX(50%)-50%;
   }
   header .btn-open,
-header .btn-close {
+  header .btn-close {
     display: block;
   }
   header nav {
@@ -1021,7 +961,7 @@ header .btn-close {
     width: 90%;
   }
   main .como .como__txt ul {
-    padding: 45px;
+    padding: 30px;
   }
   main .servicos {
     display: none;
@@ -1055,15 +995,15 @@ header .btn-close {
   }
   main .servicos__tab .cards__tab .slick-track {
     display: flex;
-    gap: 1%;
+    gap: 0.5%;
   }
   main .servicos__tab .cards__tab .slick-arrow {
     display: none !important;
   }
   main .servicos__tab .cards__tab .card-1,
-main .servicos__tab .cards__tab .card-2,
-main .servicos__tab .cards__tab .card-3,
-main .servicos__tab .cards__tab .card-4 {
+  main .servicos__tab .cards__tab .card-2,
+  main .servicos__tab .cards__tab .card-3,
+  main .servicos__tab .cards__tab .card-4 {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
@@ -1072,44 +1012,44 @@ main .servicos__tab .cards__tab .card-4 {
     border-radius: 50px 50px;
   }
   main .servicos__tab .cards__tab .card-1:hover > span i,
-main .servicos__tab .cards__tab .card-2:hover > span i,
-main .servicos__tab .cards__tab .card-3:hover > span i,
-main .servicos__tab .cards__tab .card-4:hover > span i {
+  main .servicos__tab .cards__tab .card-2:hover > span i,
+  main .servicos__tab .cards__tab .card-3:hover > span i,
+  main .servicos__tab .cards__tab .card-4:hover > span i {
     color: var(--laranja-1);
   }
   main .servicos__tab .cards__tab .card-1:hover .btn-white,
-main .servicos__tab .cards__tab .card-2:hover .btn-white,
-main .servicos__tab .cards__tab .card-3:hover .btn-white,
-main .servicos__tab .cards__tab .card-4:hover .btn-white {
+  main .servicos__tab .cards__tab .card-2:hover .btn-white,
+  main .servicos__tab .cards__tab .card-3:hover .btn-white,
+  main .servicos__tab .cards__tab .card-4:hover .btn-white {
     background-color: var(--laranja-1);
     color: var(--azul-2);
     border-color: var(--laranja-1);
   }
   main .servicos__tab .cards__tab .card-1 span i,
-main .servicos__tab .cards__tab .card-2 span i,
-main .servicos__tab .cards__tab .card-3 span i,
-main .servicos__tab .cards__tab .card-4 span i {
+  main .servicos__tab .cards__tab .card-2 span i,
+  main .servicos__tab .cards__tab .card-3 span i,
+  main .servicos__tab .cards__tab .card-4 span i {
     color: var(--azul-2);
     font-size: calc(var(--size) * 1.1);
     transition: var(--suave);
   }
   main .servicos__tab .cards__tab .card-1 h3,
-main .servicos__tab .cards__tab .card-2 h3,
-main .servicos__tab .cards__tab .card-3 h3,
-main .servicos__tab .cards__tab .card-4 h3 {
+  main .servicos__tab .cards__tab .card-2 h3,
+  main .servicos__tab .cards__tab .card-3 h3,
+  main .servicos__tab .cards__tab .card-4 h3 {
     font-size: calc(var(--size) * 0.9);
     font-weight: bold;
   }
   main .servicos__tab .cards__tab .card-1 p,
-main .servicos__tab .cards__tab .card-2 p,
-main .servicos__tab .cards__tab .card-3 p,
-main .servicos__tab .cards__tab .card-4 p {
+  main .servicos__tab .cards__tab .card-2 p,
+  main .servicos__tab .cards__tab .card-3 p,
+  main .servicos__tab .cards__tab .card-4 p {
     font-size: calc(var(--size) * 0.6);
   }
   main .servicos__tab .cards__tab .card-1 .btn-white,
-main .servicos__tab .cards__tab .card-2 .btn-white,
-main .servicos__tab .cards__tab .card-3 .btn-white,
-main .servicos__tab .cards__tab .card-4 .btn-white {
+  main .servicos__tab .cards__tab .card-2 .btn-white,
+  main .servicos__tab .cards__tab .card-3 .btn-white,
+  main .servicos__tab .cards__tab .card-4 .btn-white {
     font-size: calc(var(--size) * 0.8);
     width: 55%;
     padding: 5px;
@@ -1117,9 +1057,9 @@ main .servicos__tab .cards__tab .card-4 .btn-white {
     text-align: center;
   }
   main .servicos__tab .cards__tab .card-1 .btn-white i,
-main .servicos__tab .cards__tab .card-2 .btn-white i,
-main .servicos__tab .cards__tab .card-3 .btn-white i,
-main .servicos__tab .cards__tab .card-4 .btn-white i {
+  main .servicos__tab .cards__tab .card-2 .btn-white i,
+  main .servicos__tab .cards__tab .card-3 .btn-white i,
+  main .servicos__tab .cards__tab .card-4 .btn-white i {
     font-size: calc(var(--size) * 0.7);
   }
   main .servicos__tab .cards__tab .slick-slide {
@@ -1133,10 +1073,14 @@ main .servicos__tab .cards__tab .card-4 .btn-white i {
   main .blog .slick-track {
     display: flex;
     align-items: flex-start;
-    gap: 50px;
+    gap: 0.5%;
   }
   main .blog .slick-track div {
     width: 90%;
+  }
+  main .blog .slick-track .slick-slide {
+    height: -moz-fit-content;
+    height: fit-content;
   }
   main .blog .slick-track .slick-slide img {
     width: 250px;
@@ -1149,10 +1093,10 @@ main .servicos__tab .cards__tab .card-4 .btn-white i {
     padding: 10px;
   }
   main .blog .blog-1,
-main .blog .blog-2,
-main .blog .blog-3,
-main .blog .blog-4,
-main .blog .blog-5 {
+  main .blog .blog-2,
+  main .blog .blog-3,
+  main .blog .blog-4,
+  main .blog .blog-5 {
     width: 669px;
     display: flex;
     flex-direction: column;
@@ -1337,30 +1281,7 @@ main .blog .blog-5 {
     display: block;
     height: 300px;
     width: 90%;
-    -webkit-animation: fadeImg 20s ease infinite;
-            animation: fadeImg 20s ease infinite;
-  }
-  @-webkit-keyframes fadeImg {
-    0% {
-      background: url(../assets/img/banner-1.jpg) no-repeat;
-      background-size: cover;
-      border-radius: 40% 20%;
-    }
-    25% {
-      background: url(../assets/img/banner-5.jpg) no-repeat;
-      background-size: cover;
-      border-radius: 20% 40%;
-    }
-    50% {
-      background: url(../assets/img/banner-3.jpg) no-repeat;
-      background-size: cover;
-      border-radius: 40% 20%;
-    }
-    75% {
-      background: url(../assets/img/banner-6.jpg) no-repeat;
-      background-size: cover;
-      border-radius: 20% 40%;
-    }
+    animation: fadeImg 20s ease infinite;
   }
   @keyframes fadeImg {
     0% {
@@ -1433,36 +1354,75 @@ main .blog .blog-5 {
     font-size: calc(var(--size) * 0.5);
   }
   main .blog {
-    max-width: 769px;
+    max-width: 380px;
     width: 90%;
+  }
+  main .blog h2 {
+    margin-bottom: 10px;
   }
   main .blog .slick-track {
     display: block;
     align-items: flex-start;
-    gap: 0px;
+    gap: 1%;
+    display: flex;
   }
   main .blog .slick-track div {
-    width: 380px !important;
-  }
-  main .blog .slick-track .slick-slide {
-    display: block;
-  }
-  main .blog .slick-track .slick-slide img {
-    width: 100%;
+    width: 120% !important;
+    align-self: flex-start;
   }
   main .blog .blogs div {
-    border: 1px solid black;
     height: 620px;
     width: 380px;
     display: flex;
     justify-content: space-between;
   }
   main .blog .slick-track {
-    background-color: rgba(255, 255, 255, 0.43);
+    width: 380px;
     display: flex;
     flex-direction: row;
+    gap: 10px;
   }
   main .blog .slick-arrow::before {
     display: none;
+  }
+  main .orcamento {
+    max-width: 380px;
+    border-radius: 50px 50px 0 0;
+  }
+  main .orcamento p {
+    width: 90%;
+    text-align: center;
+    padding: 20px 0;
+    font-size: calc(var(--size) * 0.9);
+  }
+  main .orcamento a {
+    border-radius: 30px;
+    padding: 10px;
+    width: 90%;
+    font-size: calc(var(--size) * 0.9);
+  }
+  main .duvidas {
+    max-width: 380px;
+    border-radius: 0 0 50px 50px;
+    text-align: center;
+    padding: 10px 0;
+    height: auto;
+  }
+  main .duvidas p {
+    font-size: calc(var(--size) * 0.9);
+    width: 90%;
+  }
+  main .duvidas p i {
+    font-size: calc(var(--size) * 1);
+    align-self: center;
+  }
+  main .voltar {
+    bottom: 10px;
+    right: 10px;
+    height: 30px;
+    width: 30px;
+  }
+  main .voltar img {
+    height: 35px;
   }
 }/*# sourceMappingURL=style.css.map */
