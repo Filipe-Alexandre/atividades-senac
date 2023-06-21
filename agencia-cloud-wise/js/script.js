@@ -27,6 +27,15 @@ $(".cards__tab").slick({
   slidesToScroll: 1,
   autoplay: true,
   speed: 3000,
+  responsive: [
+    {
+      breakpoint: 769,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1,
+      },
+    },
+  ],
 });
 
 $(".blogs").slick({
@@ -40,22 +49,29 @@ $(".blogs").slick({
       breakpoint: 769,
       settings: {
         slidesToShow: 2,
-        slidesToScroll: 1
-      }
+        slidesToScroll: 1,
+      },
     },
-  ]
+    {
+      breakpoint: 380,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1,
+      },
+    },
+  ],
 });
 
 //-----------------------------------------------------------------
 
-let open = document.querySelector(".btn-open")
-let close = document.querySelector(".btn-close")
-let nav = document.querySelector("nav")
+let open = document.querySelector(".btn-open");
+let close = document.querySelector(".btn-close");
+let nav = document.querySelector("nav");
 
-open.addEventListener('click', () => {
-  nav.classList.add("ativo")
-})
+open.addEventListener("click", () => {
+  nav.classList.add("ativo");
+});
 
-close.addEventListener('click', () => {
-  nav.classList.remove("ativo")
-})
+close.addEventListener("click", () => {
+  nav.classList.remove("ativo");
+});

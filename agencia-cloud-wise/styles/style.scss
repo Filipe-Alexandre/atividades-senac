@@ -68,7 +68,7 @@
     }
 }
 
-// color: fuchsia;
+// color: fuchsia; marcação
 
 html {
     scroll-behavior: smooth;
@@ -1034,14 +1034,13 @@ footer {
 //     }
 // }
 
-// color: fuchsia;
-
+// color: fuchsia; marcação
 @media screen and (max-width: 769px) {
 
     body {
         overflow-x: hidden;
     }
-    
+
     header {
         max-width: 769px;
         width: 90%;
@@ -1098,60 +1097,62 @@ footer {
             max-width: 769px;
             width: 100%;
             display: flex;
+
             i {
                 font-size: calc(var(--size) * 3);
                 position: absolute;
                 transition: .3s ease;
+
                 &:hover {
                     text-shadow: 0 0 10px white;
                 }
             }
-    
+
             .nuvem_1 {
                 left: 7.5%;
                 top: 50px;
             }
-    
+
             .nuvem_2 {
                 left: 92%;
                 top: 250px;
             }
-    
+
             .nuvem_3 {
                 left: 7.5%;
                 top: 500px;
             }
-    
+
             .nuvem_4 {
                 left: 92%;
                 top: 1050px;
             }
-    
+
             .nuvem_5 {
                 left: 7.5%;
                 top: 1800px;
             }
-    
+
             .nuvem_6 {
                 left: 92%;
                 top: 2180px;
             }
-    
+
             .nuvem_7 {
                 left: 7.5%;
                 top: 2800px;
             }
-    
+
             .nuvem_8 {
                 left: 92%;
                 top: 3570px;
             }
-    
+
             .nuvem_9 {
                 left: 7.5%;
                 top: 3900px;
             }
-    
+
             .nuvem_10 {
                 left: 92%;
                 top: 4700px;
@@ -1207,7 +1208,7 @@ footer {
             flex-flow: column wrap;
             align-items: center;
 
-            .heade-svc {
+            .header-svc {
                 max-width: 769px;
                 display: flex;
                 align-items: center;
@@ -1217,6 +1218,7 @@ footer {
                 h2 {
                     font-size: calc(var(--size) * 1.3);
                     width: 50%;
+                    
                 }
 
                 .svc-btn {
@@ -1331,6 +1333,7 @@ footer {
                     height: 620px;
                     display: flex;
                     justify-content: space-between;
+                    padding: 10px;
                 }
             }
 
@@ -1344,6 +1347,7 @@ footer {
                 display: flex;
                 flex-direction: column;
                 justify-content: space-evenly;
+
             }
 
             // cards separados (para modificar cor das tags)
@@ -1498,9 +1502,234 @@ footer {
     }
 }
 
-//p
-@media screen and (max-width: 480px) {
+// color: fuchsia; marcação
+@media screen and (max-width: 380px) {
+
+    header {
+        max-width: 380px;
+
+        h1 {
+            height: 50px;
+            display: grid;
+            place-items: center;
+        }
+
+        .btn-open {
+            position: absolute;
+            right: 6%;
+        }
+
+        nav {
+            width: 100%;
+        }
+    }
+
     main {
         background-color: lightsalmon;
+        max-width: 380px;
+
+        section {
+            margin: 25px auto;
+        }
+
+        h2 {
+            font-size: calc(var(--size) * 1.3);
+        }
+
+        .trilha {
+            display: block;
+            background-position: top center;
+
+            .banner {
+                text-align: center;
+
+                span {
+                    font-size: calc(var(--size) * 4) !important;
+
+                    i {
+                        display: none;
+                    }
+                }
+
+                p {
+                    font-size: calc(var(--size) * .9) !important;
+
+                }
+            }
+        }
+
+        .sobre {
+            max-width: 380px;
+
+            display: flex;
+            flex-flow: column wrap;
+            justify-content: center;
+            align-items: center;
+
+            .sobre__txt {
+
+
+                p {
+                    font-size: calc(var(--size) * .8);
+                    margin: 20px auto;
+                }
+
+                .btn {
+                    display: block;
+                    margin: auto;
+                    width: 75%;
+                    text-align: center;
+
+                    font-size: calc(var(--size) * .8);
+
+                    i {
+                        font-size: calc(var(--size) * .7);
+                    }
+                }
+            }
+
+            .sobre__imgs {
+                @keyframes fadeImg {
+                    0% {
+                        background: url(../assets/img/banner-1.jpg) no-repeat;
+                        background-size: cover;
+                        border-radius: 40% 20%;
+                    }
+
+                    25% {
+                        background: url(../assets/img/banner-5.jpg) no-repeat;
+                        background-size: cover;
+                        border-radius: 20% 40%;
+                    }
+
+                    50% {
+                        background: url(../assets/img/banner-3.jpg) no-repeat;
+                        background-size: cover;
+                        border-radius: 40% 20%;
+                    }
+
+                    75% {
+                        background: url(../assets/img/banner-6.jpg) no-repeat;
+                        background-size: cover;
+                        border-radius: 20% 40%;
+                    }
+                }
+
+                display: block;
+                height: 300px;
+                width: 90%;
+                animation: fadeImg 20s ease infinite;
+
+                img {
+                    display: none;
+                }
+
+            }
+        }
+
+        .como {
+            max-width: 380px;
+            width: 90%;
+
+            .como__img {
+                background-size: cover;
+                background-position: center center;
+                width: 90%;
+
+                img {
+                    width: 80%;
+                    height: 70%;
+                }
+            }
+
+            .como__txt {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+
+                ul {
+                    padding: 10px;
+                }
+
+
+
+                h3 {
+                    font-size: calc(var(--size) * .8);
+                    transform: translateX(0);
+                }
+
+            }
+        }
+
+        .servicos__tab {
+            width: 90%;
+            max-width: 380px;
+
+            .header-svc {
+                max-width: 380px;
+                display: flex;
+                flex-flow: column wrap;
+                h2 {
+                    width: 100%;
+                }
+            }
+
+            .svc-btn {
+                align-self: center;
+                font-size: calc(var(--size) * .5);
+                margin: 15px auto;
+
+
+                i {
+                    font-size: calc(var(--size) * .5);
+                }
+            }
+        }
+
+        .blog {
+            max-width: 769px;
+            width: 90%;
+
+            .slick-track {
+                display: block;
+                align-items: flex-start;
+                gap: 0px;
+
+                div {
+                    width: 380px!important;
+                }
+
+                .slick-slide {
+                    display: block;
+                    img {
+                        width: 100%;
+                    }
+                }
+            }
+
+            // container que pega todos os blocos (carrossel)
+            .blogs {
+                div {
+                    border: 1px solid black;
+                    height: 620px;
+                    width: 380px;
+                    display: flex;
+                    justify-content: space-between;
+                }
+            }
+            .slick-track {
+                background-color: rgba(255, 255, 255, 0.43);
+                display: flex;
+                flex-direction: row;
+            }
+
+            .slick-arrow::before {
+                display: none;
+            }
+        }
     }
+
+    // footer {
+
+    // }
 }
