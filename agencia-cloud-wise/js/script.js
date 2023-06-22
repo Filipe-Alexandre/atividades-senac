@@ -75,3 +75,6 @@ open.addEventListener("click", () => {
 close.addEventListener("click", () => {
   nav.classList.remove("ativo");
 });
+
+// Inicialização AOS
+AOS.init();
