@@ -892,6 +892,11 @@ footer .direito {
   font-size: calc(var(--size) * 0.7);
 }
 
+@media screen and (max-width: 1024px) {
+  main {
+    background-color: lightblue;
+  }
+}
 @media screen and (max-width: 769px) {
   body {
     overflow-x: hidden;
