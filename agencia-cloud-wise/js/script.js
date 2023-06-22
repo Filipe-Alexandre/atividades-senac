@@ -26,7 +26,7 @@ $(".cards__tab").slick({
   slidesToShow: 2,
   slidesToScroll: 1,
   autoplay: true,
-  speed: 3000,
+  speed: 2000,
   responsive: [
     {
       breakpoint: 769,
@@ -43,7 +43,7 @@ $(".blogs").slick({
   slidesToShow: 2,
   slidesToScroll: 1,
   autoplay: true,
-  speed: 3000,
+  speed: 2000,
   responsive: [
     {
       breakpoint: 769,

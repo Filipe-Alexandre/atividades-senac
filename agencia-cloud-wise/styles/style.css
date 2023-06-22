@@ -1231,7 +1231,6 @@ footer .direito {
     width: 100%;
   }
   main {
-    background-color: lightsalmon;
     max-width: 380px;
   }
   main section {
@@ -1424,5 +1423,8 @@ footer .direito {
   }
   main .voltar img {
     height: 35px;
+  }
+  footer {
+    background-color: lightsalmon;
   }
 }/*# sourceMappingURL=style.css.map */
