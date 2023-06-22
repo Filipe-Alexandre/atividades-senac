@@ -565,13 +565,14 @@ main {
         .cards {
             display: grid;
             grid-area: cards;
+            grid-template-rows:  repeat(2, 450px);
             grid-template-areas:
                 "card1 card2"
                 "card3 card4";
             gap: 30px;
 
             div {
-                height: 38vh;
+                height: 78%;
                 width: 350px;
                 padding: 60px;
                 background: var(--azul-1);
