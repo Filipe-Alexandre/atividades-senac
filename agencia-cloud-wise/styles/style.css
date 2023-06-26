@@ -1400,8 +1400,7 @@ main .blog .blog-5 {
     display: block;
     height: 400px;
     width: 400px;
-    -webkit-animation: fadeImg 20s ease infinite;
-            animation: fadeImg 20s ease infinite;
+    animation: fadeImg 20s ease infinite reverse;
   }
   @-webkit-keyframes fadeImg {
     0% {
@@ -1409,17 +1408,27 @@ main .blog .blog-5 {
       background-size: cover;
       border-radius: 40% 20%;
     }
-    25% {
-      background: url(../assets/img/banner-5.jpg) no-repeat;
+    20% {
+      background: url(../assets/img/banner-2.jpg) no-repeat;
       background-size: cover;
       border-radius: 20% 40%;
     }
-    50% {
+    40% {
       background: url(../assets/img/banner-3.jpg) no-repeat;
       background-size: cover;
       border-radius: 40% 20%;
     }
-    75% {
+    60% {
+      background: url(../assets/img/banner-4.jpg) no-repeat;
+      background-size: cover;
+      border-radius: 20% 40%;
+    }
+    80% {
+      background: url(../assets/img/banner-5.jpg) no-repeat;
+      background-size: cover;
+      border-radius: 40% 20%;
+    }
+    100% {
       background: url(../assets/img/banner-6.jpg) no-repeat;
       background-size: cover;
       border-radius: 20% 40%;
@@ -1431,17 +1440,27 @@ main .blog .blog-5 {
       background-size: cover;
       border-radius: 40% 20%;
     }
-    25% {
-      background: url(../assets/img/banner-5.jpg) no-repeat;
+    20% {
+      background: url(../assets/img/banner-2.jpg) no-repeat;
       background-size: cover;
       border-radius: 20% 40%;
     }
-    50% {
+    40% {
       background: url(../assets/img/banner-3.jpg) no-repeat;
       background-size: cover;
       border-radius: 40% 20%;
     }
-    75% {
+    60% {
+      background: url(../assets/img/banner-4.jpg) no-repeat;
+      background-size: cover;
+      border-radius: 20% 40%;
+    }
+    80% {
+      background: url(../assets/img/banner-5.jpg) no-repeat;
+      background-size: cover;
+      border-radius: 40% 20%;
+    }
+    100% {
       background: url(../assets/img/banner-6.jpg) no-repeat;
       background-size: cover;
       border-radius: 20% 40%;

@@ -19,7 +19,7 @@
     --suave: .5s ease;
 }
 
-// color: fuchsia;
+// dodgerblue
 // #region keyframes
 @keyframes pulse {
     50% {
@@ -72,10 +72,8 @@
 
 // #endregion keyframes
 
-// color: fuchsia;
+// dodgerblue
 // #region body
-
-
 html {
     scroll-behavior: smooth;
 }
@@ -105,7 +103,7 @@ body::-webkit-scrollbar-thumb {
 
 // #endregion body
 
-// color: fuchsia;
+// dodgerblue
 // #region PADRÕES
 
 .btn {
@@ -200,7 +198,7 @@ section {
 
 // #endregion PADRÕES
 
-// color: fuchsia;
+// dodgerblue
 // #region 1200
 header {
     max-width: 1200px;
@@ -577,7 +575,7 @@ main {
 
         .btn-white {
             align-self: flex-start;
-            
+
         }
 
         .cards {
@@ -1049,7 +1047,7 @@ footer {
 
 // #endregion 1200
 
-// color: fuchsia; medio
+// dodgerblue
 @media screen and (max-width: 900px) {
 
     body {
@@ -1518,7 +1516,7 @@ footer {
     }
 }
 
-// color: fuchsia; pequeno
+// dodgerblue
 @media screen and (max-width: 600px) {
     header {
         max-width: 600px;
@@ -1671,19 +1669,31 @@ footer {
                         border-radius: 40% 20%;
                     }
 
-                    25% {
-                        background: url(../assets/img/banner-5.jpg) no-repeat;
+                    20% {
+                        background: url(../assets/img/banner-2.jpg) no-repeat;
                         background-size: cover;
                         border-radius: 20% 40%;
                     }
 
-                    50% {
+                    40% {
                         background: url(../assets/img/banner-3.jpg) no-repeat;
                         background-size: cover;
                         border-radius: 40% 20%;
                     }
 
-                    75% {
+                    60% {
+                        background: url(../assets/img/banner-4.jpg) no-repeat;
+                        background-size: cover;
+                        border-radius: 20% 40%;
+                    }
+
+                    80% {
+                        background: url(../assets/img/banner-5.jpg) no-repeat;
+                        background-size: cover;
+                        border-radius: 40% 20%;
+                    }
+
+                    100% {
                         background: url(../assets/img/banner-6.jpg) no-repeat;
                         background-size: cover;
                         border-radius: 20% 40%;
@@ -1693,7 +1703,7 @@ footer {
                 display: block;
                 height: 400px;
                 width: 400px;
-                animation: fadeImg 20s ease infinite;
+                animation: fadeImg 20s ease infinite reverse;
 
                 img {
                     display: none;
