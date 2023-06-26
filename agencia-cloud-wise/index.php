@@ -48,6 +48,7 @@
 
 
     <main>
+        <?php require_once('./sections/sect-nuvens.php'); ?>
         <?php require_once('./sections/sect-banner.php'); ?>
         <?php require_once('./sections/sect-sobre.php'); ?>
         <?php require_once('./sections/sect-comoTrabalhamos.php'); ?>
