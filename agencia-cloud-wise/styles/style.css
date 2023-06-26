@@ -892,7 +892,7 @@ footer .direito {
   font-size: calc(var(--size) * 0.7);
 }
 
-@media screen and (max-width: 720px) {
+@media screen and (max-width: 900px) {
   body {
     overflow-x: hidden;
   }

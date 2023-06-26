@@ -1041,8 +1041,8 @@ footer {
 }
 // #endregion 1200
 
-// color: fuchsia; 769
-@media screen and (max-width: 720px) {
+// color: fuchsia; medio
+@media screen and (max-width: 900px) {
 
     body {
         overflow-x: hidden;
@@ -1510,7 +1510,7 @@ footer {
     }
 }
 
-// color: fuchsia; 380
+// color: fuchsia; pequeno
 @media screen and (max-width: 600px) {
 
     header {
