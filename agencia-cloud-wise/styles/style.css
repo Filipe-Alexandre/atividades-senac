@@ -897,7 +897,7 @@ footer .direito {
     overflow-x: hidden;
   }
   header {
-    max-width: 769px;
+    max-width: 900px;
     width: 90%;
   }
   header h1 {
@@ -934,7 +934,7 @@ header .btn-close {
     right: 0px;
   }
   main {
-    max-width: 769px;
+    max-width: 900px;
     width: 90%;
     margin: auto;
   }
@@ -942,7 +942,7 @@ header .btn-close {
     margin: 50px auto;
   }
   main .nuvens {
-    max-width: 769px;
+    max-width: 900px;
     width: 100%;
     display: flex;
   }
@@ -1001,7 +1001,7 @@ header .btn-close {
     height: auto !important;
   }
   main .sobre {
-    max-width: 769px;
+    max-width: 900px;
     display: flex;
     flex-flow: column wrap;
     justify-content: center;
@@ -1013,7 +1013,7 @@ header .btn-close {
     grid-template-rows: repeat(2, 50%);
   }
   main .como {
-    max-width: 769px;
+    max-width: 900px;
     display: flex;
     flex-flow: column-reverse wrap;
     justify-content: center;
@@ -1029,13 +1029,13 @@ header .btn-close {
     display: none;
   }
   main .servicos__tab {
-    max-width: 769px;
+    max-width: 900px;
     display: block;
     flex-flow: column wrap;
     align-items: center;
   }
   main .servicos__tab .header-svc {
-    max-width: 769px;
+    max-width: 900px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -1053,7 +1053,7 @@ header .btn-close {
     font-size: calc(var(--size) * 0.8);
   }
   main .servicos__tab .cards__tab {
-    max-width: 769px;
+    max-width: 900px;
   }
   main .servicos__tab .cards__tab .slick-track {
     display: flex;
@@ -1129,7 +1129,7 @@ main .servicos__tab .cards__tab .card-4 .btn-white i {
     height: 350px !important;
   }
   main .blog {
-    max-width: 769px;
+    max-width: 900px;
     width: 90%;
   }
   main .blog .slick-track {
@@ -1178,7 +1178,7 @@ main .blog .blog-5 {
     display: none;
   }
   main .orcamento {
-    max-width: 769px;
+    max-width: 900px;
     border-radius: 50px 50px 0 0;
   }
   main .orcamento p {
@@ -1191,7 +1191,7 @@ main .blog .blog-5 {
     padding: 10px;
   }
   main .duvidas {
-    max-width: 769px;
+    max-width: 900px;
     border-radius: 0 0 50px 50px;
     text-align: center;
     padding: 10px 0;
@@ -1202,7 +1202,7 @@ main .blog .blog-5 {
     width: 90%;
   }
   footer .rodape {
-    max-width: 769px;
+    max-width: 900px;
     width: 90%;
     flex-direction: column;
     height: auto;
@@ -1273,13 +1273,13 @@ main .blog .blog-5 {
     border-bottom: 2px solid var(--azul-2);
   }
   footer .direito {
-    max-width: 769px;
+    max-width: 900px;
     width: 90%;
   }
 }
 @media screen and (max-width: 600px) {
   header {
-    max-width: 380px;
+    max-width: 600px;
   }
   header h1 {
     height: 50px;
@@ -1294,7 +1294,7 @@ main .blog .blog-5 {
     width: 100%;
   }
   main {
-    max-width: 380px;
+    max-width: 600px;
   }
   main section {
     margin: 25px auto;
@@ -1303,7 +1303,7 @@ main .blog .blog-5 {
     font-size: calc(var(--size) * 1.3);
   }
   main .nuvens {
-    max-width: 380px;
+    max-width: 600px;
   }
   main .nuvens i {
     font-size: calc(var(--size) * 2);
@@ -1370,7 +1370,7 @@ main .blog .blog-5 {
     font-size: calc(var(--size) * 0.9) !important;
   }
   main .sobre {
-    max-width: 380px;
+    max-width: 600px;
     display: flex;
     flex-flow: column wrap;
     justify-content: center;
@@ -1445,7 +1445,7 @@ main .blog .blog-5 {
     display: none;
   }
   main .como {
-    max-width: 380px;
+    max-width: 600px;
     width: 90%;
   }
   main .como .como__img {
@@ -1471,10 +1471,10 @@ main .blog .blog-5 {
   }
   main .servicos__tab {
     width: 90%;
-    max-width: 380px;
+    max-width: 600px;
   }
   main .servicos__tab .header-svc {
-    max-width: 380px;
+    max-width: 600px;
     display: flex;
     flex-flow: column wrap;
   }
@@ -1490,7 +1490,7 @@ main .blog .blog-5 {
     font-size: calc(var(--size) * 0.5);
   }
   main .blog {
-    max-width: 380px;
+    max-width: 600px;
     max-height: 600px;
     width: 90%;
   }
@@ -1509,12 +1509,12 @@ main .blog .blog-5 {
   }
   main .blog .blogs div {
     height: 620px;
-    width: 380px;
+    width: 600px;
     display: flex;
     justify-content: space-between;
   }
   main .blog .slick-track {
-    width: 380px;
+    width: 600px;
     display: flex;
     flex-direction: row;
     gap: 10px;
@@ -1523,7 +1523,7 @@ main .blog .blog-5 {
     display: none;
   }
   main .orcamento {
-    max-width: 380px;
+    max-width: 600px;
     border-radius: 50px 50px 0 0;
   }
   main .orcamento p {
@@ -1539,7 +1539,7 @@ main .blog .blog-5 {
     font-size: calc(var(--size) * 0.9);
   }
   main .duvidas {
-    max-width: 380px;
+    max-width: 600px;
     border-radius: 0 0 50px 50px;
     text-align: center;
     padding: 10px 0;
@@ -1563,7 +1563,7 @@ main .blog .blog-5 {
     height: 35px;
   }
   footer .rodape {
-    max-width: 380px;
+    max-width: 600px;
     width: 90%;
     flex-direction: column;
     height: auto;
@@ -1622,7 +1622,7 @@ footer .rodape .menu ul:nth-child(3) {
     align-items: center;
   }
   footer .direito {
-    max-width: 380px;
+    max-width: 600px;
     width: 100%;
   }
 }/*# sourceMappingURL=style.css.map */

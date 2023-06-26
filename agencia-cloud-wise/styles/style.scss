@@ -1049,7 +1049,7 @@ footer {
     }
 
     header {
-        max-width: 769px;
+        max-width: 900px;
         width: 90%;
 
         h1 {
@@ -1092,7 +1092,7 @@ footer {
     }
 
     main {
-        max-width: 769px;
+        max-width: 900px;
         width: 90%;
         margin: auto;
 
@@ -1101,7 +1101,7 @@ footer {
         }
 
         .nuvens {
-            max-width: 769px;
+            max-width: 900px;
             width: 100%;
             display: flex;
 
@@ -1175,7 +1175,7 @@ footer {
         }
 
         .sobre {
-            max-width: 769px;
+            max-width: 900px;
 
             display: flex;
             flex-flow: column wrap;
@@ -1190,7 +1190,7 @@ footer {
         }
 
         .como {
-            max-width: 769px;
+            max-width: 900px;
             display: flex;
             flex-flow: column-reverse wrap;
             justify-content: center;
@@ -1210,13 +1210,13 @@ footer {
         }
 
         .servicos__tab {
-            max-width: 769px;
+            max-width: 900px;
             display: block;
             flex-flow: column wrap;
             align-items: center;
 
             .header-svc {
-                max-width: 769px;
+                max-width: 900px;
                 display: flex;
                 align-items: center;
                 justify-content: space-between;
@@ -1241,7 +1241,7 @@ footer {
 
             .cards__tab {
                 // container carrossel
-                max-width: 769px;
+                max-width: 900px;
 
                 .slick-track {
                     display: flex;
@@ -1314,7 +1314,7 @@ footer {
         }
 
         .blog {
-            max-width: 769px;
+            max-width: 900px;
             width: 90%;
 
             .slick-track {
@@ -1385,7 +1385,7 @@ footer {
         }
 
         .orcamento {
-            max-width: 769px;
+            max-width: 900px;
             border-radius: 50px 50px 0 0;
 
             p {
@@ -1401,7 +1401,7 @@ footer {
         }
 
         .duvidas {
-            max-width: 769px;
+            max-width: 900px;
             border-radius: 0 0 50px 50px;
             text-align: center;
             padding: 10px 0;
@@ -1416,7 +1416,7 @@ footer {
 
     footer {
         .rodape {
-            max-width: 769px;
+            max-width: 900px;
             width: 90%;
             flex-direction: column;
             height: auto;
@@ -1504,7 +1504,7 @@ footer {
         }
 
         .direito {
-            max-width: 769px;
+            max-width: 900px;
             width: 90%;
         }
     }
@@ -1514,7 +1514,7 @@ footer {
 @media screen and (max-width: 600px) {
 
     header {
-        max-width: 380px;
+        max-width: 600px;
 
         h1 {
             height: 50px;
@@ -1533,7 +1533,7 @@ footer {
     }
 
     main {
-        max-width: 380px;
+        max-width: 600px;
 
         section {
             margin: 25px auto;
@@ -1544,7 +1544,7 @@ footer {
         }
 
         .nuvens {
-            max-width: 380px;
+            max-width: 600px;
 
             i {
                 font-size: calc(var(--size) * 2);
@@ -1629,7 +1629,7 @@ footer {
         }
 
         .sobre {
-            max-width: 380px;
+            max-width: 600px;
 
             display: flex;
             flex-flow: column wrap;
@@ -1696,7 +1696,7 @@ footer {
         }
 
         .como {
-            max-width: 380px;
+            max-width: 600px;
             width: 90%;
 
             .como__img {
@@ -1728,10 +1728,10 @@ footer {
 
         .servicos__tab {
             width: 90%;
-            max-width: 380px;
+            max-width: 600px;
 
             .header-svc {
-                max-width: 380px;
+                max-width: 600px;
                 display: flex;
                 flex-flow: column wrap;
 
@@ -1753,7 +1753,7 @@ footer {
         }
 
         .blog {
-            max-width: 380px;
+            max-width: 600px;
             max-height: 600px;
             width: 90%;
 
@@ -1777,14 +1777,14 @@ footer {
             .blogs {
                 div {
                     height: 620px;
-                    width: 380px;
+                    width: 600px;
                     display: flex;
                     justify-content: space-between;
                 }
             }
 
             .slick-track {
-                width: 380px;
+                width: 600px;
                 display: flex;
                 flex-direction: row;
                 gap: 10px;
@@ -1796,7 +1796,7 @@ footer {
         }
 
         .orcamento {
-            max-width: 380px;
+            max-width: 600px;
             border-radius: 50px 50px 0 0;
 
             p {
@@ -1815,7 +1815,7 @@ footer {
         }
 
         .duvidas {
-            max-width: 380px;
+            max-width: 600px;
             border-radius: 0 0 50px 50px;
             text-align: center;
             padding: 10px 0;
@@ -1847,7 +1847,7 @@ footer {
     footer {
 
         .rodape {
-            max-width: 380px;
+            max-width: 600px;
             width: 90%;
             flex-direction: column;
             height: auto;
@@ -1922,7 +1922,7 @@ footer {
         }
 
         .direito {
-            max-width: 380px;
+            max-width: 600px;
             width: 100%;
         }
     }
