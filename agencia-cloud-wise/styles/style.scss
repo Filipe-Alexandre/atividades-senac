@@ -1459,9 +1459,10 @@ footer {
             }
 
             .menu {
+                background-color: red;
                 display: grid;
-                grid-template-columns: 200px 400px;
-                grid-template-rows: repeat(2, 150px);
+                grid-template-columns: 1fr 1fr;
+                grid-template-rows: repeat(2, 175px);
                 grid-template-areas:
                     "menu contato"
                     "menu agencia";
