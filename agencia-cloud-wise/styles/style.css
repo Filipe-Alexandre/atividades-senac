@@ -171,6 +171,10 @@ h2 {
   text-decoration: none;
   font-size: calc(var(--size) * 2);
   align-self: flex-start;
+  display: block;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
 }
 h2::before {
   content: "";
@@ -1323,7 +1327,7 @@ main .blog .blog-5 {
   }
   main .nuvens .nuvem_3 {
     left: 7.5%;
-    top: 450px;
+    top: 440px;
   }
   main .nuvens .nuvem_4 {
     left: 90%;
@@ -1339,11 +1343,11 @@ main .blog .blog-5 {
   }
   main .nuvens .nuvem_7 {
     left: 7.5%;
-    top: 2800px;
+    top: 2630px;
   }
   main .nuvens .nuvem_8 {
     left: 90%;
-    top: 3450px;
+    top: 3100px;
   }
   main .nuvens .nuvem_9 {
     left: 7.5%;
@@ -1383,7 +1387,9 @@ main .blog .blog-5 {
   main .sobre .sobre__txt .btn {
     display: block;
     margin: auto;
-    width: 75%;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
     text-align: center;
     font-size: calc(var(--size) * 0.8);
   }
@@ -1392,8 +1398,8 @@ main .blog .blog-5 {
   }
   main .sobre .sobre__imgs {
     display: block;
-    height: 300px;
-    width: 90%;
+    height: 400px;
+    width: 400px;
     -webkit-animation: fadeImg 20s ease infinite;
             animation: fadeImg 20s ease infinite;
   }
@@ -1485,6 +1491,9 @@ main .blog .blog-5 {
     align-self: center;
     font-size: calc(var(--size) * 0.5);
     margin: 15px auto;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
   }
   main .servicos__tab .svc-btn i {
     font-size: calc(var(--size) * 0.5);
@@ -1535,8 +1544,11 @@ main .blog .blog-5 {
   main .orcamento a {
     border-radius: 30px;
     padding: 10px;
-    width: 90%;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
     font-size: calc(var(--size) * 0.9);
+    text-align: center;
   }
   main .duvidas {
     max-width: 600px;

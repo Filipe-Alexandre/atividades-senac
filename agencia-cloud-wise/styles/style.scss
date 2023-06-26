@@ -69,6 +69,7 @@
         transform: translateY(-3%);
     }
 }
+
 // #endregion keyframes
 
 // color: fuchsia;
@@ -78,6 +79,7 @@
 html {
     scroll-behavior: smooth;
 }
+
 body {
     background: linear-gradient(to bottom, var(--preto-1), var(--azul-2), var(--azul-1));
     color: var(--branco-1);
@@ -100,6 +102,7 @@ body::-webkit-scrollbar-thumb {
     background: var(--laranja-1);
     border-radius: 16px;
 }
+
 // #endregion body
 
 // color: fuchsia;
@@ -168,6 +171,8 @@ h2 {
     text-decoration: none;
     font-size: calc(var(--size) * 2);
     align-self: flex-start;
+    display: block;
+    width: fit-content;
 
     &::before {
         content: "";
@@ -192,6 +197,7 @@ h2 {
 section {
     margin: 100px auto;
 }
+
 // #endregion PADRÕES
 
 // color: fuchsia;
@@ -571,6 +577,7 @@ main {
 
         .btn-white {
             align-self: flex-start;
+            
         }
 
         .cards {
@@ -1039,6 +1046,7 @@ footer {
         font-size: calc(var(--size) * .7);
     }
 }
+
 // #endregion 1200
 
 // color: fuchsia; medio
@@ -1512,7 +1520,6 @@ footer {
 
 // color: fuchsia; pequeno
 @media screen and (max-width: 600px) {
-
     header {
         max-width: 600px;
 
@@ -1568,7 +1575,7 @@ footer {
 
             .nuvem_3 {
                 left: 7.5%;
-                top: 450px;
+                top: 440px;
             }
 
             .nuvem_4 {
@@ -1588,12 +1595,12 @@ footer {
 
             .nuvem_7 {
                 left: 7.5%;
-                top: 2800px;
+                top: 2630px;
             }
 
             .nuvem_8 {
                 left: 90%;
-                top: 3450px;
+                top: 3100px;
             }
 
             .nuvem_9 {
@@ -1645,7 +1652,7 @@ footer {
                 .btn {
                     display: block;
                     margin: auto;
-                    width: 75%;
+                    width: fit-content;
                     text-align: center;
 
                     font-size: calc(var(--size) * .8);
@@ -1684,8 +1691,8 @@ footer {
                 }
 
                 display: block;
-                height: 300px;
-                width: 90%;
+                height: 400px;
+                width: 400px;
                 animation: fadeImg 20s ease infinite;
 
                 img {
@@ -1744,6 +1751,7 @@ footer {
                 align-self: center;
                 font-size: calc(var(--size) * .5);
                 margin: 15px auto;
+                width: fit-content;
 
 
                 i {
@@ -1809,8 +1817,9 @@ footer {
             a {
                 border-radius: 30px;
                 padding: 10px;
-                width: 90%;
+                width: fit-content;
                 font-size: calc(var(--size)*.9);
+                text-align: center;
             }
         }
 
@@ -1845,7 +1854,6 @@ footer {
     }
 
     footer {
-
         .rodape {
             max-width: 600px;
             width: 90%;
