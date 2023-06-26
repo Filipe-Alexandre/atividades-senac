@@ -892,12 +892,7 @@ footer .direito {
   font-size: calc(var(--size) * 0.7);
 }
 
-@media screen and (max-width: 1024px) {
-  main {
-    background-color: transparent;
-  }
-}
-@media screen and (max-width: 769px) {
+@media screen and (max-width: 720px) {
   body {
     overflow-x: hidden;
   }
@@ -1282,7 +1277,7 @@ main .blog .blog-5 {
     width: 90%;
   }
 }
-@media screen and (max-width: 380px) {
+@media screen and (max-width: 600px) {
   header {
     max-width: 380px;
   }
