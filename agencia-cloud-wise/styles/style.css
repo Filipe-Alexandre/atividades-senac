@@ -992,7 +992,7 @@ header .btn-close {
   }
   main .nuvens .nuvem_10 {
     left: 92%;
-    top: 4700px;
+    top: 4620px;
   }
   main .trilha {
     background-position: 0px, -5px !important;
@@ -1238,9 +1238,8 @@ main .blog .blog-5 {
     transform: translateY(-50%);
   }
   footer .rodape .menu {
-    background-color: red;
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, 175px);
     grid-template-areas: "menu contato" "menu agencia";
     place-items: start;

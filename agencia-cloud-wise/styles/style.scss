@@ -1162,7 +1162,7 @@ footer {
 
             .nuvem_10 {
                 left: 92%;
-                top: 4700px;
+                top: 4620px;
             }
         }
 
@@ -1459,9 +1459,8 @@ footer {
             }
 
             .menu {
-                background-color: red;
                 display: grid;
-                grid-template-columns: 1fr 1fr;
+                grid-template-columns: repeat(2, 1fr);
                 grid-template-rows: repeat(2, 175px);
                 grid-template-areas:
                     "menu contato"
