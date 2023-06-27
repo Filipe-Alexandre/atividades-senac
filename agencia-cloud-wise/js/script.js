@@ -29,7 +29,14 @@ $(".cards__tab").slick({
   speed: 2000,
   responsive: [
     {
-      breakpoint: 769,
+      breakpoint: 900,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 1,
+      },
+    },
+    {
+      breakpoint: 600,
       settings: {
         slidesToShow: 1,
         slidesToScroll: 1,
@@ -46,14 +53,14 @@ $(".blogs").slick({
   speed: 2000,
   responsive: [
     {
-      breakpoint: 769,
+      breakpoint: 900,
       settings: {
         slidesToShow: 2,
         slidesToScroll: 1,
       },
     },
     {
-      breakpoint: 390,
+      breakpoint: 600,
       settings: {
         slidesToShow: 1,
         slidesToScroll: 1,
