@@ -343,7 +343,7 @@ main .nuvens .nuvem_9 {
 }
 main .nuvens .nuvem_10 {
   left: 100%;
-  top: 4790px;
+  top: 4680px;
 }
 main .banner-bg {
   z-index: 1;
@@ -699,28 +699,71 @@ main .duvidas {
   max-width: 1200px;
   background-color: var(--branco-1);
   border-radius: 4px 4px 50px 20px;
-  padding: 20px 0;
-  margin-top: 5px;
+  margin: 5px auto;
+  padding-top: 10px;
   display: flex;
-  justify-content: flex-start;
+  flex-direction: column;
   align-items: center;
-  height: 50px;
+  justify-content: flex-start;
+  transition: var(--suave);
 }
-main .duvidas p {
+main .duvidas .gaveta {
   color: var(--laranja-1);
   font-size: calc(var(--size) * 1.2);
   line-height: calc(var(--size) * 2);
   cursor: pointer;
   transition: var(--suave);
-  width: 85%;
   margin: auto;
+  justify-content: flex-start;
+  width: 85%;
 }
-main .duvidas p:hover {
+main .duvidas .gaveta::marker {
+  font-size: 1px;
+  color: transparent;
+}
+main .duvidas .gaveta:hover {
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
 }
-main .duvidas p i {
+main .duvidas .gaveta i {
   font-weight: bolder;
   font-size: calc(var(--size) * 1.2);
+}
+main .duvidas ul {
+  transform: translateX(5%);
+  width: 85%;
+  color: var(--azul-1);
+  transition: var(--suave);
+}
+main .duvidas ul li {
+  transition: var(--suave);
+  border-bottom: 2px solid var(--azul-2);
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 1% 0;
+}
+main .duvidas ul li:nth-last-child(1) {
+  border: none;
+}
+main .duvidas ul li .dvd-btn {
+  transition: var(--suave);
+  cursor: pointer;
+  font-weight: bold;
+}
+main .duvidas ul li .dvd-btn::marker {
+  font-size: 1px;
+  color: transparent;
+}
+main .duvidas ul li .dvd-btn:hover {
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+main .duvidas ul li .dvd-txt {
+  display: block;
+  transition: var(--suave);
+  color: var(--preto-2);
+  font-size: calc(var(--size) * 0.8);
+  margin-top: 5px;
+  text-indent: 1em;
 }
 main .voltar {
   z-index: 1;
@@ -920,7 +963,7 @@ header .btn-close {
     gap: 5%;
     top: 0;
     right: -100%;
-    height: 100%;
+    height: 100vh;
     width: 50%;
     background: var(--azul-2);
     z-index: 1;
@@ -993,7 +1036,7 @@ header .btn-close {
   }
   main .nuvens .nuvem_10 {
     left: 92%;
-    top: 4600px;
+    top: 4570px;
   }
   main .trilha {
     background-position: 0px, -5px !important;
@@ -1198,7 +1241,7 @@ main .blog .blog-5 {
     padding: 10px 0;
     height: auto;
   }
-  main .duvidas p {
+  main .duvidas h3 {
     font-size: calc(var(--size) * 1.1);
     width: 90%;
   }
@@ -1574,11 +1617,11 @@ main .blog .blog-5 {
     padding: 10px 0;
     height: auto;
   }
-  main .duvidas p {
+  main .duvidas h3 {
     font-size: calc(var(--size) * 0.9);
     width: 90%;
   }
-  main .duvidas p i {
+  main .duvidas h3 i {
     font-size: calc(var(--size) * 1);
     align-self: center;
   }

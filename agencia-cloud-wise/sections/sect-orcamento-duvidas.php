@@ -7,6 +7,38 @@
     <a href="#">Solicite um orçamento <i class="fa-solid fa-calculator"></i></a>
 </section>
 
-<section class="duvidas" data-aos="fade-up">
-    <p><i class="fa-solid fa-plus"></i> Duvidas frequentes</p>
-</section>
+<details class="duvidas" data-aos="fade-up">
+            <summary class="gaveta"><i class="fa-solid fa-plus"></i> Duvidas frequentes</summary>
+            <ul>
+                <li>
+                    <details>
+                        <summary class="dvd-btn">Duvida 01</summary>
+                        <p class="dvd-txt">Solução da dúvida blá blá blá</p>
+                    </details>
+                </li>
+                <li>
+                    <details>
+                        <summary class="dvd-btn">Duvida 02</summary>
+                        <p class="dvd-txt">Solução da dúvida blá blá blá</p>
+                    </details>
+                </li>
+                <li>
+                    <details>
+                        <summary class="dvd-btn">Duvida 03</summary>
+                        <p class="dvd-txt">Solução da dúvida blá blá blá</p>
+                    </details>
+                </li>
+                <li>
+                    <details>
+                        <summary class="dvd-btn">Duvida 04</summary>
+                        <p class="dvd-txt">Solução da dúvida blá blá blá</p>
+                    </details>
+                </li>
+                <li>
+                    <details>
+                        <summary class="dvd-btn">Duvida 05</summary>
+                        <p class="dvd-txt">Solução da dúvida blá blá blá</p>
+                    </details>
+                </li>
+            </ul>
+        </details>
