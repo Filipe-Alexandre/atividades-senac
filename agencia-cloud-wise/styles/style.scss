@@ -209,10 +209,6 @@ header {
     margin: 20px auto;
     height: 85px;
 
-    input {
-        display: none;
-    }
-
     h1 {
         background: url(../assets/logos/logo-vazio.png) no-repeat center center;
         background-size: contain;
@@ -382,7 +378,7 @@ main {
 
         .nuvem_10 {
             left: 100%;
-            top: 4800px;
+            top: 4790px;
         }
     }
 
@@ -1168,7 +1164,7 @@ footer {
 
             .nuvem_10 {
                 left: 92%;
-                top: 4620px;
+                top: 4600px;
             }
         }
 
@@ -1701,8 +1697,9 @@ footer {
                 }
 
                 display: block;
-                height: 400px;
-                width: 400px;
+                height: 350px;
+                width: 350px;
+                max-width: 100%;
                 animation: fadeImg 20s ease infinite reverse;
 
                 img {

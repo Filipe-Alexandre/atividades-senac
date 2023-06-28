@@ -207,9 +207,6 @@ header {
   margin: 20px auto;
   height: 85px;
 }
-header input {
-  display: none;
-}
 header h1 {
   background: url(../assets/logos/logo-vazio.png) no-repeat center center;
   background-size: contain;
@@ -346,7 +343,7 @@ main .nuvens .nuvem_9 {
 }
 main .nuvens .nuvem_10 {
   left: 100%;
-  top: 4800px;
+  top: 4790px;
 }
 main .banner-bg {
   z-index: 1;
@@ -996,7 +993,7 @@ header .btn-close {
   }
   main .nuvens .nuvem_10 {
     left: 92%;
-    top: 4620px;
+    top: 4600px;
   }
   main .trilha {
     background-position: 0px, -5px !important;
@@ -1398,8 +1395,9 @@ main .blog .blog-5 {
   }
   main .sobre .sobre__imgs {
     display: block;
-    height: 400px;
-    width: 400px;
+    height: 350px;
+    width: 350px;
+    max-width: 100%;
     animation: fadeImg 20s ease infinite reverse;
   }
   @-webkit-keyframes fadeImg {

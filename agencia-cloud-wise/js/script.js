@@ -1,4 +1,4 @@
-// // tentar fazer função de reconhecer a tela DE NOVO
+//#region teste
 
 // let cards = document.querySelectorAll('.texto1');
 // let largura = window.innerWidth
@@ -19,8 +19,9 @@
 //   teste();
 // }
 
-//-----------------------------------------------------------------
+//#endregion teste
 
+//#region slick
 $(".cards__tab").slick({
   infinite: true,
   slidesToShow: 2,
@@ -68,9 +69,9 @@ $(".blogs").slick({
     },
   ],
 });
+//#endregion slick
 
-//-----------------------------------------------------------------
-
+// #region menu mobile
 let open = document.querySelector(".btn-open");
 let close = document.querySelector(".btn-close");
 let nav = document.querySelector("nav");
@@ -82,6 +83,8 @@ open.addEventListener("click", () => {
 close.addEventListener("click", () => {
   nav.classList.remove("ativo");
 });
+// #endregion menu mobile
 
-// Inicialização AOS
+// #region AOS
 AOS.init();
+// #endregion AOS
