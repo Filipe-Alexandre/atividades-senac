@@ -843,8 +843,36 @@ main {
             width: 85%;
 
             &::marker {
-                font-size: 0px;
-                color: transparent;
+                content: '+';
+                font-size: calc(var(--size)*2);
+                text-align: center;
+                
+            }
+            
+            &:hover {
+                text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+            }
+
+            i {
+                font-weight: bolder;
+                font-size: calc(var(--size) * 1.2);
+            }
+        }
+
+        .gaveta-click {
+            color: var(--laranja-1);
+            font-size: calc(var(--size) * 1.2);
+            line-height: calc(var(--size) * 2);
+            cursor: pointer;
+            transition: var(--suave);
+            margin: auto;
+            justify-content: flex-start;
+            width: 85%;
+
+            &::marker {
+                content: '-';
+                font-size: calc(var(--size)*2);
+                text-align: center;
             }
 
             &:hover {
@@ -854,10 +882,6 @@ main {
             i {
                 font-weight: bolder;
                 font-size: calc(var(--size) * 1.2);
-            }
-            
-            .dvd-simbolo {
-                color: red;
             }
         }
 
@@ -1464,6 +1488,11 @@ footer {
             height: auto;
 
             .gaveta {
+                font-size: calc(var(--size) * 1.1);
+                text-align: center;
+            }
+
+            .gaveta-click {
                 font-size: calc(var(--size) * 1.1);
                 text-align: center;
             }

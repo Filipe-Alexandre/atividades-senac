@@ -88,16 +88,30 @@ AOS.init();
 // #endregion AOS
 
 // #region gaveta de duvidas
-// let gaveta = document.querySelector('.gaveta')
+
+let gaveta = document.querySelector(".gaveta");
+
+gaveta.addEventListener("click", () => {
+  if (gaveta.classList.contains("gaveta")) {
+    gaveta.classList.replace("gaveta", "gaveta-click");
+  } else {
+    gaveta.classList.replace("gaveta-click", "gaveta");
+  }
+});
 // let texto = gaveta.textContent;
 // let newTxt = texto.replace("+", "<span class='caixa-aberta'>+</span>")
 // gaveta.innerHTML = newTxt;
 
-// function alterarSinal(elemento) {
-//   if (elemento.textContent === '- Duvidas Frequentes') {
-//     elemento.textContent = '+ Duvidas Frequentes';
-//   } else {
-//     elemento.textContent = '- Duvidas Frequentes';
-//   }
-// }
+function alterarSinal(elemento) {
+  if (
+    elemento.textContent ===
+    '<span class="dvd-simbolo">+</span> Duvidas frequentes'
+  ) {
+    elemento.textContent =
+      '<span class="dvd-simbolo">-</span> Duvidas frequentes';
+  } else {
+    elemento.textContent =
+      '<span class="dvd-simbolo">+</span> Duvidas frequentes';
+  }
+}
 // #endregion gaveta de duvidas
