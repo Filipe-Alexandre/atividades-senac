@@ -824,13 +824,13 @@ main {
         background-color: var(--branco-1);
         border-radius: 4px 4px 50px 20px;
         margin: 5px auto;
+        margin-bottom: 45px;
         padding-top: 10px;
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: flex-start;
         transition: var(--suave);
-
 
         .gaveta {
             color: var(--laranja-1);
@@ -843,7 +843,7 @@ main {
             width: 85%;
 
             &::marker {
-                font-size: 1px;
+                font-size: 0px;
                 color: transparent;
             }
 
@@ -855,12 +855,16 @@ main {
                 font-weight: bolder;
                 font-size: calc(var(--size) * 1.2);
             }
+            
+            .dvd-simbolo {
+                color: red;
+            }
         }
 
         ul {
             transform: translateX(5%);
             width: 85%;
-            color: var(--azul-1);
+            color: var(--preto-1);
             transition: var(--suave);
 
 
@@ -881,7 +885,7 @@ main {
                 }
 
                 .dvd-btn::marker {
-                    font-size: 1px;
+                    font-size: 0px;
                     color: transparent;
                 }
 
@@ -1456,13 +1460,32 @@ footer {
         .duvidas {
             max-width: 900px;
             border-radius: 0 0 50px 50px;
-            text-align: center;
             padding: 10px 0;
             height: auto;
 
-            h3 {
+            .gaveta {
                 font-size: calc(var(--size) * 1.1);
-                width: 90%;
+                text-align: center;
+            }
+
+            ul {
+                width: fit-content;
+                max-width: 90%;
+                margin: auto;
+
+                p {
+                    max-width: 90%;
+                }
+
+                details {
+                    text-align: center;
+                }
+            }
+
+            .dvd-btn,
+            .dvd-txt {
+                text-align: center;
+                width: 100%;
             }
         }
     }

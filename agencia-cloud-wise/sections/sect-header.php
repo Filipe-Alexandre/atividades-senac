@@ -11,7 +11,7 @@
         </button>
         <ul class="categorias">
             <li onclick="window.scroll(0, 640)"><a href="#"><i class="fa-solid fa-rocket"></i> Quem somos</a></li>
-            <li onclick="window.scroll(0, 3400)"><a href="#"><i class="fa-solid fa-newspaper"></i> Blog</a></li>
+            <li onclick="window.scroll(0, 4000)"><a href="#"><i class="fa-solid fa-phone"></i> Contato</a></li>
             <li onclick="window.scroll(0, 2300)"><a href="#"><i class="fa-solid fa-pen-ruler"></i> Serviços</a></li>
         </ul>
         <ul class="redes">

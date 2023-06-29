@@ -19,8 +19,6 @@
 //   teste();
 // }
 
-//#endregion teste
-
 //#region slick
 $(".cards__tab").slick({
   infinite: true,
@@ -88,3 +86,18 @@ close.addEventListener("click", () => {
 // #region AOS
 AOS.init();
 // #endregion AOS
+
+// #region gaveta de duvidas
+// let gaveta = document.querySelector('.gaveta')
+// let texto = gaveta.textContent;
+// let newTxt = texto.replace("+", "<span class='caixa-aberta'>+</span>")
+// gaveta.innerHTML = newTxt;
+
+// function alterarSinal(elemento) {
+//   if (elemento.textContent === '- Duvidas Frequentes') {
+//     elemento.textContent = '+ Duvidas Frequentes';
+//   } else {
+//     elemento.textContent = '- Duvidas Frequentes';
+//   }
+// }
+// #endregion gaveta de duvidas

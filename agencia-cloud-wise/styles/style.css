@@ -13,26 +13,9 @@
   --suave: .5s ease;
 }
 
-@-webkit-keyframes pulse {
-  50% {
-    background-color: var(--laranja-1);
-  }
-}
-
 @keyframes pulse {
   50% {
     background-color: var(--laranja-1);
-  }
-}
-@-webkit-keyframes wiggle {
-  0%, 80%, 100% {
-    transform: rotate(35deg);
-  }
-  85% {
-    transform: rotate(45deg);
-  }
-  95% {
-    transform: rotate(25deg);
   }
 }
 @keyframes wiggle {
@@ -46,21 +29,9 @@
     transform: rotate(25deg);
   }
 }
-@-webkit-keyframes pisca {
-  50% {
-    color: white;
-  }
-}
 @keyframes pisca {
   50% {
     color: white;
-  }
-}
-@-webkit-keyframes pisca2 {
-  50% {
-    color: var(--laranja-1);
-    font-size: calc(var(--size) * 1.1);
-    text-shadow: 0 0 4px rgba(0, 0, 0, 0.5);
   }
 }
 @keyframes pisca2 {
@@ -68,14 +39,6 @@
     color: var(--laranja-1);
     font-size: calc(var(--size) * 1.1);
     text-shadow: 0 0 4px rgba(0, 0, 0, 0.5);
-  }
-}
-@-webkit-keyframes float {
-  0%, 100% {
-    transform: translateY(3%);
-  }
-  50% {
-    transform: translateY(-3%);
   }
 }
 @keyframes float {
@@ -172,7 +135,6 @@ h2 {
   font-size: calc(var(--size) * 2);
   align-self: flex-start;
   display: block;
-  width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
 }
@@ -284,12 +246,10 @@ header .redes li i {
   margin-top: 2px;
 }
 header .redes li:nth-child(3) {
-  -webkit-animation: pulse 2.5s infinite;
-          animation: pulse 2.5s infinite;
+  animation: pulse 2.5s infinite;
 }
 header .redes li:nth-child(3):hover {
-  -webkit-animation: none;
-          animation: none;
+  animation: none;
   background-color: var(--laranja-1);
 }
 header .redes li:nth-child(3):hover i {
@@ -514,12 +474,10 @@ main .servicos .cards div {
   align-items: flex-start;
   gap: 15px;
   line-height: calc(var(--size) * 1.3);
-  -webkit-animation: float 9s ease infinite;
-          animation: float 9s ease infinite;
+  animation: float 9s ease infinite;
 }
 main .servicos .cards div:hover {
-  -webkit-animation-play-state: paused;
-          animation-play-state: paused;
+  animation-play-state: paused;
 }
 main .servicos .cards div:hover > span i {
   color: var(--laranja-1);
@@ -545,29 +503,25 @@ main .servicos .cards .card-1 {
   grid-area: card1;
   border-radius: 50px 4px 4px 4px;
   transform: translateY(-15px);
-  -webkit-animation-delay: 0.2s;
-          animation-delay: 0.2s;
+  animation-delay: 0.2s;
 }
 main .servicos .cards .card-2 {
   grid-area: card2;
   border-radius: 4px 50px 4px 4px;
   transform: translateY(15px);
-  -webkit-animation-delay: 0.5s;
-          animation-delay: 0.5s;
+  animation-delay: 0.5s;
 }
 main .servicos .cards .card-3 {
   grid-area: card3;
   border-radius: 4px 4px 4px 50px;
   transform: translateY(-15px);
-  -webkit-animation-delay: 0s;
-          animation-delay: 0s;
+  animation-delay: 0s;
 }
 main .servicos .cards .card-4 {
   grid-area: card4;
   border-radius: 4px 4px 50px 4px;
   transform: translateY(15px);
-  -webkit-animation-delay: 0.8s;
-          animation-delay: 0.8s;
+  animation-delay: 0.8s;
 }
 main .servicos__tab {
   display: none;
@@ -602,7 +556,6 @@ main .blog .blogs div .blog__tag {
   background-color: var(--branco-1);
   border-radius: 34px;
   padding: 5px 20px;
-  width: -webkit-max-content;
   width: -moz-max-content;
   width: max-content;
   text-align: center;
@@ -686,20 +639,19 @@ main .orcamento a:hover {
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
 }
 main .orcamento a:hover > i {
-  -webkit-animation: pisca 1.5s ease;
-          animation: pisca 1.5s ease;
+  animation: pisca 1.5s ease;
 }
 main .orcamento a i {
   transform: rotate(35deg);
   padding-left: 5px;
-  -webkit-animation: wiggle 2.5s infinite;
-          animation: wiggle 2.5s infinite;
+  animation: wiggle 2.5s infinite;
 }
 main .duvidas {
   max-width: 1200px;
   background-color: var(--branco-1);
   border-radius: 4px 4px 50px 20px;
   margin: 5px auto;
+  margin-bottom: 45px;
   padding-top: 10px;
   display: flex;
   flex-direction: column;
@@ -718,7 +670,7 @@ main .duvidas .gaveta {
   width: 85%;
 }
 main .duvidas .gaveta::marker {
-  font-size: 1px;
+  font-size: 0px;
   color: transparent;
 }
 main .duvidas .gaveta:hover {
@@ -728,16 +680,18 @@ main .duvidas .gaveta i {
   font-weight: bolder;
   font-size: calc(var(--size) * 1.2);
 }
+main .duvidas .gaveta .dvd-simbolo {
+  color: red;
+}
 main .duvidas ul {
   transform: translateX(5%);
   width: 85%;
-  color: var(--azul-1);
+  color: var(--preto-1);
   transition: var(--suave);
 }
 main .duvidas ul li {
   transition: var(--suave);
   border-bottom: 2px solid var(--azul-2);
-  width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
   padding: 1% 0;
@@ -751,7 +705,7 @@ main .duvidas ul li .dvd-btn {
   font-weight: bold;
 }
 main .duvidas ul li .dvd-btn::marker {
-  font-size: 1px;
+  font-size: 0px;
   color: transparent;
 }
 main .duvidas ul li .dvd-btn:hover {
@@ -805,40 +759,28 @@ footer .rodape .acompanhe {
   justify-content: space-evenly;
 }
 footer .rodape .acompanhe:hover .fa-facebook {
-  -webkit-animation: pisca2 0.7s ease normal;
-          animation: pisca2 0.7s ease normal;
-  -webkit-animation-delay: 0s;
-          animation-delay: 0s;
+  animation: pisca2 0.7s ease normal;
+  animation-delay: 0s;
 }
 footer .rodape .acompanhe:hover .fa-instagram {
-  -webkit-animation: pisca2 0.7s ease normal;
-          animation: pisca2 0.7s ease normal;
-  -webkit-animation-delay: 0.5s;
-          animation-delay: 0.5s;
+  animation: pisca2 0.7s ease normal;
+  animation-delay: 0.5s;
 }
 footer .rodape .acompanhe:hover .fa-twitter {
-  -webkit-animation: pisca2 0.7s ease normal;
-          animation: pisca2 0.7s ease normal;
-  -webkit-animation-delay: 1s;
-          animation-delay: 1s;
+  animation: pisca2 0.7s ease normal;
+  animation-delay: 1s;
 }
 footer .rodape .acompanhe:hover .fa-whatsapp {
-  -webkit-animation: pisca2 0.7s ease normal;
-          animation: pisca2 0.7s ease normal;
-  -webkit-animation-delay: 1.5s;
-          animation-delay: 1.5s;
+  animation: pisca2 0.7s ease normal;
+  animation-delay: 1.5s;
 }
 footer .rodape .acompanhe:hover .fa-linkedin {
-  -webkit-animation: pisca2 0.7s ease normal;
-          animation: pisca2 0.7s ease normal;
-  -webkit-animation-delay: 2s;
-          animation-delay: 2s;
+  animation: pisca2 0.7s ease normal;
+  animation-delay: 2s;
 }
 footer .rodape .acompanhe:hover .fa-github {
-  -webkit-animation: pisca2 0.7s ease normal;
-          animation: pisca2 0.7s ease normal;
-  -webkit-animation-delay: 2.5s;
-          animation-delay: 2.5s;
+  animation: pisca2 0.7s ease normal;
+  animation-delay: 2.5s;
 }
 footer .rodape .acompanhe:hover img {
   filter: brightness(100%);
@@ -950,7 +892,7 @@ footer .direito {
     transform: translateX(50%)-50%;
   }
   header .btn-open,
-header .btn-close {
+  header .btn-close {
     display: block;
   }
   header nav {
@@ -1107,9 +1049,9 @@ header .btn-close {
     display: none !important;
   }
   main .servicos__tab .cards__tab .card-1,
-main .servicos__tab .cards__tab .card-2,
-main .servicos__tab .cards__tab .card-3,
-main .servicos__tab .cards__tab .card-4 {
+  main .servicos__tab .cards__tab .card-2,
+  main .servicos__tab .cards__tab .card-3,
+  main .servicos__tab .cards__tab .card-4 {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
@@ -1118,44 +1060,44 @@ main .servicos__tab .cards__tab .card-4 {
     border-radius: 50px 50px;
   }
   main .servicos__tab .cards__tab .card-1:hover > span i,
-main .servicos__tab .cards__tab .card-2:hover > span i,
-main .servicos__tab .cards__tab .card-3:hover > span i,
-main .servicos__tab .cards__tab .card-4:hover > span i {
+  main .servicos__tab .cards__tab .card-2:hover > span i,
+  main .servicos__tab .cards__tab .card-3:hover > span i,
+  main .servicos__tab .cards__tab .card-4:hover > span i {
     color: var(--laranja-1);
   }
   main .servicos__tab .cards__tab .card-1:hover .btn-white,
-main .servicos__tab .cards__tab .card-2:hover .btn-white,
-main .servicos__tab .cards__tab .card-3:hover .btn-white,
-main .servicos__tab .cards__tab .card-4:hover .btn-white {
+  main .servicos__tab .cards__tab .card-2:hover .btn-white,
+  main .servicos__tab .cards__tab .card-3:hover .btn-white,
+  main .servicos__tab .cards__tab .card-4:hover .btn-white {
     background-color: var(--laranja-1);
     color: var(--azul-2);
     border-color: var(--laranja-1);
   }
   main .servicos__tab .cards__tab .card-1 span i,
-main .servicos__tab .cards__tab .card-2 span i,
-main .servicos__tab .cards__tab .card-3 span i,
-main .servicos__tab .cards__tab .card-4 span i {
+  main .servicos__tab .cards__tab .card-2 span i,
+  main .servicos__tab .cards__tab .card-3 span i,
+  main .servicos__tab .cards__tab .card-4 span i {
     color: var(--azul-2);
     font-size: calc(var(--size) * 1.1);
     transition: var(--suave);
   }
   main .servicos__tab .cards__tab .card-1 h3,
-main .servicos__tab .cards__tab .card-2 h3,
-main .servicos__tab .cards__tab .card-3 h3,
-main .servicos__tab .cards__tab .card-4 h3 {
+  main .servicos__tab .cards__tab .card-2 h3,
+  main .servicos__tab .cards__tab .card-3 h3,
+  main .servicos__tab .cards__tab .card-4 h3 {
     font-size: calc(var(--size) * 0.9);
     font-weight: bold;
   }
   main .servicos__tab .cards__tab .card-1 p,
-main .servicos__tab .cards__tab .card-2 p,
-main .servicos__tab .cards__tab .card-3 p,
-main .servicos__tab .cards__tab .card-4 p {
+  main .servicos__tab .cards__tab .card-2 p,
+  main .servicos__tab .cards__tab .card-3 p,
+  main .servicos__tab .cards__tab .card-4 p {
     font-size: calc(var(--size) * 0.6);
   }
   main .servicos__tab .cards__tab .card-1 .btn-white,
-main .servicos__tab .cards__tab .card-2 .btn-white,
-main .servicos__tab .cards__tab .card-3 .btn-white,
-main .servicos__tab .cards__tab .card-4 .btn-white {
+  main .servicos__tab .cards__tab .card-2 .btn-white,
+  main .servicos__tab .cards__tab .card-3 .btn-white,
+  main .servicos__tab .cards__tab .card-4 .btn-white {
     font-size: calc(var(--size) * 0.8);
     width: 55%;
     padding: 5px;
@@ -1163,9 +1105,9 @@ main .servicos__tab .cards__tab .card-4 .btn-white {
     text-align: center;
   }
   main .servicos__tab .cards__tab .card-1 .btn-white i,
-main .servicos__tab .cards__tab .card-2 .btn-white i,
-main .servicos__tab .cards__tab .card-3 .btn-white i,
-main .servicos__tab .cards__tab .card-4 .btn-white i {
+  main .servicos__tab .cards__tab .card-2 .btn-white i,
+  main .servicos__tab .cards__tab .card-3 .btn-white i,
+  main .servicos__tab .cards__tab .card-4 .btn-white i {
     font-size: calc(var(--size) * 0.7);
   }
   main .servicos__tab .cards__tab .slick-slide {
@@ -1185,7 +1127,6 @@ main .servicos__tab .cards__tab .card-4 .btn-white i {
     width: 90%;
   }
   main .blog .slick-track .slick-slide {
-    height: -webkit-fit-content;
     height: -moz-fit-content;
     height: fit-content;
   }
@@ -1200,10 +1141,10 @@ main .servicos__tab .cards__tab .card-4 .btn-white i {
     padding: 10px;
   }
   main .blog .blog-1,
-main .blog .blog-2,
-main .blog .blog-3,
-main .blog .blog-4,
-main .blog .blog-5 {
+  main .blog .blog-2,
+  main .blog .blog-3,
+  main .blog .blog-4,
+  main .blog .blog-5 {
     width: 669px;
     display: flex;
     flex-direction: column;
@@ -1237,13 +1178,29 @@ main .blog .blog-5 {
   main .duvidas {
     max-width: 900px;
     border-radius: 0 0 50px 50px;
-    text-align: center;
     padding: 10px 0;
     height: auto;
   }
-  main .duvidas h3 {
+  main .duvidas .gaveta {
     font-size: calc(var(--size) * 1.1);
-    width: 90%;
+    text-align: center;
+  }
+  main .duvidas ul {
+    width: -moz-fit-content;
+    width: fit-content;
+    max-width: 90%;
+    margin: auto;
+  }
+  main .duvidas ul p {
+    max-width: 90%;
+  }
+  main .duvidas ul details {
+    text-align: center;
+  }
+  main .duvidas .dvd-btn,
+  main .duvidas .dvd-txt {
+    text-align: center;
+    width: 100%;
   }
   footer .rodape {
     max-width: 900px;
@@ -1427,7 +1384,6 @@ main .blog .blog-5 {
   main .sobre .sobre__txt .btn {
     display: block;
     margin: auto;
-    width: -webkit-fit-content;
     width: -moz-fit-content;
     width: fit-content;
     text-align: center;
@@ -1442,38 +1398,6 @@ main .blog .blog-5 {
     width: 350px;
     max-width: 100%;
     animation: fadeImg 20s ease infinite reverse;
-  }
-  @-webkit-keyframes fadeImg {
-    0% {
-      background: url(../assets/img/banner-1.jpg) no-repeat;
-      background-size: cover;
-      border-radius: 30% 20%;
-    }
-    20% {
-      background: url(../assets/img/banner-2.jpg) no-repeat;
-      background-size: cover;
-      border-radius: 20% 30%;
-    }
-    40% {
-      background: url(../assets/img/banner-3.jpg) no-repeat;
-      background-size: cover;
-      border-radius: 30% 20%;
-    }
-    60% {
-      background: url(../assets/img/banner-4.jpg) no-repeat;
-      background-size: cover;
-      border-radius: 20% 30%;
-    }
-    80% {
-      background: url(../assets/img/banner-5.jpg) no-repeat;
-      background-size: cover;
-      border-radius: 30% 20%;
-    }
-    100% {
-      background: url(../assets/img/banner-6.jpg) no-repeat;
-      background-size: cover;
-      border-radius: 20% 30%;
-    }
   }
   @keyframes fadeImg {
     0% {
@@ -1551,7 +1475,6 @@ main .blog .blog-5 {
     align-self: center;
     font-size: calc(var(--size) * 0.5);
     margin: 15px auto;
-    width: -webkit-fit-content;
     width: -moz-fit-content;
     width: fit-content;
   }
@@ -1604,7 +1527,6 @@ main .blog .blog-5 {
   main .orcamento a {
     border-radius: 30px;
     padding: 10px;
-    width: -webkit-fit-content;
     width: -moz-fit-content;
     width: fit-content;
     font-size: calc(var(--size) * 0.9);
@@ -1689,8 +1611,8 @@ main .blog .blog-5 {
     line-height: calc(var(--size) * 0.1);
   }
   footer .rodape .menu ul:nth-child(1),
-footer .rodape .menu ul:nth-child(2),
-footer .rodape .menu ul:nth-child(3) {
+  footer .rodape .menu ul:nth-child(2),
+  footer .rodape .menu ul:nth-child(3) {
     align-items: center;
   }
   footer .direito {

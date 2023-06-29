@@ -8,7 +8,7 @@
 </section>
 
 <details class="duvidas" data-aos="fade-up">
-            <summary class="gaveta"><i class="fa-solid fa-plus"></i> Duvidas frequentes</summary>
+            <summary class="gaveta">Duvidas frequentes</summary>
             <ul>
                 <li>
                     <details>
