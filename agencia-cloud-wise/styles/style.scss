@@ -542,6 +542,33 @@ main {
         }
     }
 
+    #missao {
+        display: grid;
+        grid-template-columns: repeat(2, 50%);
+        grid-template-rows: 700px;
+
+        .mvv-menu {
+            width: 100%;
+            display: flex;
+            justify-content: space-evenly;
+
+            // arrumar o hover com sublinhado inputs radio
+            // poder fazer cada classe com um background na div 1 e o conteudo na segunda e mudar por js
+        }
+    }
+
+    #visao {
+        display: grid;
+        grid-template-columns: repeat(2, 50%);
+        grid-template-rows: 700px;
+    }
+
+    #valores {
+        display: grid;
+        grid-template-columns: repeat(2, 50%);
+        grid-template-rows: 700px;
+    }
+
     .servicos {
         max-width: 1200px;
         margin: auto;

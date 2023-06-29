@@ -11,7 +11,6 @@
             Nosso objetivo é ajudar os empreendedores a impulsionar seus negócios através da presença digital,
             criando sites modernos, responsivos e de fácil navegação.
         </p>
-        <a href="#" class="btn">Nossos projetos <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
     </div>
     <div class="sobre__imgs">
         <img src="assets/img/sobre-1.jpg">

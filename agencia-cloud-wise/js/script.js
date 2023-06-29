@@ -98,20 +98,13 @@ gaveta.addEventListener("click", () => {
     gaveta.classList.replace("gaveta-click", "gaveta");
   }
 });
-// let texto = gaveta.textContent;
-// let newTxt = texto.replace("+", "<span class='caixa-aberta'>+</span>")
-// gaveta.innerHTML = newTxt;
-
-function alterarSinal(elemento) {
-  if (
-    elemento.textContent ===
-    '<span class="dvd-simbolo">+</span> Duvidas frequentes'
-  ) {
-    elemento.textContent =
-      '<span class="dvd-simbolo">-</span> Duvidas frequentes';
-  } else {
-    elemento.textContent =
-      '<span class="dvd-simbolo">+</span> Duvidas frequentes';
-  }
-}
 // #endregion gaveta de duvidas
+
+// identificar qual bloco está ativo e dar display block, caso contrario, display none isso vale para o header
+
+// #region MVV
+
+
+
+// #endregion MVV
+
