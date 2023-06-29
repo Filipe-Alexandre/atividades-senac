@@ -51,16 +51,24 @@
 
         <?php require_once('./sections/sect-sobre.php'); ?>
 
-        <section class="como" id="missao" data-aos="fade-up">
+        <section class="como" id="sobre-blocos" data-aos="fade-up">
             <div class="como__img">
                 <img src="assets/img/missao.png">
             </div>
             <div class="como__txt">
                 <ul class="mvv-menu">
-                    <input type="radio" name="mis" id="mis" value="Missão">
-                    <label for="mis">Missão</label>
-                    <li><span>Visão</span></li>
-                    <li><span>Valores</span></li>
+                    <li>
+                        <input type="radio" name="btn-missao" id="btn-missao">
+                        <label for="btn-missao">Missão</label>
+                    </li>
+                    <li>
+                        <input type="radio" name="btn-visao" id="btn-visao">
+                        <label for="btn-visao">Missão</label>
+                    </li>
+                    <li>
+                        <input type="radio" name="btn-valores" id="btn-valores">
+                        <label for="btn-valores">Missão</label>
+                    </li>
                 </ul>
                 <ul>
                     <li>

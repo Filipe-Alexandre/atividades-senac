@@ -103,7 +103,18 @@ gaveta.addEventListener("click", () => {
 // identificar qual bloco está ativo e dar display block, caso contrario, display none isso vale para o header
 
 // #region MVV
+var container = document.querySelector('#sobre-blocos')
+var missao = document.querySelector('#btn-missao')
+var visao = document.querySelector('#btn-visao')
+var valores = document.querySelector('#btn-missao')
 
+if(missao.checked){
+  console.log('missao')
+} if (visao.checked) {
+  console.log('visao')
+} if(valores.checked) {
+  console.log('valores')
+}
 
 
 // #endregion MVV
