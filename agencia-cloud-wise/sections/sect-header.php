@@ -11,8 +11,8 @@
         </button>
         <ul class="categorias">
             <li onclick="window.scroll(0, 640)"><a href="sobre.php"><i class="fa-solid fa-rocket"></i> Quem somos</a></li>
-            <li onclick="window.scroll(0, 4000)"><a href="#"><i class="fa-solid fa-phone"></i> Contato</a></li>
-            <li onclick="window.scroll(0, 2300)"><a href="#"><i class="fa-solid fa-pen-ruler"></i> Serviços</a></li>
+            <li onclick="window.scroll(0, 4000)"><a href="contato.php"><i class="fa-solid fa-phone"></i> Contato</a></li>
+            <li onclick="window.scroll(0, 2300)"><a href="servicos.php"><i class="fa-solid fa-pen-ruler"></i> Serviços</a></li>
         </ul>
         <ul class="redes">
             <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>

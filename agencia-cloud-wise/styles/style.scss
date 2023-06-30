@@ -542,32 +542,242 @@ main {
         }
     }
 
-    #missao {
-        display: grid;
-        grid-template-columns: repeat(2, 50%);
-        grid-template-rows: 700px;
+    // #region pag. sobre
+    // #region mvv-menu
+    .mvv-menu {
+        width: 100%;
+        display: flex;
+        justify-content: space-evenly;
 
-        .mvv-menu {
-            width: 100%;
-            display: flex;
-            justify-content: space-evenly;
+        input {
+            display: none;
+        }
 
-            // arrumar o hover com sublinhado inputs radio
-            // poder fazer cada classe com um background na div 1 e o conteudo na segunda e mudar por js
+        input:checked~label {
+            color: var(--laranja-1);
+            position: relative;
+            font-size: calc(var(--size) * 1.2);
+            margin-bottom: 15px;
+            align-self: flex-start;
+            display: block;
+            width: fit-content;
+            cursor: pointer;
+
+            &::before {
+                content: "";
+                position: absolute;
+                width: 100%;
+                height: 4px;
+                bottom: -5px;
+                background-color: var(--laranja-1);
+                visibility: visible;
+                transform: scaleX(1);
+                transition: transform 300ms cubic-bezier(.57, -0.02, .31, .71);
+            }
+
+            &:hover:before {
+                visibility: visible;
+                transform: scaleX(1);
+                transform-origin: center;
+                color: currentColor;
+            }
+        }
+
+        label {
+            position: relative;
+            font-size: calc(var(--size) * 1.2);
+            margin-bottom: 15px;
+            align-self: flex-start;
+            display: block;
+            width: fit-content;
+            cursor: pointer;
+            transition: .3s ease;
+
+            &::before {
+                content: "";
+                position: absolute;
+                width: 100%;
+                height: 4px;
+                bottom: -5px;
+                background-color: var(--laranja-1);
+                visibility: hidden;
+                transform: scaleX(0);
+                transition: transform 300ms cubic-bezier(.57, -0.02, .31, .71);
+            }
+
+
+            &:hover:before {
+                visibility: visible;
+                transform: scaleX(1);
+                transform-origin: center;
+                color: currentColor;
+            }
         }
     }
 
-    #visao {
+    // #endregion mvv-menu
+
+    #como-mvv {
         display: grid;
         grid-template-columns: repeat(2, 50%);
         grid-template-rows: 700px;
+        align-items: center;
+
+        .como__img {
+            z-index: 1;
+            height: 610px;
+            width: 100%;
+            background-color: var(--azul-1);
+            border-radius: 30px;
+            box-shadow: 0 0 25px rgba(0, 0, 0, 0.8);
+        }
+
+        .como__txt {
+            color: var(--preto-1);
+            background-color: var(--branco-1);
+            height: 550px;
+            width: 100%;
+            border-radius: 0 30px 30px 0;
+            // box-shadow: inset 20px 0px 10px rgba(0, 0, 0, 0.3);
+            grid-template-rows: 100px 1fr;
+
+            #missao,
+            #visao,
+            #valores {
+                padding: 0 5%;
+                width: 80%;
+                height: 100%;
+                display: flex;
+                justify-content: space-evenly;
+                flex-direction: column;
+            }
+
+            h3 {
+                transform: translateX(0);
+            }
+
+            p {
+                transform: translateX(7%);
+
+            }
+        }
     }
 
-    #valores {
-        display: grid;
-        grid-template-columns: repeat(2, 50%);
-        grid-template-rows: 700px;
+    // #endregion pag. sobre
+
+    // #region pag. contato
+    .mapa {
+        margin: 50px auto;
+        width: 90%;
+
+        iframe {
+            height: 700px;
+            width: 100%;
+            border-radius: 30px;
+            transition: var(--suave);
+
+            &:hover {
+                box-shadow: 10px 10px 30px var(--azul-1), -10px -10px 30px var(--azul-1);
+            }
+
+        }
     }
+
+    .formulario {
+        max-width: 1200px;
+        margin: auto;
+
+        h2 {
+            margin: auto;
+            margin-bottom: 15px;
+            text-transform: capitalize;
+            animation: brilho 5s infinite;
+
+            @keyframes brilho {
+                50% {
+                    color: var(--laranja-1);
+                    text-shadow: 1px 1px 5px currentColor, -1px -1px 5px currentColor;
+                }
+            }
+        }
+
+        form {
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            width: 100%;
+            height: 600px;
+            border-radius: 50px;
+            background: linear-gradient(to bottom, #1b51d880, #15203980);
+
+
+            div {
+                height: 90%;
+                width: 45%;
+                display: flex;
+                flex-direction: column;
+                gap: 10%;
+                padding: 20px;
+
+                input {
+                    height: 50px;
+                    border-radius: 30px;
+                    // padding: 5px 10px;
+                    font-size: calc(var(--size) * 1);
+                    font-family: var(--padrao);
+                    border: none;
+                    transition: var(--suave);
+                    text-indent: calc(var(--size) * .5);
+
+                    &:focus {
+                        outline: 3px solid rgba(255, 136, 0, 0.8);
+                    }
+
+                    &::placeholder {
+                        color: var(--laranja-1);
+                        font-size: calc(var(--size) * 1);
+                        font-family: var(--padrao);
+                        text-indent: calc(var(--size) * .5);
+                    }
+                }
+
+                h3 {
+                    color: var(--laranja-1)
+                }
+
+                textarea {
+                    height: 80%;
+                    resize: none;
+                    border-radius: 30px;
+                    padding: 10px;
+                    font-size: calc(var(--size) * 1);
+                    font-family: var(--padrao);
+                    border: none;
+                    transition: var(--suave);
+                    text-indent: calc(var(--size) * .5);
+
+                    &:focus {
+                        outline: 3px solid rgba(255, 136, 0, 0.8);
+                    }
+
+                    &::placeholder {
+                        color: var(--laranja-1);
+                        font-size: calc(var(--size) * 1);
+                        font-family: var(--padrao);
+                        text-indent: calc(var(--size) * .5);
+                    }
+                }
+
+                .btn {
+                    width: fit-content;
+                    font-size: calc(var(--size) * .8);
+                    align-self: flex-end;
+                }
+            }
+        }
+    }
+
+    // #endregion pag. contato
 
     .servicos {
         max-width: 1200px;
@@ -873,9 +1083,9 @@ main {
                 content: '+';
                 font-size: calc(var(--size)*2);
                 text-align: center;
-                
+
             }
-            
+
             &:hover {
                 text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
             }

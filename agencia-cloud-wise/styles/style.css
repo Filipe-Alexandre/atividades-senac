@@ -432,25 +432,212 @@ main .como .como__txt p {
   margin: 20px auto;
   font-size: calc(var(--size) * 0.75);
 }
-main #missao {
-  display: grid;
-  grid-template-columns: repeat(2, 50%);
-  grid-template-rows: 700px;
-}
-main #missao .mvv-menu {
+main .mvv-menu {
   width: 100%;
   display: flex;
   justify-content: space-evenly;
 }
-main #visao {
-  display: grid;
-  grid-template-columns: repeat(2, 50%);
-  grid-template-rows: 700px;
+main .mvv-menu input {
+  display: none;
 }
-main #valores {
+main .mvv-menu input:checked ~ label {
+  color: var(--laranja-1);
+  position: relative;
+  font-size: calc(var(--size) * 1.2);
+  margin-bottom: 15px;
+  align-self: flex-start;
+  display: block;
+  width: -moz-fit-content;
+  width: fit-content;
+  cursor: pointer;
+}
+main .mvv-menu input:checked ~ label::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 4px;
+  bottom: -5px;
+  background-color: var(--laranja-1);
+  visibility: visible;
+  transform: scaleX(1);
+  transition: transform 300ms cubic-bezier(0.57, -0.02, 0.31, 0.71);
+}
+main .mvv-menu input:checked ~ label:hover:before {
+  visibility: visible;
+  transform: scaleX(1);
+  transform-origin: center;
+  color: currentColor;
+}
+main .mvv-menu label {
+  position: relative;
+  font-size: calc(var(--size) * 1.2);
+  margin-bottom: 15px;
+  align-self: flex-start;
+  display: block;
+  width: -moz-fit-content;
+  width: fit-content;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+main .mvv-menu label::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 4px;
+  bottom: -5px;
+  background-color: var(--laranja-1);
+  visibility: hidden;
+  transform: scaleX(0);
+  transition: transform 300ms cubic-bezier(0.57, -0.02, 0.31, 0.71);
+}
+main .mvv-menu label:hover:before {
+  visibility: visible;
+  transform: scaleX(1);
+  transform-origin: center;
+  color: currentColor;
+}
+main #como-mvv {
   display: grid;
   grid-template-columns: repeat(2, 50%);
   grid-template-rows: 700px;
+  align-items: center;
+}
+main #como-mvv .como__img {
+  z-index: 1;
+  height: 610px;
+  width: 100%;
+  background-color: var(--azul-1);
+  border-radius: 30px;
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.8);
+}
+main #como-mvv .como__txt {
+  color: var(--preto-1);
+  background-color: var(--branco-1);
+  height: 550px;
+  width: 100%;
+  border-radius: 0 30px 30px 0;
+  grid-template-rows: 100px 1fr;
+}
+main #como-mvv .como__txt #missao,
+main #como-mvv .como__txt #visao,
+main #como-mvv .como__txt #valores {
+  padding: 0 5%;
+  width: 80%;
+  height: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: column;
+}
+main #como-mvv .como__txt h3 {
+  transform: translateX(0);
+}
+main #como-mvv .como__txt p {
+  transform: translateX(7%);
+}
+main .mapa {
+  margin: 50px auto;
+  width: 90%;
+}
+main .mapa iframe {
+  height: 700px;
+  width: 100%;
+  border-radius: 30px;
+  transition: var(--suave);
+}
+main .mapa iframe:hover {
+  box-shadow: 10px 10px 30px var(--azul-1), -10px -10px 30px var(--azul-1);
+}
+main .formulario {
+  max-width: 1200px;
+  margin: auto;
+}
+main .formulario h2 {
+  margin: auto;
+  margin-bottom: 15px;
+  text-transform: capitalize;
+  animation: brilho 5s infinite;
+}
+@keyframes brilho {
+  50% {
+    color: var(--laranja-1);
+    text-shadow: 1px 1px 5px currentColor, -1px -1px 5px currentColor;
+  }
+}
+main .formulario form {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100%;
+  height: 600px;
+  border-radius: 50px;
+  background: linear-gradient(to bottom, rgba(27, 81, 216, 0.5019607843), rgba(21, 32, 57, 0.5019607843));
+}
+main .formulario form div {
+  height: 90%;
+  width: 45%;
+  display: flex;
+  flex-direction: column;
+  gap: 10%;
+  padding: 20px;
+}
+main .formulario form div input {
+  height: 50px;
+  border-radius: 30px;
+  font-size: calc(var(--size) * 1);
+  font-family: var(--padrao);
+  border: none;
+  transition: var(--suave);
+  text-indent: calc(var(--size) * 0.5);
+}
+main .formulario form div input:focus {
+  outline: 3px solid rgba(255, 136, 0, 0.8);
+}
+main .formulario form div input::-moz-placeholder {
+  color: var(--laranja-1);
+  font-size: calc(var(--size) * 1);
+  font-family: var(--padrao);
+  text-indent: calc(var(--size) * 0.5);
+}
+main .formulario form div input::placeholder {
+  color: var(--laranja-1);
+  font-size: calc(var(--size) * 1);
+  font-family: var(--padrao);
+  text-indent: calc(var(--size) * 0.5);
+}
+main .formulario form div h3 {
+  color: var(--laranja-1);
+}
+main .formulario form div textarea {
+  height: 80%;
+  resize: none;
+  border-radius: 30px;
+  padding: 10px;
+  font-size: calc(var(--size) * 1);
+  font-family: var(--padrao);
+  border: none;
+  transition: var(--suave);
+  text-indent: calc(var(--size) * 0.5);
+}
+main .formulario form div textarea:focus {
+  outline: 3px solid rgba(255, 136, 0, 0.8);
+}
+main .formulario form div textarea::-moz-placeholder {
+  color: var(--laranja-1);
+  font-size: calc(var(--size) * 1);
+  font-family: var(--padrao);
+  text-indent: calc(var(--size) * 0.5);
+}
+main .formulario form div textarea::placeholder {
+  color: var(--laranja-1);
+  font-size: calc(var(--size) * 1);
+  font-family: var(--padrao);
+  text-indent: calc(var(--size) * 0.5);
+}
+main .formulario form div .btn {
+  width: -moz-fit-content;
+  width: fit-content;
+  font-size: calc(var(--size) * 0.8);
+  align-self: flex-end;
 }
 main .servicos {
   max-width: 1200px;
