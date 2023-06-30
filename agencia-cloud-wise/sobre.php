@@ -54,7 +54,7 @@
         <section class="como" id="como-mvv" data-aos="fade-up">
             <div class="como__img">
                 <div id="img-mvv">
-                    
+                    <img src="assets/itens/mvv-missao.svg" id="img-mvv">
                 </div>
             </div>
             <div class="como__txt">
