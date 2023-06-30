@@ -496,69 +496,13 @@ main .mvv-menu label:hover:before {
   transform-origin: center;
   color: currentColor;
 }
-main .mvv-menu input:checked ~ label {
-  color: var(--laranja-1);
-  position: relative;
-  font-size: calc(var(--size) * 1.2);
-  margin-bottom: 15px;
-  align-self: flex-start;
-  display: block;
-  width: -moz-fit-content;
-  width: fit-content;
-  cursor: pointer;
-}
-main .mvv-menu input:checked ~ label::before {
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 4px;
-  bottom: -5px;
-  background-color: var(--laranja-1);
-  visibility: visible;
-  transform: scaleX(1);
-  transition: transform 300ms cubic-bezier(0.57, -0.02, 0.31, 0.71);
-}
-main .mvv-menu input:checked ~ label:hover:before {
-  visibility: visible;
-  transform: scaleX(1);
-  transform-origin: center;
-  color: currentColor;
-}
-main .mvv-menu label {
-  position: relative;
-  font-size: calc(var(--size) * 1.2);
-  margin-bottom: 15px;
-  align-self: flex-start;
-  display: block;
-  width: -moz-fit-content;
-  width: fit-content;
-  cursor: pointer;
-  transition: 0.3s ease;
-}
-main .mvv-menu label::before {
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 4px;
-  bottom: -5px;
-  background-color: var(--laranja-1);
-  visibility: hidden;
-  transform: scaleX(0);
-  transition: transform 300ms cubic-bezier(0.57, -0.02, 0.31, 0.71);
-}
-main .mvv-menu label:hover:before {
-  visibility: visible;
-  transform: scaleX(1);
-  transform-origin: center;
-  color: currentColor;
-}
 main #como-mvv {
   display: grid;
   grid-template-columns: repeat(2, 50%);
   grid-template-rows: 700px;
   align-items: center;
 }
-main #como-mvv HEAD .como__img {
+main #como-mvv .como__img {
   z-index: 1;
   height: 610px;
   width: 100%;
@@ -603,43 +547,11 @@ main .mapa iframe {
 main .mapa iframe:hover {
   box-shadow: 10px 10px 30px var(--azul-1), -10px -10px 30px var(--azul-1);
 }
-main .mapa iframe .como__img {
-  z-index: 1;
-  height: 610px;
-  width: 100%;
-  background-color: var(--azul-1);
-  border-radius: 30px;
-  box-shadow: 0 0 25px rgba(0, 0, 0, 0.8);
-}
-main .mapa iframe .como__txt {
-  color: var(--preto-1);
-  background-color: var(--branco-1);
-  height: 550px;
-  width: 100%;
-  border-radius: 0 30px 30px 0;
-  grid-template-rows: 100px 1fr;
-}
-main .mapa iframe .como__txt #missao,
-main .mapa iframe .como__txt #visao,
-main .mapa iframe .como__txt #valores {
-  padding: 0 5%;
-  width: 80%;
-  height: 100%;
-  display: flex;
-  justify-content: space-evenly;
-  flex-direction: column;
-}
-main .mapa iframe .como__txt h3 {
-  transform: translateX(0);
-}
-main .mapa iframe .como__txt p {
-  transform: translateX(7%);
-}
-main .mapa .formulario {
+main .formulario {
   max-width: 1200px;
   margin: auto;
 }
-main .mapa .formulario h2 {
+main .formulario h2 {
   margin: auto;
   margin-bottom: 15px;
   text-transform: capitalize;
@@ -651,7 +563,7 @@ main .mapa .formulario h2 {
     text-shadow: 1px 1px 5px currentColor, -1px -1px 5px currentColor;
   }
 }
-main .mapa .formulario form {
+main .formulario form {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
@@ -660,7 +572,7 @@ main .mapa .formulario form {
   border-radius: 50px;
   background: linear-gradient(to bottom, rgba(27, 81, 216, 0.5019607843), rgba(21, 32, 57, 0.5019607843));
 }
-main .mapa .formulario form div {
+main .formulario form div {
   height: 90%;
   width: 45%;
   display: flex;
@@ -668,7 +580,7 @@ main .mapa .formulario form div {
   gap: 10%;
   padding: 20px;
 }
-main .mapa .formulario form div input {
+main .formulario form div input {
   height: 50px;
   border-radius: 30px;
   font-size: calc(var(--size) * 1);
@@ -677,25 +589,25 @@ main .mapa .formulario form div input {
   transition: var(--suave);
   text-indent: calc(var(--size) * 0.5);
 }
-main .mapa .formulario form div input:focus {
+main .formulario form div input:focus {
   outline: 3px solid rgba(255, 136, 0, 0.8);
 }
-main .mapa .formulario form div input::-moz-placeholder {
+main .formulario form div input::-moz-placeholder {
   color: var(--laranja-1);
   font-size: calc(var(--size) * 1);
   font-family: var(--padrao);
   text-indent: calc(var(--size) * 0.5);
 }
-main .mapa .formulario form div input::placeholder {
+main .formulario form div input::placeholder {
   color: var(--laranja-1);
   font-size: calc(var(--size) * 1);
   font-family: var(--padrao);
   text-indent: calc(var(--size) * 0.5);
 }
-main .mapa .formulario form div h3 {
+main .formulario form div h3 {
   color: var(--laranja-1);
 }
-main .mapa .formulario form div textarea {
+main .formulario form div textarea {
   height: 80%;
   resize: none;
   border-radius: 30px;
@@ -706,28 +618,28 @@ main .mapa .formulario form div textarea {
   transition: var(--suave);
   text-indent: calc(var(--size) * 0.5);
 }
-main .mapa .formulario form div textarea:focus {
+main .formulario form div textarea:focus {
   outline: 3px solid rgba(255, 136, 0, 0.8);
 }
-main .mapa .formulario form div textarea::-moz-placeholder {
+main .formulario form div textarea::-moz-placeholder {
   color: var(--laranja-1);
   font-size: calc(var(--size) * 1);
   font-family: var(--padrao);
   text-indent: calc(var(--size) * 0.5);
 }
-main .mapa .formulario form div textarea::placeholder {
+main .formulario form div textarea::placeholder {
   color: var(--laranja-1);
   font-size: calc(var(--size) * 1);
   font-family: var(--padrao);
   text-indent: calc(var(--size) * 0.5);
 }
-main .mapa .formulario form div .btn {
+main .formulario form div .btn {
   width: -moz-fit-content;
   width: fit-content;
   font-size: calc(var(--size) * 0.8);
   align-self: flex-end;
 }
-main .mapa .servicos {
+main .servicos {
   max-width: 1200px;
   margin: auto;
   display: grid;
@@ -737,28 +649,28 @@ main .mapa .servicos {
   grid-template-rows: repeat(2, auto);
   grid-template-areas: "h2 btn" "cards cards";
 }
-main .mapa .servicos h2 {
+main .servicos h2 {
   font-size: calc(var(--size) * 1.47);
   grid-area: h2;
   transform: translateX(50px);
 }
-main .mapa .servicos .svc-btn {
+main .servicos .svc-btn {
   grid-area: btn;
   place-self: end;
   align-self: center;
   transform: translateX(-50px);
 }
-main .mapa .servicos .btn-white {
+main .servicos .btn-white {
   align-self: flex-start;
 }
-main .mapa .servicos .cards {
+main .servicos .cards {
   display: grid;
   grid-area: cards;
   grid-template-rows: repeat(2, 450px);
   grid-template-areas: "card1 card2" "card3 card4";
   gap: 30px;
 }
-main .mapa .servicos .cards div {
+main .servicos .cards div {
   height: 78%;
   width: 350px;
   padding: 60px;
@@ -771,83 +683,83 @@ main .mapa .servicos .cards div {
   line-height: calc(var(--size) * 1.3);
   animation: float 9s ease infinite;
 }
-main .mapa .servicos .cards div:hover {
+main .servicos .cards div:hover {
   animation-play-state: paused;
 }
-main .mapa .servicos .cards div:hover > span i {
+main .servicos .cards div:hover > span i {
   color: var(--laranja-1);
 }
-main .mapa .servicos .cards div:hover > .btn-white {
+main .servicos .cards div:hover > .btn-white {
   background-color: var(--laranja-1);
   color: var(--azul-2);
   border-color: var(--laranja-1);
 }
-main .mapa .servicos .cards div span i {
+main .servicos .cards div span i {
   color: var(--azul-2);
   font-size: calc(var(--size) * 1.6);
   transition: var(--suave);
 }
-main .mapa .servicos .cards div h3 {
+main .servicos .cards div h3 {
   font-size: calc(var(--size) * 1.1);
   font-weight: bold;
 }
-main .mapa .servicos .cards div p {
+main .servicos .cards div p {
   font-size: calc(var(--size) * 0.7);
 }
-main .mapa .servicos .cards .card-1 {
+main .servicos .cards .card-1 {
   grid-area: card1;
   border-radius: 50px 4px 4px 4px;
   transform: translateY(-15px);
   animation-delay: 0.2s;
 }
-main .mapa .servicos .cards .card-2 {
+main .servicos .cards .card-2 {
   grid-area: card2;
   border-radius: 4px 50px 4px 4px;
   transform: translateY(15px);
   animation-delay: 0.5s;
 }
-main .mapa .servicos .cards .card-3 {
+main .servicos .cards .card-3 {
   grid-area: card3;
   border-radius: 4px 4px 4px 50px;
   transform: translateY(-15px);
   animation-delay: 0s;
 }
-main .mapa .servicos .cards .card-4 {
+main .servicos .cards .card-4 {
   grid-area: card4;
   border-radius: 4px 4px 50px 4px;
   transform: translateY(15px);
   animation-delay: 0.8s;
 }
-main .mapa .servicos__tab {
+main .servicos__tab {
   display: none;
 }
-main .mapa .blog {
+main .blog {
   max-width: 1200px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
-main .mapa .blog h2 {
+main .blog h2 {
   margin-bottom: 50px;
 }
-main .mapa .blog h2:before {
+main .blog h2:before {
   bottom: -10px;
   width: 100%;
 }
-main .mapa .blog .blogs {
+main .blog .blogs {
   width: auto;
   max-width: 1200px;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
 }
-main .mapa .blog .blogs div img {
+main .blog .blogs div img {
   border-radius: 50px;
   width: 550px;
   height: 350px;
   margin-bottom: 20px;
 }
-main .mapa .blog .blogs div .blog__tag {
+main .blog .blogs div .blog__tag {
   background-color: var(--branco-1);
   border-radius: 34px;
   padding: 5px 20px;
@@ -859,50 +771,50 @@ main .mapa .blog .blogs div .blog__tag {
   display: block;
   margin-bottom: 10px;
 }
-main .mapa .blog .blogs div h3 {
+main .blog .blogs div h3 {
   font-size: calc(var(--size) * 0.85);
 }
-main .mapa .blog .blogs div p {
+main .blog .blogs div p {
   width: 90%;
   line-height: calc(var(--size) * 1.3);
   display: block;
 }
-main .mapa .blog .blogs div a {
+main .blog .blogs div a {
   align-self: flex-start;
 }
-main .mapa .blog .blog-1,
-main .mapa .blog .blog-2,
-main .mapa .blog .blog-3,
-main .mapa .blog .blog-4,
-main .mapa .blog .blog-5 {
+main .blog .blog-1,
+main .blog .blog-2,
+main .blog .blog-3,
+main .blog .blog-4,
+main .blog .blog-5 {
   width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
 }
-main .mapa .blog .blog-1 .blog__tag {
+main .blog .blog-1 .blog__tag {
   color: var(--azul-1);
 }
-main .mapa .blog .blog-2 .blog__tag {
+main .blog .blog-2 .blog__tag {
   color: var(--laranja-1);
 }
-main .mapa .blog .blog-3 .blog__tag {
+main .blog .blog-3 .blog__tag {
   color: var(--azul-2);
 }
-main .mapa .blog .slick-arrow {
+main .blog .slick-arrow {
   top: 32%;
 }
-main .mapa .blog .slick-arrow::before {
+main .blog .slick-arrow::before {
   display: block;
   color: var(--laranja-1);
   transform: translateX(-25px);
 }
-main .mapa .blog .slick-slide:hover a {
+main .blog .slick-slide:hover a {
   background-color: var(--laranja-1);
   color: var(--azul-2);
   border-color: var(--laranja-1);
 }
-main .mapa .orcamento {
+main .orcamento {
   max-width: 1200px;
   background-color: var(--branco-1);
   border-radius: 20px 50px 4px 4px;
@@ -912,16 +824,16 @@ main .mapa .orcamento {
   padding: 20px 0;
   margin-bottom: 5px;
 }
-main .mapa .orcamento strong {
+main .orcamento strong {
   color: var(--laranja-1);
 }
-main .mapa .orcamento p {
+main .orcamento p {
   color: var(--azul-1);
   width: 85%;
   padding: 30px 0;
   margin: auto;
 }
-main .mapa .orcamento a {
+main .orcamento a {
   background-color: var(--laranja-1);
   color: var(--azul-1);
   padding: 15px 10px;
@@ -930,18 +842,18 @@ main .mapa .orcamento a {
   border-radius: 4px 16px 16px 16px;
   transition: var(--suave);
 }
-main .mapa .orcamento a:hover {
+main .orcamento a:hover {
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
 }
-main .mapa .orcamento a:hover > i {
+main .orcamento a:hover > i {
   animation: pisca 1.5s ease;
 }
-main .mapa .orcamento a i {
+main .orcamento a i {
   transform: rotate(35deg);
   padding-left: 5px;
   animation: wiggle 2.5s infinite;
 }
-main .mapa .duvidas {
+main .duvidas {
   max-width: 1200px;
   background-color: var(--branco-1);
   border-radius: 4px 4px 50px 20px;
@@ -954,7 +866,7 @@ main .mapa .duvidas {
   justify-content: flex-start;
   transition: var(--suave);
 }
-main .mapa .duvidas .gaveta {
+main .duvidas .gaveta {
   color: var(--laranja-1);
   font-size: calc(var(--size) * 1.2);
   line-height: calc(var(--size) * 2);
@@ -964,19 +876,19 @@ main .mapa .duvidas .gaveta {
   justify-content: flex-start;
   width: 85%;
 }
-main .mapa .duvidas .gaveta::marker {
+main .duvidas .gaveta::marker {
   content: "+";
   font-size: calc(var(--size) * 2);
   text-align: center;
 }
-main .mapa .duvidas .gaveta:hover {
+main .duvidas .gaveta:hover {
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
 }
-main .mapa .duvidas .gaveta i {
+main .duvidas .gaveta i {
   font-weight: bolder;
   font-size: calc(var(--size) * 1.2);
 }
-main .mapa .duvidas .gaveta-click {
+main .duvidas .gaveta-click {
   color: var(--laranja-1);
   font-size: calc(var(--size) * 1.2);
   line-height: calc(var(--size) * 2);
@@ -986,47 +898,47 @@ main .mapa .duvidas .gaveta-click {
   justify-content: flex-start;
   width: 85%;
 }
-main .mapa .duvidas .gaveta-click::marker {
+main .duvidas .gaveta-click::marker {
   content: "-";
   font-size: calc(var(--size) * 2);
   text-align: center;
 }
-main .mapa .duvidas .gaveta-click:hover {
+main .duvidas .gaveta-click:hover {
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
 }
-main .mapa .duvidas .gaveta-click i {
+main .duvidas .gaveta-click i {
   font-weight: bolder;
   font-size: calc(var(--size) * 1.2);
 }
-main .mapa .duvidas ul {
+main .duvidas ul {
   transform: translateX(5%);
   width: 85%;
   color: var(--preto-1);
   transition: var(--suave);
 }
-main .mapa .duvidas ul li {
+main .duvidas ul li {
   transition: var(--suave);
   border-bottom: 2px solid var(--azul-2);
   width: -moz-fit-content;
   width: fit-content;
   padding: 1% 0;
 }
-main .mapa .duvidas ul li:nth-last-child(1) {
+main .duvidas ul li:nth-last-child(1) {
   border: none;
 }
-main .mapa .duvidas ul li .dvd-btn {
+main .duvidas ul li .dvd-btn {
   transition: var(--suave);
   cursor: pointer;
   font-weight: bold;
 }
-main .mapa .duvidas ul li .dvd-btn::marker {
+main .duvidas ul li .dvd-btn::marker {
   font-size: 0px;
   color: transparent;
 }
-main .mapa .duvidas ul li .dvd-btn:hover {
+main .duvidas ul li .dvd-btn:hover {
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
 }
-main .mapa .duvidas ul li .dvd-txt {
+main .duvidas ul li .dvd-txt {
   display: block;
   transition: var(--suave);
   color: var(--preto-2);
@@ -1034,7 +946,7 @@ main .mapa .duvidas ul li .dvd-txt {
   margin-top: 5px;
   text-indent: 1em;
 }
-main .mapa .voltar {
+main .voltar {
   z-index: 1;
   position: fixed;
   right: 15px;
@@ -1050,14 +962,15 @@ main .mapa .voltar {
   transition: var(--suave);
   cursor: pointer;
 }
-main .mapa .voltar:hover {
+main .voltar:hover {
   background: var(--laranja-1);
   box-shadow: 0 0 10px black;
 }
-main .mapa .voltar img {
+main .voltar img {
   height: 50px;
 }
-main footer .rodape {
+
+footer .rodape {
   max-width: 1200px;
   margin: auto;
   display: flex;
@@ -1066,87 +979,87 @@ main footer .rodape {
   gap: 20px;
   height: 200px;
 }
-main footer .rodape .acompanhe {
+footer .rodape .acompanhe {
   display: flex;
   flex-direction: column;
   height: 180px;
   justify-content: space-evenly;
 }
-main footer .rodape .acompanhe:hover .fa-facebook {
+footer .rodape .acompanhe:hover .fa-facebook {
   animation: pisca2 0.7s ease normal;
   animation-delay: 0s;
 }
-main footer .rodape .acompanhe:hover .fa-instagram {
+footer .rodape .acompanhe:hover .fa-instagram {
   animation: pisca2 0.7s ease normal;
   animation-delay: 0.5s;
 }
-main footer .rodape .acompanhe:hover .fa-twitter {
+footer .rodape .acompanhe:hover .fa-twitter {
   animation: pisca2 0.7s ease normal;
   animation-delay: 1s;
 }
-main footer .rodape .acompanhe:hover .fa-whatsapp {
+footer .rodape .acompanhe:hover .fa-whatsapp {
   animation: pisca2 0.7s ease normal;
   animation-delay: 1.5s;
 }
-main footer .rodape .acompanhe:hover .fa-linkedin {
+footer .rodape .acompanhe:hover .fa-linkedin {
   animation: pisca2 0.7s ease normal;
   animation-delay: 2s;
 }
-main footer .rodape .acompanhe:hover .fa-github {
+footer .rodape .acompanhe:hover .fa-github {
   animation: pisca2 0.7s ease normal;
   animation-delay: 2.5s;
 }
-main footer .rodape .acompanhe:hover img {
+footer .rodape .acompanhe:hover img {
   filter: brightness(100%);
 }
-main footer .rodape .acompanhe h2 {
+footer .rodape .acompanhe h2 {
   font-size: calc(var(--size) * 1.2);
   color: var(--azul-2);
   cursor: pointer;
   font-weight: bold;
   transition: var(--suave);
 }
-main footer .rodape .acompanhe h2:hover {
+footer .rodape .acompanhe h2:hover {
   text-shadow: 1px 1px 3px rgba(255, 255, 255, 0.5);
 }
-main footer .rodape .acompanhe h2:hover::before {
+footer .rodape .acompanhe h2:hover::before {
   visibility: hidden;
 }
-main footer .rodape .acompanhe hr {
+footer .rodape .acompanhe hr {
   border: 1px dashed var(--azul-2);
   width: 100%;
 }
-main footer .rodape .acompanhe ul {
+footer .rodape .acompanhe ul {
   display: flex;
   align-items: center;
   justify-content: flex-start;
   gap: 20px;
   height: calc(var(--size) * 1.1);
 }
-main footer .rodape .acompanhe ul li {
+footer .rodape .acompanhe ul li {
   width: calc(var(--size) * 1.1);
 }
-main footer .rodape .acompanhe ul li a {
+footer .rodape .acompanhe ul li a {
   color: var(--branco-1);
   transition: var(--suave);
 }
-main footer .rodape .acompanhe ul li a:hover {
+footer .rodape .acompanhe ul li a:hover {
   color: var(--azul-2);
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
 }
-main footer .rodape .acompanhe img {
+footer .rodape .acompanhe img {
   width: 95px;
   align-self: flex-end;
   filter: brightness(70%);
   transition: var(--suave);
 }
-main footer .rodape .menu {
+footer .rodape .menu {
   display: flex;
   align-items: flex-start;
   justify-content: space-evenly;
   gap: 30px;
 }
-main footer .rodape .menu ul {
+footer .rodape .menu ul {
   display: flex;
   flex-direction: column;
   gap: 10px;
@@ -1154,18 +1067,18 @@ main footer .rodape .menu ul {
   line-height: calc(var(--size) * 0.9);
   height: 180px;
 }
-main footer .rodape .menu ul h3 {
+footer .rodape .menu ul h3 {
   font-size: calc(var(--size) * 1.2);
   color: var(--azul-2);
   font-weight: bold;
   line-height: calc(var(--size) * 1.5);
 }
-main footer .rodape .menu ul a {
+footer .rodape .menu ul a {
   color: var(--branco-1);
   text-decoration: none;
   position: relative;
 }
-main footer .rodape .menu ul a::before {
+footer .rodape .menu ul a::before {
   content: "";
   position: absolute;
   width: 100%;
@@ -1176,13 +1089,13 @@ main footer .rodape .menu ul a::before {
   transform: scaleX(0);
   transition: transform 300ms cubic-bezier(0.57, -0.02, 0.31, 0.71);
 }
-main footer .rodape .menu ul a:hover:before {
+footer .rodape .menu ul a:hover:before {
   visibility: visible;
   transform: scaleX(1);
   transform-origin: left;
   color: currentColor;
 }
-main footer .direito {
+footer .direito {
   max-width: 1200px;
   margin: 30px auto;
   display: flex;
@@ -1191,24 +1104,25 @@ main footer .direito {
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
   font-size: calc(var(--size) * 0.7);
 }
+
 @media screen and (max-width: 900px) {
-  main body {
+  body {
     overflow-x: hidden;
   }
-  main header {
+  header {
     max-width: 900px;
     width: 90%;
   }
-  main header h1 {
+  header h1 {
     display: block;
     margin: auto;
     transform: translateX(50%)-50%;
   }
-  main header .btn-open,
-  main header .btn-close {
+  header .btn-open,
+  header .btn-close {
     display: block;
   }
-  main header nav {
+  header nav {
     display: flex;
     align-items: center;
     position: fixed;
@@ -1224,147 +1138,147 @@ main footer .direito {
     z-index: 1;
     transition: var(--suave);
   }
-  main header nav .categorias {
+  header nav .categorias {
     flex-direction: column;
     justify-content: space-evenly;
     height: 50%;
   }
-  main header .ativo {
+  header .ativo {
     right: 0px;
   }
-  main main {
+  main {
     max-width: 900px;
     width: 90%;
     margin: auto;
   }
-  main main section {
+  main section {
     margin: 50px auto;
   }
-  main main .nuvens {
+  main .nuvens {
     max-width: 900px;
     width: 100%;
     display: flex;
   }
-  main main .nuvens i {
+  main .nuvens i {
     font-size: calc(var(--size) * 3);
     position: absolute;
     transition: 0.3s ease;
   }
-  main main .nuvens i:hover {
+  main .nuvens i:hover {
     text-shadow: 0 0 10px white;
   }
-  main main .nuvens .nuvem_1 {
+  main .nuvens .nuvem_1 {
     left: 7.5%;
     top: 50px;
   }
-  main main .nuvens .nuvem_2 {
+  main .nuvens .nuvem_2 {
     left: 92%;
     top: 250px;
   }
-  main main .nuvens .nuvem_3 {
+  main .nuvens .nuvem_3 {
     left: 7.5%;
     top: 500px;
   }
-  main main .nuvens .nuvem_4 {
+  main .nuvens .nuvem_4 {
     left: 92%;
     top: 1050px;
   }
-  main main .nuvens .nuvem_5 {
+  main .nuvens .nuvem_5 {
     left: 7.5%;
     top: 1800px;
   }
-  main main .nuvens .nuvem_6 {
+  main .nuvens .nuvem_6 {
     left: 92%;
     top: 2180px;
   }
-  main main .nuvens .nuvem_7 {
+  main .nuvens .nuvem_7 {
     left: 7.5%;
     top: 2800px;
   }
-  main main .nuvens .nuvem_8 {
+  main .nuvens .nuvem_8 {
     left: 92%;
     top: 3570px;
   }
-  main main .nuvens .nuvem_9 {
+  main .nuvens .nuvem_9 {
     left: 7.5%;
     top: 3900px;
   }
-  main main .nuvens .nuvem_10 {
+  main .nuvens .nuvem_10 {
     left: 92%;
     top: 4570px;
   }
-  main main .trilha {
+  main .trilha {
     background-position: 0px, -5px !important;
   }
-  main main .trilha .banner {
+  main .trilha .banner {
     height: auto !important;
   }
-  main main .sobre {
+  main .sobre {
     max-width: 900px;
     display: flex;
     flex-flow: column wrap;
     justify-content: center;
     align-items: center;
   }
-  main main .sobre .sobre__imgs {
+  main .sobre .sobre__imgs {
     display: grid;
     grid-template-columns: repeat(2, 50%);
     grid-template-rows: repeat(2, 50%);
   }
-  main main .como {
+  main .como {
     max-width: 900px;
     display: flex;
     flex-flow: column-reverse wrap;
     justify-content: center;
     align-items: center;
   }
-  main main .como .como__txt {
+  main .como .como__txt {
     width: 90%;
   }
-  main main .como .como__txt ul {
+  main .como .como__txt ul {
     padding: 30px;
   }
-  main main .servicos {
+  main .servicos {
     display: none;
   }
-  main main .servicos__tab {
+  main .servicos__tab {
     max-width: 900px;
     display: block;
     flex-flow: column wrap;
     align-items: center;
   }
-  main main .servicos__tab .header-svc {
+  main .servicos__tab .header-svc {
     max-width: 900px;
     display: flex;
     align-items: center;
     justify-content: space-between;
     margin-bottom: 15px;
   }
-  main main .servicos__tab .header-svc h2 {
+  main .servicos__tab .header-svc h2 {
     font-size: calc(var(--size) * 1.3);
     width: 50%;
   }
-  main main .servicos__tab .header-svc .svc-btn {
+  main .servicos__tab .header-svc .svc-btn {
     align-self: center;
     font-size: calc(var(--size) * 0.8);
   }
-  main main .servicos__tab .header-svc .svc-btn i {
+  main .servicos__tab .header-svc .svc-btn i {
     font-size: calc(var(--size) * 0.8);
   }
-  main main .servicos__tab .cards__tab {
+  main .servicos__tab .cards__tab {
     max-width: 900px;
   }
-  main main .servicos__tab .cards__tab .slick-track {
+  main .servicos__tab .cards__tab .slick-track {
     display: flex;
     gap: 0.5%;
   }
-  main main .servicos__tab .cards__tab .slick-arrow {
+  main .servicos__tab .cards__tab .slick-arrow {
     display: none !important;
   }
-  main main .servicos__tab .cards__tab .card-1,
-  main main .servicos__tab .cards__tab .card-2,
-  main main .servicos__tab .cards__tab .card-3,
-  main main .servicos__tab .cards__tab .card-4 {
+  main .servicos__tab .cards__tab .card-1,
+  main .servicos__tab .cards__tab .card-2,
+  main .servicos__tab .cards__tab .card-3,
+  main .servicos__tab .cards__tab .card-4 {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
@@ -1372,167 +1286,167 @@ main footer .direito {
     padding: 15px 20px;
     border-radius: 50px 50px;
   }
-  main main .servicos__tab .cards__tab .card-1:hover > span i,
-  main main .servicos__tab .cards__tab .card-2:hover > span i,
-  main main .servicos__tab .cards__tab .card-3:hover > span i,
-  main main .servicos__tab .cards__tab .card-4:hover > span i {
+  main .servicos__tab .cards__tab .card-1:hover > span i,
+  main .servicos__tab .cards__tab .card-2:hover > span i,
+  main .servicos__tab .cards__tab .card-3:hover > span i,
+  main .servicos__tab .cards__tab .card-4:hover > span i {
     color: var(--laranja-1);
   }
-  main main .servicos__tab .cards__tab .card-1:hover .btn-white,
-  main main .servicos__tab .cards__tab .card-2:hover .btn-white,
-  main main .servicos__tab .cards__tab .card-3:hover .btn-white,
-  main main .servicos__tab .cards__tab .card-4:hover .btn-white {
+  main .servicos__tab .cards__tab .card-1:hover .btn-white,
+  main .servicos__tab .cards__tab .card-2:hover .btn-white,
+  main .servicos__tab .cards__tab .card-3:hover .btn-white,
+  main .servicos__tab .cards__tab .card-4:hover .btn-white {
     background-color: var(--laranja-1);
     color: var(--azul-2);
     border-color: var(--laranja-1);
   }
-  main main .servicos__tab .cards__tab .card-1 span i,
-  main main .servicos__tab .cards__tab .card-2 span i,
-  main main .servicos__tab .cards__tab .card-3 span i,
-  main main .servicos__tab .cards__tab .card-4 span i {
+  main .servicos__tab .cards__tab .card-1 span i,
+  main .servicos__tab .cards__tab .card-2 span i,
+  main .servicos__tab .cards__tab .card-3 span i,
+  main .servicos__tab .cards__tab .card-4 span i {
     color: var(--azul-2);
     font-size: calc(var(--size) * 1.1);
     transition: var(--suave);
   }
-  main main .servicos__tab .cards__tab .card-1 h3,
-  main main .servicos__tab .cards__tab .card-2 h3,
-  main main .servicos__tab .cards__tab .card-3 h3,
-  main main .servicos__tab .cards__tab .card-4 h3 {
+  main .servicos__tab .cards__tab .card-1 h3,
+  main .servicos__tab .cards__tab .card-2 h3,
+  main .servicos__tab .cards__tab .card-3 h3,
+  main .servicos__tab .cards__tab .card-4 h3 {
     font-size: calc(var(--size) * 0.9);
     font-weight: bold;
   }
-  main main .servicos__tab .cards__tab .card-1 p,
-  main main .servicos__tab .cards__tab .card-2 p,
-  main main .servicos__tab .cards__tab .card-3 p,
-  main main .servicos__tab .cards__tab .card-4 p {
+  main .servicos__tab .cards__tab .card-1 p,
+  main .servicos__tab .cards__tab .card-2 p,
+  main .servicos__tab .cards__tab .card-3 p,
+  main .servicos__tab .cards__tab .card-4 p {
     font-size: calc(var(--size) * 0.6);
   }
-  main main .servicos__tab .cards__tab .card-1 .btn-white,
-  main main .servicos__tab .cards__tab .card-2 .btn-white,
-  main main .servicos__tab .cards__tab .card-3 .btn-white,
-  main main .servicos__tab .cards__tab .card-4 .btn-white {
+  main .servicos__tab .cards__tab .card-1 .btn-white,
+  main .servicos__tab .cards__tab .card-2 .btn-white,
+  main .servicos__tab .cards__tab .card-3 .btn-white,
+  main .servicos__tab .cards__tab .card-4 .btn-white {
     font-size: calc(var(--size) * 0.8);
     width: 55%;
     padding: 5px;
     align-self: flex-end;
     text-align: center;
   }
-  main main .servicos__tab .cards__tab .card-1 .btn-white i,
-  main main .servicos__tab .cards__tab .card-2 .btn-white i,
-  main main .servicos__tab .cards__tab .card-3 .btn-white i,
-  main main .servicos__tab .cards__tab .card-4 .btn-white i {
+  main .servicos__tab .cards__tab .card-1 .btn-white i,
+  main .servicos__tab .cards__tab .card-2 .btn-white i,
+  main .servicos__tab .cards__tab .card-3 .btn-white i,
+  main .servicos__tab .cards__tab .card-4 .btn-white i {
     font-size: calc(var(--size) * 0.7);
   }
-  main main .servicos__tab .cards__tab .slick-slide {
+  main .servicos__tab .cards__tab .slick-slide {
     width: 350px !important;
     height: 350px !important;
   }
-  main main .blog {
+  main .blog {
     max-width: 900px;
     width: 90%;
   }
-  main main .blog .slick-track {
+  main .blog .slick-track {
     display: flex;
     align-items: flex-start;
     gap: 0.5%;
   }
-  main main .blog .slick-track div {
+  main .blog .slick-track div {
     width: 90%;
   }
-  main main .blog .slick-track .slick-slide {
+  main .blog .slick-track .slick-slide {
     height: -moz-fit-content;
     height: fit-content;
   }
-  main main .blog .slick-track .slick-slide img {
+  main .blog .slick-track .slick-slide img {
     width: 250px;
     max-height: 250px;
   }
-  main main .blog .blogs div {
+  main .blog .blogs div {
     height: 620px;
     display: flex;
     justify-content: space-between;
     padding: 10px;
   }
-  main main .blog .blog-1,
-  main main .blog .blog-2,
-  main main .blog .blog-3,
-  main main .blog .blog-4,
-  main main .blog .blog-5 {
+  main .blog .blog-1,
+  main .blog .blog-2,
+  main .blog .blog-3,
+  main .blog .blog-4,
+  main .blog .blog-5 {
     width: 669px;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
   }
-  main main .blog .blog-1 .blog__tag {
+  main .blog .blog-1 .blog__tag {
     color: var(--azul-1);
   }
-  main main .blog .blog-2 .blog__tag {
+  main .blog .blog-2 .blog__tag {
     color: var(--laranja-1);
   }
-  main main .blog .blog-3 .blog__tag {
+  main .blog .blog-3 .blog__tag {
     color: var(--azul-2);
   }
-  main main .blog .slick-arrow::before {
+  main .blog .slick-arrow::before {
     display: none;
   }
-  main main .orcamento {
+  main .orcamento {
     max-width: 900px;
     border-radius: 50px 50px 0 0;
   }
-  main main .orcamento p {
+  main .orcamento p {
     width: 90%;
     text-align: center;
     padding: 20px 0;
   }
-  main main .orcamento a {
+  main .orcamento a {
     border-radius: 16px;
     padding: 10px;
   }
-  main main .duvidas {
+  main .duvidas {
     max-width: 900px;
     border-radius: 0 0 50px 50px;
     padding: 10px 0;
     height: auto;
   }
-  main main .duvidas .gaveta {
+  main .duvidas .gaveta {
     font-size: calc(var(--size) * 1.1);
     text-align: center;
   }
-  main main .duvidas .gaveta-click {
+  main .duvidas .gaveta-click {
     font-size: calc(var(--size) * 1.1);
     text-align: center;
   }
-  main main .duvidas ul {
+  main .duvidas ul {
     width: -moz-fit-content;
     width: fit-content;
     max-width: 90%;
     margin: auto;
   }
-  main main .duvidas ul p {
+  main .duvidas ul p {
     max-width: 90%;
   }
-  main main .duvidas ul details {
+  main .duvidas ul details {
     text-align: center;
   }
-  main main .duvidas .dvd-btn,
-  main main .duvidas .dvd-txt {
+  main .duvidas .dvd-btn,
+  main .duvidas .dvd-txt {
     text-align: center;
     width: 100%;
   }
-  main footer .rodape {
+  footer .rodape {
     max-width: 900px;
     width: 90%;
     flex-direction: column;
     height: auto;
   }
-  main footer .rodape .acompanhe {
+  footer .rodape .acompanhe {
     order: 1;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
     margin-top: 30px;
   }
-  main footer .rodape .acompanhe ul {
+  footer .rodape .acompanhe ul {
     display: flex;
     align-items: center;
     flex-wrap: wrap;
@@ -1541,28 +1455,28 @@ main footer .direito {
     gap: 20px;
     height: calc(var(--size) * 1.1);
   }
-  main footer .rodape .acompanhe ul li {
+  footer .rodape .acompanhe ul li {
     width: calc(var(--size) * 1.1);
   }
-  main footer .rodape .acompanhe ul li a {
+  footer .rodape .acompanhe ul li a {
     color: var(--branco-1);
     transition: var(--suave);
   }
-  main footer .rodape .acompanhe ul li a:hover {
+  footer .rodape .acompanhe ul li a:hover {
     color: var(--azul-2);
     text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
   }
-  main footer .rodape .acompanhe img {
+  footer .rodape .acompanhe img {
     transform: translateY(-50%);
   }
-  main footer .rodape .menu {
+  footer .rodape .menu {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, 175px);
     grid-template-areas: "menu contato" "menu agencia";
     place-items: start;
   }
-  main footer .rodape .menu ul {
+  footer .rodape .menu ul {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -1572,133 +1486,133 @@ main footer .direito {
     min-width: 100%;
     height: 100%;
   }
-  main footer .rodape .menu ul:nth-child(1) {
+  footer .rodape .menu ul:nth-child(1) {
     grid-area: menu;
     align-items: center;
     width: 100px;
     border-right: 2px solid var(--azul-2);
   }
-  main footer .rodape .menu ul:nth-child(1) li {
+  footer .rodape .menu ul:nth-child(1) li {
     margin: 7% auto;
   }
-  main footer .rodape .menu ul:nth-child(2) {
+  footer .rodape .menu ul:nth-child(2) {
     grid-area: agencia;
     align-items: flex-start;
     justify-content: flex-start;
   }
-  main footer .rodape .menu ul:nth-child(3) {
+  footer .rodape .menu ul:nth-child(3) {
     grid-area: contato;
     border-bottom: 2px solid var(--azul-2);
   }
-  main footer .direito {
+  footer .direito {
     max-width: 900px;
     width: 90%;
   }
 }
 @media screen and (max-width: 600px) {
-  main header {
+  header {
     max-width: 600px;
   }
-  main header h1 {
+  header h1 {
     height: 50px;
     display: grid;
     place-items: center;
   }
-  main header .btn-open {
+  header .btn-open {
     position: absolute;
     right: 6%;
   }
-  main header nav {
+  header nav {
     width: 100%;
   }
-  main main {
+  main {
     max-width: 600px;
   }
-  main main section {
+  main section {
     margin: 25px auto;
   }
-  main main h2 {
+  main h2 {
     font-size: calc(var(--size) * 1.3);
   }
-  main main .nuvens {
+  main .nuvens {
     max-width: 600px;
   }
-  main main .nuvens i {
+  main .nuvens i {
     font-size: calc(var(--size) * 2);
     position: absolute;
     transition: 0.3s ease;
   }
-  main main .nuvens i:hover {
+  main .nuvens i:hover {
     text-shadow: 0 0 10px white;
   }
-  main main .nuvens .nuvem_1 {
+  main .nuvens .nuvem_1 {
     left: 7.5%;
     top: 50px;
   }
-  main main .nuvens .nuvem_2 {
+  main .nuvens .nuvem_2 {
     left: 90%;
     top: 250px;
   }
-  main main .nuvens .nuvem_3 {
+  main .nuvens .nuvem_3 {
     left: 7.5%;
     top: 440px;
   }
-  main main .nuvens .nuvem_4 {
+  main .nuvens .nuvem_4 {
     left: 90%;
     top: 1050px;
   }
-  main main .nuvens .nuvem_5 {
+  main .nuvens .nuvem_5 {
     left: 7.5%;
     top: 1450px;
   }
-  main main .nuvens .nuvem_6 {
+  main .nuvens .nuvem_6 {
     left: 90%;
     top: 2180px;
   }
-  main main .nuvens .nuvem_7 {
+  main .nuvens .nuvem_7 {
     left: 7.5%;
     top: 2630px;
   }
-  main main .nuvens .nuvem_8 {
+  main .nuvens .nuvem_8 {
     left: 90%;
     top: 3100px;
   }
-  main main .nuvens .nuvem_9 {
+  main .nuvens .nuvem_9 {
     left: 7.5%;
     top: 4000px;
   }
-  main main .nuvens .nuvem_10 {
+  main .nuvens .nuvem_10 {
     left: 90%;
     top: 4450px;
   }
-  main main .trilha {
+  main .trilha {
     display: block;
     background-position: top center;
   }
-  main main .trilha .banner {
+  main .trilha .banner {
     text-align: center;
   }
-  main main .trilha .banner span {
+  main .trilha .banner span {
     font-size: calc(var(--size) * 4) !important;
   }
-  main main .trilha .banner span i {
+  main .trilha .banner span i {
     display: none;
   }
-  main main .trilha .banner p {
+  main .trilha .banner p {
     font-size: calc(var(--size) * 0.9) !important;
   }
-  main main .sobre {
+  main .sobre {
     max-width: 600px;
     display: flex;
     flex-flow: column wrap;
     justify-content: center;
     align-items: center;
   }
-  main main .sobre .sobre__txt p {
+  main .sobre .sobre__txt p {
     font-size: calc(var(--size) * 0.8);
     margin: 20px auto;
   }
-  main main .sobre .sobre__txt .btn {
+  main .sobre .sobre__txt .btn {
     display: block;
     margin: auto;
     width: -moz-fit-content;
@@ -1706,10 +1620,10 @@ main footer .direito {
     text-align: center;
     font-size: calc(var(--size) * 0.8);
   }
-  main main .sobre .sobre__txt .btn i {
+  main .sobre .sobre__txt .btn i {
     font-size: calc(var(--size) * 0.7);
   }
-  main main .sobre .sobre__imgs {
+  main .sobre .sobre__imgs {
     display: block;
     height: 350px;
     width: 350px;
@@ -1748,100 +1662,100 @@ main footer .direito {
       border-radius: 20% 30%;
     }
   }
-  main main .sobre .sobre__imgs img {
+  main .sobre .sobre__imgs img {
     display: none;
   }
-  main main .como {
+  main .como {
     max-width: 600px;
     width: 90%;
   }
-  main main .como .como__img {
+  main .como .como__img {
     background-size: cover;
     background-position: center center;
     width: 90%;
   }
-  main main .como .como__img img {
+  main .como .como__img img {
     width: 80%;
     height: 70%;
   }
-  main main .como .como__txt {
+  main .como .como__txt {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
   }
-  main main .como .como__txt ul {
+  main .como .como__txt ul {
     padding: 10px;
   }
-  main main .como .como__txt h3 {
+  main .como .como__txt h3 {
     font-size: calc(var(--size) * 0.8);
     transform: translateX(0);
   }
-  main main .servicos__tab {
+  main .servicos__tab {
     width: 90%;
     max-width: 600px;
   }
-  main main .servicos__tab .header-svc {
+  main .servicos__tab .header-svc {
     max-width: 600px;
     display: flex;
     flex-flow: column wrap;
   }
-  main main .servicos__tab .header-svc h2 {
+  main .servicos__tab .header-svc h2 {
     width: 100%;
   }
-  main main .servicos__tab .svc-btn {
+  main .servicos__tab .svc-btn {
     align-self: center;
     font-size: calc(var(--size) * 0.5);
     margin: 15px auto;
     width: -moz-fit-content;
     width: fit-content;
   }
-  main main .servicos__tab .svc-btn i {
+  main .servicos__tab .svc-btn i {
     font-size: calc(var(--size) * 0.5);
   }
-  main main .blog {
+  main .blog {
     max-width: 600px;
     max-height: 600px;
     width: 90%;
   }
-  main main .blog h2 {
+  main .blog h2 {
     margin-bottom: 10px;
   }
-  main main .blog .slick-track {
+  main .blog .slick-track {
     display: block;
     align-items: flex-start;
     gap: 1%;
     display: flex;
   }
-  main main .blog .slick-track div {
+  main .blog .slick-track div {
     width: 120% !important;
     align-self: flex-start;
   }
-  main main .blog .blogs div {
+  main .blog .blogs div {
     height: 620px;
     width: 600px;
     display: flex;
     justify-content: space-between;
   }
-  main main .blog .slick-track {
+  main .blog .slick-track {
     width: 600px;
     display: flex;
     flex-direction: row;
     gap: 10px;
   }
-  main main .blog .slick-arrow::before {
+  main .blog .slick-arrow::before {
     display: none;
   }
-  main main .orcamento {
+  main .orcamento {
     max-width: 600px;
     border-radius: 50px 50px 0 0;
   }
-  main main .orcamento p {
+  main .orcamento p {
     width: 90%;
     text-align: center;
     padding: 20px 0;
     font-size: calc(var(--size) * 0.9);
   }
-  main main .orcamento a {
+  main .orcamento a {
     border-radius: 30px;
     padding: 10px;
     width: -moz-fit-content;
@@ -1849,47 +1763,47 @@ main footer .direito {
     font-size: calc(var(--size) * 0.9);
     text-align: center;
   }
-  main main .duvidas {
+  main .duvidas {
     max-width: 600px;
     border-radius: 0 0 50px 50px;
     text-align: center;
     padding: 10px 0;
     height: auto;
   }
-  main main .duvidas h3 {
+  main .duvidas h3 {
     font-size: calc(var(--size) * 0.9);
     width: 90%;
   }
-  main main .duvidas h3 i {
+  main .duvidas h3 i {
     font-size: calc(var(--size) * 1);
     align-self: center;
   }
-  main main .voltar {
+  main .voltar {
     bottom: 10px;
     right: 10px;
     height: 30px;
     width: 30px;
   }
-  main main .voltar img {
+  main .voltar img {
     height: 35px;
   }
-  main footer .rodape {
+  footer .rodape {
     max-width: 600px;
     width: 90%;
     flex-direction: column;
     height: auto;
   }
-  main footer .rodape .acompanhe {
+  footer .rodape .acompanhe {
     order: 1;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
     margin-top: 30px;
   }
-  main footer .rodape .acompanhe h2 {
+  footer .rodape .acompanhe h2 {
     font-size: calc(var(--size) * 1);
   }
-  main footer .rodape .acompanhe ul {
+  footer .rodape .acompanhe ul {
     display: flex;
     align-items: center;
     flex-wrap: wrap;
@@ -1898,41 +1812,41 @@ main footer .direito {
     gap: 20px;
     height: calc(var(--size) * 1.1);
   }
-  main footer .rodape .acompanhe ul li {
+  footer .rodape .acompanhe ul li {
     width: calc(var(--size) * 1.1);
   }
-  main footer .rodape .acompanhe ul li a {
+  footer .rodape .acompanhe ul li a {
     color: var(--branco-1);
     transition: var(--suave);
   }
-  main footer .rodape .acompanhe ul li a:hover {
+  footer .rodape .acompanhe ul li a:hover {
     color: var(--azul-2);
     text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
   }
-  main footer .rodape .acompanhe img {
+  footer .rodape .acompanhe img {
     transform: translateY(-50%);
   }
-  main footer .rodape .menu {
+  footer .rodape .menu {
     display: flex;
     flex-direction: column;
     gap: 10px;
   }
-  main footer .rodape .menu ul {
+  footer .rodape .menu ul {
     border: none !important;
     text-align: center;
     align-items: center;
     justify-content: center;
     margin-bottom: 30px;
   }
-  main footer .rodape .menu ul:nth-child(1) {
+  footer .rodape .menu ul:nth-child(1) {
     line-height: calc(var(--size) * 0.1);
   }
-  main footer .rodape .menu ul:nth-child(1),
-  main footer .rodape .menu ul:nth-child(2),
-  main footer .rodape .menu ul:nth-child(3) {
+  footer .rodape .menu ul:nth-child(1),
+  footer .rodape .menu ul:nth-child(2),
+  footer .rodape .menu ul:nth-child(3) {
     align-items: center;
   }
-  main footer .direito {
+  footer .direito {
     max-width: 600px;
     width: 100%;
   }
