@@ -51,113 +51,81 @@
 
         <?php require_once('./sections/sect-sobre.php'); ?>
 
-        <section class="como" id="sobre-blocos" data-aos="fade-up">
+        <section class="como" id="como-mvv" data-aos="fade-up">
             <div class="como__img">
-                <img src="assets/img/missao.png">
+                <div id="img-mvv">
+                    
+                </div>
             </div>
             <div class="como__txt">
                 <ul class="mvv-menu">
                     <li>
-                        <input type="radio" name="btn-missao" id="btn-missao">
+                        <input type="radio" name="btn-mvv" id="btn-missao" checked>
                         <label for="btn-missao">Missão</label>
                     </li>
                     <li>
-                        <input type="radio" name="btn-visao" id="btn-visao">
-                        <label for="btn-visao">Missão</label>
+                        <input type="radio" name="btn-mvv" id="btn-visao">
+                        <label for="btn-visao">Visão</label>
                     </li>
                     <li>
-                        <input type="radio" name="btn-valores" id="btn-valores">
-                        <label for="btn-valores">Missão</label>
+                        <input type="radio" name="btn-mvv" id="btn-valores">
+                        <label for="btn-valores">Valores</label>
                     </li>
                 </ul>
-                <ul>
+                <!-- missão -->
+                <ul id="missao">
                     <li>
-                        <h3><i class="fa-regular fa-circle-check"></i> Análise de problemas</h3>
-                        <p>Realizamos uma análise dos problemas e necessidades do cliente. Dessa forma, conseguimos
-                            oferecer soluções personalizadas, efetivas e que atendam às expectativas e objetivos do
-                            negócio.</p>
+                        <h3><i class="fa-regular fa-circle-check"></i> Missão 1</h3>
+                        <p>texto texto texto texto texto texto texto texto texto </p>
                         </i>
                     </li>
                     <li>
-                        <h3><i class="fa-regular fa-circle-check"></i> Soluções funcionais para o usuário</h3>
-                        <p>Nosso foco é sempre o usuário. Por isso, criamos soluções funcionais e intuitivas, que visam
-                            proporcionar a melhor experiência possível para o público-alvo de cada projeto.</p>
-                    </li>
-                    <li>
-                        <h3><i class="fa-regular fa-circle-check"></i> Uso de tecnologias atuais</h3>
-                        <p>
-                            Mantemos nossos projetos sempre atualizados com as tecnologias mais recentes, garantindo a
-                            qualidade, segurança e eficiência em nossas soluções. Buscamos sempre estar à frente do
-                            mercado e oferecer o que há de melhor aos nossos clientes.
-                        </p>
-                    </li>
-                </ul>
-            </div>
-        </section>
-
-        <section class="como" id="visao" data-aos="fade-up">
-            <div class="como__img">
-                <img src="assets/img/visao.png">
-            </div>
-            <div class="como__txt">
-                <ul class="mvv-menu">
-                    <li><span>Missão</span></li>
-                    <li><span>Visão</span></li>
-                    <li><span>Valores</span></li>
-                </ul>
-                <ul>
-                    <li>
-                        <h3><i class="fa-regular fa-circle-check"></i> Análise de problemas</h3>
-                        <p>Realizamos uma análise dos problemas e necessidades do cliente. Dessa forma, conseguimos
-                            oferecer soluções personalizadas, efetivas e que atendam às expectativas e objetivos do
-                            negócio.</p>
+                        <h3><i class="fa-regular fa-circle-check"></i> Missão 2</h3>
+                        <p>texto texto texto texto texto texto texto texto texto </p>
                         </i>
                     </li>
                     <li>
-                        <h3><i class="fa-regular fa-circle-check"></i> Soluções funcionais para o usuário</h3>
-                        <p>Nosso foco é sempre o usuário. Por isso, criamos soluções funcionais e intuitivas, que visam
-                            proporcionar a melhor experiência possível para o público-alvo de cada projeto.</p>
-                    </li>
-                    <li>
-                        <h3><i class="fa-regular fa-circle-check"></i> Uso de tecnologias atuais</h3>
-                        <p>
-                            Mantemos nossos projetos sempre atualizados com as tecnologias mais recentes, garantindo a
-                            qualidade, segurança e eficiência em nossas soluções. Buscamos sempre estar à frente do
-                            mercado e oferecer o que há de melhor aos nossos clientes.
-                        </p>
+                        <h3><i class="fa-regular fa-circle-check"></i> Missão 3</h3>
+                        <p>texto texto texto texto texto texto texto texto texto </p>
+                        </i>
                     </li>
                 </ul>
-            </div>
-        </section>
 
-        <section class="como" id="valores" data-aos="fade-up">
-            <div class="como__img">
-                <img src="assets/img/valores.png">
-            </div>
-            <div class="como__txt">
-                <ul class="mvv-menu">
-
-                </ul>
-                <ul>
+                <!-- visão -->
+                <ul id="visao" style="display: none;">
                     <li>
-                        <h3><i class="fa-regular fa-circle-check"></i> Análise de problemas</h3>
-                        <p>Realizamos uma análise dos problemas e necessidades do cliente. Dessa forma, conseguimos
-                            oferecer soluções personalizadas, efetivas e que atendam às expectativas e objetivos do
-                            negócio.</p>
+                        <h3><i class="fa-regular fa-circle-check"></i> Visão 1</h3>
+                        <p>texto texto texto texto texto texto texto texto texto </p>
                         </i>
                     </li>
                     <li>
-                        <h3><i class="fa-regular fa-circle-check"></i> Soluções funcionais para o usuário</h3>
-                        <p>Nosso foco é sempre o usuário. Por isso, criamos soluções funcionais e intuitivas, que visam
-                            proporcionar a melhor experiência possível para o público-alvo de cada projeto.</p>
+                        <h3><i class="fa-regular fa-circle-check"></i> Visão 2</h3>
+                        <p>texto texto texto texto texto texto texto texto texto </p>
+                        </i>
                     </li>
                     <li>
-                        <h3><i class="fa-regular fa-circle-check"></i> Uso de tecnologias atuais</h3>
-                        <p>
-                            Mantemos nossos projetos sempre atualizados com as tecnologias mais recentes, garantindo a
-                            qualidade, segurança e eficiência em nossas soluções. Buscamos sempre estar à frente do
-                            mercado e oferecer o que há de melhor aos nossos clientes.
-                        </p>
+                        <h3><i class="fa-regular fa-circle-check"></i> Visão 3</h3>
+                        <p>texto texto texto texto texto texto texto texto texto </p>
+                        </i>
+                    </li>
+                </ul>
+
+                <!-- valores -->
+                <ul id="valores" style="display: none;">
+                    <li>
+                        <h3><i class="fa-regular fa-circle-check"></i> Valores 1</h3>
+                        <p>texto texto texto texto texto texto texto texto texto </p>
+                        </i>
+                    </li>
+                    <li>
+                        <h3><i class="fa-regular fa-circle-check"></i> Valores 2</h3>
+                        <p>texto texto texto texto texto texto texto texto texto </p>
+                        </i>
+                    </li>
+                    <li>
+                        <h3><i class="fa-regular fa-circle-check"></i> Valores 3</h3>
+                        <p>texto texto texto texto texto texto texto texto texto </p>
+                        </i>
                     </li>
                 </ul>
             </div>

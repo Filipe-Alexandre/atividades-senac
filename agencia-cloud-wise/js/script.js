@@ -1,24 +1,3 @@
-//#region teste
-
-// let cards = document.querySelectorAll('.texto1');
-// let largura = window.innerWidth
-
-// function teste () {
-//   if(largura <= 600) {
-//     cards.innerHtml = '<p> gaiufdjaifnsojdnf </p>'
-
-//   } else {
-//     document.documentElement.classList.remove('cards cards__tab');
-//   }
-
-//   // verificação
-
-//   window.addEventListener('load', teste());
-//   window.addEventListener('resize', teste());
-
-//   teste();
-// }
-
 //#region slick
 $(".cards__tab").slick({
   infinite: true,
@@ -103,19 +82,35 @@ gaveta.addEventListener("click", () => {
 // identificar qual bloco está ativo e dar display block, caso contrario, display none isso vale para o header
 
 // #region MVV
-var container = document.querySelector('#sobre-blocos')
-var missao = document.querySelector('#btn-missao')
-var visao = document.querySelector('#btn-visao')
-var valores = document.querySelector('#btn-missao')
+var btnMissao = document.querySelector("#btn-missao");
+var btnVisao = document.querySelector("#btn-visao");
+var btnValores = document.querySelector("#btn-valores");
 
-if(missao.checked){
-  console.log('missao')
-} if (visao.checked) {
-  console.log('visao')
-} if(valores.checked) {
-  console.log('valores')
-}
+var missao = document.querySelector("#missao");
+var visao = document.querySelector("#visao");
+var valores = document.querySelector("#valores");
+var imgMvv = document.querySelector("#img-mvv");
 
+btnMissao.addEventListener("click", () => {
+  missao.style.display = "block";
+  visao.style.display = "none";
+  valores.style.display = "none";
+  imgMvv.innerHTML = '<img src="assets/itens/mvv-missao.svg" id="img-mvv">'
+});
+
+btnVisao.addEventListener("click", () => {
+  missao.style.display = "none";
+  visao.style.display = "block";
+  valores.style.display = "none";
+  imgMvv.innerHTML = '<img src="assets/itens/mvv-visao.svg" id="img-mvv">'
+});
+
+btnValores.addEventListener("click", () => {
+  // alert("valores");
+  missao.style.display = "none";
+  visao.style.display = "none";
+  valores.style.display = "block";
+  imgMvv.innerHTML = '<img src="assets/itens/mvv-valores.svg" id="img-mvv">'
+});
 
 // #endregion MVV
-
