@@ -191,6 +191,7 @@ header .categorias {
   display: flex;
   align-items: center;
   gap: 50px;
+  list-style-type: none;
 }
 header .categorias a {
   position: relative;
@@ -563,6 +564,9 @@ main .formulario h2 {
     text-shadow: 1px 1px 5px currentColor, -1px -1px 5px currentColor;
   }
 }
+main .formulario h3 {
+  display: none;
+}
 main .formulario form {
   display: flex;
   justify-content: space-evenly;
@@ -577,7 +581,7 @@ main .formulario form div {
   width: 45%;
   display: flex;
   flex-direction: column;
-  gap: 10%;
+  gap: 15%;
   padding: 20px;
 }
 main .formulario form div input {

@@ -702,6 +702,10 @@ main {
             }
         }
 
+        h3 {
+            display: none;
+        }
+
         form {
             display: flex;
             justify-content: space-evenly;
@@ -717,7 +721,7 @@ main {
                 width: 45%;
                 display: flex;
                 flex-direction: column;
-                gap: 10%;
+                gap: 15%;
                 padding: 20px;
 
                 input {
