@@ -126,7 +126,7 @@ function formWhats() {
   var agencia = '*Cloud Wise*';
   var assunto = 'Mensagem do site!'
 
-  var numFome = '5511988896382'
+  var numFome = '5511912345678'
   var quebraDeLinha = '%0A'
 
   if (email == '') {
